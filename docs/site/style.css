@@ -138,3 +138,14 @@ details > summary { cursor: pointer; color: var(--ink-2); font-size: 14px; }
 .spinner { width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; vertical-align: -3px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hidden { display: none !important; }
+/* Small screens: let grid/flex children shrink below their content (wide tables scroll inside their card instead of
+   widening the page), and keep the header on one line. */
+.grid > *, .demo-grid > *, .row > * { min-width: 0; }
+.card { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  header.top .wrap { gap: 10px; }
+  nav.links { gap: 12px; font-size: 13px; overflow-x: auto; white-space: nowrap; flex-wrap: nowrap; scrollbar-width: none; }
+  nav.links::-webkit-scrollbar { display: none; }
+  .brand { flex-shrink: 0; }
+  .conn { width: 100%; }
+}
