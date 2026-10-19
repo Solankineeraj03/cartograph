@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/_private/serialization.py", line 74, in pickle_dumps
+    return pickle.dumps(obj)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/cloudpickle/cloudpickle.py", line 1479, in dumps
+    cp.dump(obj)
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/cloudpickle/cloudpickle.py", line 1245, in dump
+    return super().dump(obj)
+           ^^^^^^^^^^^^^^^^^
+TypeError: cannot pickle '_thread.lock' object
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/cartograph/repo/cartograph/serve_app.py", line 74, in <module>
+    @serve.ingress(app)
+     ^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/api.py", line 284, in decorator
+    pickle_dumps(app, error_msg="Failed to serialize the ASGI app.")
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/_private/serialization.py", line 80, in pickle_dumps
+    raise TypeError(msg) from e
+TypeError: Failed to serialize the ASGI app.:
+================================================================================
+Checking Serializability of <fastapi.applications.FastAPI object at 0x7f6322644250>
+================================================================================
+!!! FAIL serialization: cannot pickle '_thread.lock' object
+    Serializing '_native_telemetry' <fastapi.telemetry._asgi.NativeTelemetry object at 0x7f629c667d10>...
+    Serializing '_openapi_routes_version' None...
+    Serializing '_telemetry' {'tracer_provider': None, 'meter_provider': None, 'logger_provider': None, 'tracing': True, 'metrics': True, 'logs': True, 'operation_spans': True, 'auto_configure': False, 'exclude': None}...
+    Serializing 'add_api_route' <bound method FastAPI.add_api_route of <fastapi.applications.FastAPI object at 0x7f6322644250>>...
+    !!! FAIL serialization: cannot pickle '_thread.lock' object
+        Serializing '__func__' <function FastAPI.add_api_route at 0x7f632144aca0>...
+    WARNING: Did not find non-serializable object in <bound method FastAPI.add_api_route of <fastapi.applications.FastAPI object at 0x7f6322644250>>. This may be an oversight.
+================================================================================
+Variable: 
+
+	FailTuple(add_api_route [obj=<bound method FastAPI.add_api_route of <fastapi.applications.FastAPI object at 0x7f6322644250>>, parent=<fastapi.applications.FastAPI object at 0x7f6322644250>])
+
+was found to be non-serializable. There may be multiple other undetected variables that were non-serializable. 
+Consider either removing the instantiation/imports of these variables or moving the instantiation into the scope of the function/class. 
+================================================================================
+Check https://docs.ray.io/en/master/ray-core/objects/serialization.html#troubleshooting for more information.
+If you have any suggestions on how to improve this error message, please reach out to the Ray developers on github.com/ray-project/ray/issues/
+================================================================================
+

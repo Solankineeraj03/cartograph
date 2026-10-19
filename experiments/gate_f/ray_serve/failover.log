@@ -1,0 +1,92 @@
+2026-10-18 12:17:41,505	INFO worker.py:1771 -- Connecting to existing Ray cluster at address: gpu-host:46331...
+2026-10-18 12:17:41,516	INFO worker.py:1951 -- Connected to Ray cluster.
+Traceback (most recent call last):
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/home/user/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/user/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/home/user/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connection.py", line 254, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='127.0.0.1', port=8265): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8265): Max retries exceeded with url: /api/v0/actors?limit=100&timeout=24&detail=False&filter_keys=state&filter_predicates=%3D&filter_values=ALIVE&exclude_driver=True&server_timeout_multiplier=0.8 (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8265): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/util/state/api.py", line 193, in _make_http_get_request
+    response = self._do_request(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/dashboard/modules/dashboard_sdk.py", line 303, in _do_request
+    return requests.request(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8265): Max retries exceeded with url: /api/v0/actors?limit=100&timeout=24&detail=False&filter_keys=state&filter_predicates=%3D&filter_values=ALIVE&exclude_driver=True&server_timeout_multiplier=0.8 (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8265): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/cartograph/repo/cartograph/serve_eval.py", line 129, in <module>
+    main()
+  File "/home/user/cartograph/repo/cartograph/serve_eval.py", line 125, in main
+    args.func(args)
+  File "/home/user/cartograph/repo/cartograph/serve_eval.py", line 82, in cmd_failover
+    actors = [a for a in list_actors(filters=[("state", "=", "ALIVE")]) if "Generator" in (a.class_name or "")]
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/util/state/api.py", line 817, in list_actors
+    return StateApiClient(address=address).list(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/util/state/api.py", line 495, in list
+    list_api_response = self._make_http_get_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/util/state/api.py", line 220, in _make_http_get_request
+    raise ServerUnavailable(err_str)
+ray.util.state.exception.ServerUnavailable: Failed to make request to http://127.0.0.1:8265/api/v0/actors. Failed to connect to API server. Please check the API server log for details. Make sure dependencies are installed with `pip install ray[default]`. Please also check dashboard is available, and included when starting ray cluster, i.e. `ray start --include-dashboard=True --head`. 

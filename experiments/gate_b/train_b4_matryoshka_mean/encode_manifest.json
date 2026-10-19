@@ -1,0 +1,44 @@
+{
+  "model": "/home/user/cartograph/checkpoints/encoders/b4_matryoshka_mean",
+  "revision": null,
+  "trained_checkpoint": true,
+  "device": "cpu",
+  "fp32": false,
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "timings_s": {
+    "products": 4955.330545721001,
+    "queries_dev": 0.8796337579988176,
+    "queries_test": 3.679863375997229
+  },
+  "checkpoint_config": {
+    "pooling": "mean",
+    "base": "sentence-transformers/all-MiniLM-L6-v2",
+    "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "objective": "contrastive",
+    "matryoshka": [
+      384,
+      256,
+      128,
+      64
+    ],
+    "steps": 1000,
+    "seed": 13,
+    "slice_id": "728e301ef1fb"
+  },
+  "sha256": {
+    "products.npy": "d3ee9e9126cae1a289c4ccfc7f56e254e2fb70bb0842b0a9d53236027b78e110",
+    "queries_dev.npy": "45f17cbf2d2d738fab14912744a066667ab97ff215d925f5b0e364bd419838a2",
+    "queries_test.npy": "8833bf330a72d8828151fe24b5da291dba1caa39e2f88281412bc1173e45f9a4"
+  },
+  "slice_id": "728e301ef1fb"
+}

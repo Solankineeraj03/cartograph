@@ -1,0 +1,82 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/cartograph/repo/cartograph/encode.py", line 77, in <module>
+    main()
+  File "/home/user/cartograph/repo/cartograph/encode.py", line 62, in main
+    np.save(target, encode(products.text.tolist(), 256))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/repo/cartograph/encode.py", line 39, in <lambda>
+    encode = lambda texts, max_len: encoder.encode(texts, max_len, args.batch_size, bf16=not args.fp32)  # noqa: E731
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/repo/cartograph/encoders.py", line 61, in encode
+    vectors = self([texts[i] for i in index], max_length)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/repo/cartograph/encoders.py", line 47, in forward
+    hidden = self.model(**batch).last_hidden_state
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/transformers/models/bert/modeling_bert.py", line 1142, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/transformers/models/bert/modeling_bert.py", line 695, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/transformers/models/bert/modeling_bert.py", line 627, in forward
+    layer_output = apply_chunking_to_forward(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/transformers/pytorch_utils.py", line 260, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/transformers/models/bert/modeling_bert.py", line 639, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/transformers/models/bert/modeling_bert.py", line 539, in forward
+    hidden_states = self.dense(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: unknown error
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

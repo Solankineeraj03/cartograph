@@ -1,0 +1,13 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "vectors": "/home/user/cartograph/data/vectors/b1_pca256",
+  "qdrant": "/home/user/cartograph/opt/qdrant-1.19.0/qdrant",
+  "work": "/home/user/cartograph/work/qdrant_b1_pca256",
+  "evidence": "/home/user/cartograph/runs/gate_b/ann_b1_pca256",
+  "port": 6343,
+  "builds": "16:100,32:200",
+  "efs": "16,32,64,128,256",
+  "select_recall": 0.95,
+  "max_queries": 2000,
+  "seed": 13
+}

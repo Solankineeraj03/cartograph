@@ -1,0 +1,1601 @@
+{
+ "recorded_at_utc": "2026-10-19T06:27:28.027206+00:00",
+ "backend": {
+  "release": "2406781e60ea",
+  "model": "sft_merged",
+  "feature_watermark": {
+   "as_of": "2026-10-01T02:00:00+00:00",
+   "export_tag": "ingest_2",
+   "snapshot_ids": {
+    "price": 7213477351932751475,
+    "stock": 8033777127656018672,
+    "popularity": 583474201836631185
+   }
+  },
+  "catalog_products": 14678,
+  "categories": [
+   "charger",
+   "headphones",
+   "keyboard",
+   "keyboard_mouse_combo",
+   "laptop_stand",
+   "microphone",
+   "monitor",
+   "mouse",
+   "mouse_pad",
+   "speaker",
+   "usb_hub",
+   "webcam"
+  ]
+ },
+ "examples": [
+  {
+   "label": "Quiet keyboard + mouse under $100",
+   "status": 200,
+   "trace": {
+    "request_id": "aebe01dc-6b2c-4714-855f-cc2cfe575b9d",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a quiet wireless keyboard and mouse bundle under $100. Only include available products and explain the tradeoffs.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.2408259897492826,
+     "retrieve": 4.867017007200047,
+     "features": 3.7572380097117275,
+     "solve": 0.2574669779278338,
+     "generate_and_verify": 729.2047850205563,
+     "total": 738.3419830002822,
+     "llm_calls": 1
+    },
+    "parsed": {
+     "required_categories": [
+      "keyboard",
+      "mouse"
+     ],
+     "budget_cents": 10000,
+     "adjective": "quiet wireless",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+     "B07RK2RZ4B",
+     "B07FLKYRFB",
+     "B086JHXL7W",
+     "B01ER4B7K6",
+     "B075KMZ4MX",
+     "B07KCRTN9Q",
+     "B07VHZFSN9",
+     "B085VK6KFL",
+     "B08CBC64S3",
+     "B07Q7G5ML6",
+     "B071D14RLB",
+     "B07X4D3BR6",
+     "B07QMRCXBQ",
+     "B079YL79ZC",
+     "B07KNS34ZD",
+     "B00ZR6GZ42"
+    ],
+    "evidence": [
+     {
+      "product_id": "B07RK2RZ4B",
+      "category": "keyboard",
+      "price_cents": 1899,
+      "in_stock": true,
+      "retrieval_score": 11.3139,
+      "title": "Wireless Keyboard,J JOYACCESS Full Size Rechargeable Quiet Thin Keyboard Wireless for Laptop,Computer,Desktop,PC,Surface"
+     },
+     {
+      "product_id": "B07FLKYRFB",
+      "category": "keyboard",
+      "price_cents": 5699,
+      "in_stock": true,
+      "retrieval_score": 10.853,
+      "title": "KLIM Chroma Rechargeable Wireless Gaming Keyboard + Slim, Durable, Ergonomic, Quiet, Waterproof, Silent Keys + Backlit W"
+     },
+     {
+      "product_id": "B086JHXL7W",
+      "category": "keyboard",
+      "price_cents": 2699,
+      "in_stock": false,
+      "retrieval_score": 10.853,
+      "title": "Seenda Wireless Bluetooth Keyboard - Universal Rechargeable Wireless Keyboard with Number Pad Full-Size Ergonomic Slim Q"
+     },
+     {
+      "product_id": "B01ER4B7K6",
+      "category": "keyboard",
+      "price_cents": 3899,
+      "in_stock": true,
+      "retrieval_score": 10.1786,
+      "title": "CORSAIR K70 Mechanical Gaming Keyboard - USB Passthrough & Media Controls - Tactile & Quiet - Cherry MX Brown"
+     },
+     {
+      "product_id": "B075KMZ4MX",
+      "category": "keyboard",
+      "price_cents": 7099,
+      "in_stock": false,
+      "retrieval_score": 9.6282,
+      "title": "Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functio"
+     },
+     {
+      "product_id": "B07KCRTN9Q",
+      "category": "keyboard",
+      "price_cents": 3099,
+      "in_stock": true,
+      "retrieval_score": 9.6282,
+      "title": "Redragon K582 SURARA RGB LED Backlit Mechanical Gaming Keyboard with 104 Keys-Linear and Quiet-Red Switches"
+     },
+     {
+      "product_id": "B07VHZFSN9",
+      "category": "keyboard",
+      "price_cents": 2599,
+      "in_stock": true,
+      "retrieval_score": 9.5205,
+      "title": "Redragon K511 PRO RGB Gaming Keyboard Wired LED Backlit Programmable Macro Keyboard 104 Keys Quiet Silent Membrane Keybo"
+     },
+     {
+      "product_id": "B085VK6KFL",
+      "category": "keyboard",
+      "price_cents": 3599,
+      "in_stock": false,
+      "retrieval_score": 9.3721,
+      "title": "NPET K10 Gaming Keyboard USB Wired Floating Keyboard, Quiet Ergonomic Water-Resistant Mechanical Feeling Keyboard, Ultra"
+     },
+     {
+      "product_id": "B08CBC64S3",
+      "category": "mouse",
+      "price_cents": 2199,
+      "in_stock": false,
+      "retrieval_score": 12.2859,
+      "title": "Macally Wireless Bluetooth Mouse Rechargeable - Simple Workspace Bluetooth Mouse for Laptop, Desktop PC, Mac, MacBook Pr"
+     },
+     {
+      "product_id": "B07Q7G5ML6",
+      "category": "mouse",
+      "price_cents": 9299,
+      "in_stock": true,
+      "retrieval_score": 12.2121,
+      "title": "Left-Handed Mouse, Jelly Comb Wireless 2.4GHz Left Hand Ergonomic Vertical Mouse with USB Receiver, Sensitive and Quiet "
+     },
+     {
+      "product_id": "B071D14RLB",
+      "category": "mouse",
+      "price_cents": 1099,
+      "in_stock": false,
+      "retrieval_score": 11.571,
+      "title": "Bluetooth Mouse FENIFOX Slim Mini Whisper-Quiet Flat Portable Wireless Mice Rechargeable Compatible with Laptop,PC,Table"
+     },
+     {
+      "product_id": "B07X4D3BR6",
+      "category": "mouse",
+      "price_cents": 2099,
+      "in_stock": false,
+      "retrieval_score": 11.5083,
+      "title": "Logitech Pebble M350 Wireless Mouse with Bluetooth or USB - Silent, Slim Computer Mouse with Quiet Click for iPad, Lapto"
+     },
+     {
+      "product_id": "B07QMRCXBQ",
+      "category": "mouse",
+      "price_cents": 1499,
+      "in_stock": true,
+      "retrieval_score": 10.2016,
+      "title": "Bluetooth Mouse for Laptop/iPad/iPhone/Mac(iOS 13.1.2 and Later Version Only)/Android PC,Wireless Mouse Slim USB Recharg"
+     },
+     {
+      "product_id": "B079YL79ZC",
+      "category": "mouse",
+      "price_cents": 1699,
+      "in_stock": true,
+      "retrieval_score": 8.0001,
+      "title": "Logitech Wireless Performance Plus Mouse for PC and Mac, Large Mouse, Long Range Wireless Mouse"
+     },
+     {
+      "product_id": "B07KNS34ZD",
+      "category": "mouse",
+      "price_cents": 2899,
+      "in_stock": true,
+      "retrieval_score": 7.9176,
+      "title": "Bluetooth Mouse Rechargeable Wireless Mouse for MacBook Pro,Bluetooth Wireless Mouse for Laptop PC Computer (Silver)"
+     },
+     {
+      "product_id": "B00ZR6GZ42",
+      "category": "mouse",
+      "price_cents": 4499,
+      "in_stock": false,
+      "retrieval_score": 7.639,
+      "title": "Logitech Wireless Mouse M185 - Silver"
+     }
+    ],
+    "oracle": {
+     "feasible": true,
+     "reasons": [],
+     "bundle": {
+      "product_ids": [
+       "B07RK2RZ4B",
+       "B07QMRCXBQ"
+      ],
+      "total_cents": 3398
+     },
+     "score": 21.5155
+    },
+    "attempts": [
+     {
+      "text": "{\"decision\": \"bundle\", \"product_ids\": [\"B07RK2RZ4B\", \"B07QMRCXBQ\"], \"total_cents\": 3398, \"explanation\": \"Selected [B07RK2RZ4B] keyboard at 1899 cents and [B07QMRCXBQ] mouse at 1499 cents; total 3398 of 10000 cents, all in stock. Tradeoff: [B07KCRTN9Q] is 500 cents cheaper but matched the request less closely.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": true,
+       "format_ok": true,
+       "decision": "bundle",
+       "valid_bundle": true,
+       "correct": true,
+       "errors": [],
+       "uncited_ids": [],
+       "optimality_gap": 0.0
+      }
+     }
+    ],
+    "decision": "verified_bundle",
+    "answer": {
+     "decision": "bundle",
+     "product_ids": [
+      "B07RK2RZ4B",
+      "B07QMRCXBQ"
+     ],
+     "total_cents": 3398,
+     "explanation": "Selected [B07RK2RZ4B] keyboard at 1899 cents and [B07QMRCXBQ] mouse at 1499 cents; total 3398 of 10000 cents, all in stock. Tradeoff: [B07KCRTN9Q] is 500 cents cheaper but matched the request less closely."
+    },
+    "correct_vs_oracle": true
+   }
+  },
+  {
+   "label": "Webcam + microphone under $150",
+   "status": 200,
+   "trace": {
+    "request_id": "b08a8026-88c7-4e82-835a-a1c08236ba04",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a webcam and microphone bundle under $150.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.19958498887717724,
+     "retrieve": 4.504406999330968,
+     "features": 4.688332002842799,
+     "solve": 0.18545499187894166,
+     "generate_and_verify": 615.7415100024082,
+     "total": 625.3335200017318,
+     "llm_calls": 1
+    },
+    "parsed": {
+     "required_categories": [
+      "webcam",
+      "microphone"
+     ],
+     "budget_cents": 15000,
+     "adjective": "",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+     "B086MRSGBV",
+     "B07R3KKBPD",
+     "B01DBM07MY",
+     "B003PAIV2Q",
+     "B07ZFFR7B8",
+     "B07V31V8W9",
+     "B0876TG13V",
+     "B08HQ5NMHD",
+     "B07C3RDLFF",
+     "B082RXPSC4",
+     "B08LP1MF7X",
+     "B002SMYUFY",
+     "B000MYIIRG",
+     "B0041NY4DG",
+     "B07NRD9FMD",
+     "B0899B2R2F"
+    ],
+    "evidence": [
+     {
+      "product_id": "B086MRSGBV",
+      "category": "webcam",
+      "price_cents": 5599,
+      "in_stock": true,
+      "retrieval_score": 7.5388,
+      "title": "joupugi PC Webcam, 720P Full HD Webcam USB Desktop & Laptop Webcam Live Streaming Webcam with Microphone Widescreen HD V"
+     },
+     {
+      "product_id": "B07R3KKBPD",
+      "category": "webcam",
+      "price_cents": 2599,
+      "in_stock": true,
+      "retrieval_score": 7.4792,
+      "title": "PC Webcam, TedGem 1080P Full HD Webcam USB Desktop & Laptop Webcam Live Streaming Webcam with Microphone Widescreen HD V"
+     },
+     {
+      "product_id": "B01DBM07MY",
+      "category": "webcam",
+      "price_cents": 2499,
+      "in_stock": true,
+      "retrieval_score": 7.2902,
+      "title": "Tripod for Webcam, Logitech Webcam Tripod for Logitech Webcam C922x C922 C930e C930 C920 C615-Silver"
+     },
+     {
+      "product_id": "B003PAIV2Q",
+      "category": "webcam",
+      "price_cents": 7299,
+      "in_stock": true,
+      "retrieval_score": 7.1948,
+      "title": "Logitech HD Webcam C310"
+     },
+     {
+      "product_id": "B07ZFFR7B8",
+      "category": "webcam",
+      "price_cents": 5799,
+      "in_stock": true,
+      "retrieval_score": 7.1583,
+      "title": "HD Pro Webcam, TedGem 8MP Fixed Focus 4K/1080P Full HD Webcam USB Webcam Desktop Laptop Camera Live Streaming Webcam Bui"
+     },
+     {
+      "product_id": "B07V31V8W9",
+      "category": "webcam",
+      "price_cents": 3299,
+      "in_stock": true,
+      "retrieval_score": 6.9338,
+      "title": "Anivia Webcam Stand,Webcam Clamp Mount Suspension Scissor Tripod Stand Holder Camera arm for Webcam W8 W5 C922 C930e C93"
+     },
+     {
+      "product_id": "B0876TG13V",
+      "category": "webcam",
+      "price_cents": 8399,
+      "in_stock": false,
+      "retrieval_score": 6.8676,
+      "title": "HD Pro Webcam C920, Widescreen Video Calling and Recording, 1080p Camera, Desktop or Laptop Webcam"
+     },
+     {
+      "product_id": "B08HQ5NMHD",
+      "category": "webcam",
+      "price_cents": 3299,
+      "in_stock": false,
+      "retrieval_score": 6.8676,
+      "title": "Webcam with Microphone for Desktop, 1080P HD Computer Camera Streaming Webcam for PC Laptop Black"
+     },
+     {
+      "product_id": "B07C3RDLFF",
+      "category": "microphone",
+      "price_cents": 3999,
+      "in_stock": true,
+      "retrieval_score": 3.9269,
+      "title": "Lumiparty Kids Microphone Karaoke Microphone Machine, Music Microphone,Voice Changing and Recording Microphone with Colo"
+     },
+     {
+      "product_id": "B082RXPSC4",
+      "category": "microphone",
+      "price_cents": 6499,
+      "in_stock": true,
+      "retrieval_score": 3.9269,
+      "title": "Mini Microphone,Tiny Microphone, Portable Microphone/Instrument Microphone for Man/Pet Voice Recording Shouting and Sing"
+     },
+     {
+      "product_id": "B08LP1MF7X",
+      "category": "microphone",
+      "price_cents": 8699,
+      "in_stock": true,
+      "retrieval_score": 3.8481,
+      "title": "Little Pretender Kids Microphone | Voice Changer Microphone for Kids | Bluetooth Connectivity and 15 Pre-Installed Nurse"
+     },
+     {
+      "product_id": "B002SMYUFY",
+      "category": "microphone",
+      "price_cents": 12799,
+      "in_stock": true,
+      "retrieval_score": 3.8387,
+      "title": "VO: 1-A Harlan Hogan Signature Series Microphone - The Voice Over Microphone!"
+     },
+     {
+      "product_id": "B000MYIIRG",
+      "category": "microphone",
+      "price_cents": 2699,
+      "in_stock": false,
+      "retrieval_score": 3.8271,
+      "title": "Samson MD5 Desktop Microphone Stand"
+     },
+     {
+      "product_id": "B0041NY4DG",
+      "category": "microphone",
+      "price_cents": 7599,
+      "in_stock": true,
+      "retrieval_score": 3.8271,
+      "title": "Neumann TLM 103 Condenser Microphone"
+     },
+     {
+      "product_id": "B07NRD9FMD",
+      "category": "microphone",
+      "price_cents": 11599,
+      "in_stock": true,
+      "retrieval_score": 3.8271,
+      "title": "MXL Condenser Microphone, White (MXLAC360ZV2WHITE)"
+     },
+     {
+      "product_id": "B0899B2R2F",
+      "category": "microphone",
+      "price_cents": 6999,
+      "in_stock": true,
+      "retrieval_score": 3.8127,
+      "title": "USB Microphone, VIMVIP Microphone for Computer USB Mic for PC Desktop Laptop Condenser Microphone to Recording Podcast G"
+     }
+    ],
+    "oracle": {
+     "feasible": true,
+     "reasons": [],
+     "bundle": {
+      "product_ids": [
+       "B086MRSGBV",
+       "B07C3RDLFF"
+      ],
+      "total_cents": 9598
+     },
+     "score": 11.4657
+    },
+    "attempts": [
+     {
+      "text": "{\"decision\": \"bundle\", \"product_ids\": [\"B086MRSGBV\", \"B07C3RDLFF\"], \"total_cents\": 9598, \"explanation\": \"Selected [B086MRSGBV] webcam at 5599 cents and [B07C3RDLFF] microphone at 3999 cents; total 9598 of 15000 cents, all in stock. Bundle is valid.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": true,
+       "format_ok": true,
+       "decision": "bundle",
+       "valid_bundle": true,
+       "correct": true,
+       "errors": [],
+       "uncited_ids": [],
+       "optimality_gap": 0.0
+      }
+     }
+    ],
+    "decision": "verified_bundle",
+    "answer": {
+     "decision": "bundle",
+     "product_ids": [
+      "B086MRSGBV",
+      "B07C3RDLFF"
+     ],
+     "total_cents": 9598,
+     "explanation": "Selected [B086MRSGBV] webcam at 5599 cents and [B07C3RDLFF] microphone at 3999 cents; total 9598 of 15000 cents, all in stock. Bundle is valid."
+    },
+    "correct_vs_oracle": true
+   }
+  },
+  {
+   "label": "Gaming headphones + microphone under $60",
+   "status": 200,
+   "trace": {
+    "request_id": "40c49134-eced-462d-8607-f6014f644b3d",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a gaming headphones and microphone bundle under $60.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.20824599778279662,
+     "retrieve": 4.744183999719098,
+     "features": 4.119257006095722,
+     "solve": 0.1559140218887478,
+     "generate_and_verify": 336.4775779773481,
+     "total": 345.7208489999175,
+     "llm_calls": 1
+    },
+    "parsed": {
+     "required_categories": [
+      "headphones",
+      "microphone"
+     ],
+     "budget_cents": 6000,
+     "adjective": "gaming",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+     "B071S9RGB1",
+     "B07DM7JFVW",
+     "B07KXMMXKP",
+     "B0725JXRBN",
+     "B07R4R75DP",
+     "B084CWCJTW",
+     "B07C7R6WXN",
+     "B0836W22JF",
+     "B00BJ17WKK",
+     "B0899B2R2F",
+     "B08BPD1C6X",
+     "B08J3KK3PY",
+     "B07VTN55D3",
+     "B0863PHS7Q",
+     "B07Y1C6GDS",
+     "B07QVNXBDL"
+    ],
+    "evidence": [
+     {
+      "product_id": "B071S9RGB1",
+      "category": "headphones",
+      "price_cents": 6099,
+      "in_stock": false,
+      "retrieval_score": 6.1871,
+      "title": "ASTRO Gaming A10 Gaming Headset - Black/Red - PC"
+     },
+     {
+      "product_id": "B07DM7JFVW",
+      "category": "headphones",
+      "price_cents": 9399,
+      "in_stock": false,
+      "retrieval_score": 5.8602,
+      "title": "ASTRO Gaming A40 TR Gaming Headset for PC, Mac - Black(Renewed)"
+     },
+     {
+      "product_id": "B07KXMMXKP",
+      "category": "headphones",
+      "price_cents": 6799,
+      "in_stock": false,
+      "retrieval_score": 5.7938,
+      "title": "NUBWO Gaming headsets PS4 N7 Stereo Xbox one Headset Wired PC Gaming Headphones with Noise Canceling Mic , Over Ear Gami"
+     },
+     {
+      "product_id": "B0725JXRBN",
+      "category": "headphones",
+      "price_cents": 2599,
+      "in_stock": true,
+      "retrieval_score": 5.7274,
+      "title": "ASUS Gaming Headset ROG Centurion with USB Control Box | True 7.1 Stereo Surround Sound | Gaming Headphones with Mic"
+     },
+     {
+      "product_id": "B07R4R75DP",
+      "category": "headphones",
+      "price_cents": 16499,
+      "in_stock": true,
+      "retrieval_score": 5.7138,
+      "title": "Pacrate Gaming Headset with Microphone for Laptop Computer PC Xbox Headset Noise Cancelling Headphones with Microphone S"
+     },
+     {
+      "product_id": "B084CWCJTW",
+      "category": "headphones",
+      "price_cents": 9799,
+      "in_stock": true,
+      "retrieval_score": 5.6817,
+      "title": "JBL Quantum 100 - Wired Over-Ear Gaming Headphones - Black"
+     },
+     {
+      "product_id": "B07C7R6WXN",
+      "category": "headphones",
+      "price_cents": 9399,
+      "in_stock": true,
+      "retrieval_score": 5.5769,
+      "title": "Gaming Headset SADES SA807 Gaming Headphone 3.5mm Plug Wired Stereo Over Ear Headphones for Multi-Platform with Mic Volu"
+     },
+     {
+      "product_id": "B0836W22JF",
+      "category": "headphones",
+      "price_cents": 3899,
+      "in_stock": false,
+      "retrieval_score": 5.5769,
+      "title": "Wireless Gaming Headset for PS5 PS4 Nintendo Switch PC Laptop, Wireless Headset Over Ear 2.4GHz USB Connection Gaming He"
+     },
+     {
+      "product_id": "B00BJ17WKK",
+      "category": "microphone",
+      "price_cents": 5699,
+      "in_stock": true,
+      "retrieval_score": 6.9715,
+      "title": "V-MODA BoomPro Microphone for Gaming & Communication - Black"
+     },
+     {
+      "product_id": "B0899B2R2F",
+      "category": "microphone",
+      "price_cents": 6999,
+      "in_stock": true,
+      "retrieval_score": 6.3764,
+      "title": "USB Microphone, VIMVIP Microphone for Computer USB Mic for PC Desktop Laptop Condenser Microphone to Recording Podcast G"
+     },
+     {
+      "product_id": "B08BPD1C6X",
+      "category": "microphone",
+      "price_cents": 4599,
+      "in_stock": false,
+      "retrieval_score": 5.9323,
+      "title": "Studio USB Condenser Microphone, ikedon Professional 192kHz/24bit Cardioid Recording Microphone, Plug&Play Computer Micr"
+     },
+     {
+      "product_id": "B08J3KK3PY",
+      "category": "microphone",
+      "price_cents": 3899,
+      "in_stock": true,
+      "retrieval_score": 5.8123,
+      "title": "2020 Latest HyperX QuadCast - USB QuadCast Gaming Condenser Microphone, PC, PS4, Mac,Podcasts, Twitch, YouTube with Gall"
+     },
+     {
+      "product_id": "B07VTN55D3",
+      "category": "microphone",
+      "price_cents": 7099,
+      "in_stock": true,
+      "retrieval_score": 5.7685,
+      "title": "BOYA USB Condenser Microphone for Recording Streaming Gaming,Podcast Microphone for PC/Mac/iOS/Android Capacitive Mute A"
+     },
+     {
+      "product_id": "B0863PHS7Q",
+      "category": "microphone",
+      "price_cents": 31599,
+      "in_stock": true,
+      "retrieval_score": 5.7685,
+      "title": "BOYA USB Condenser Microphone for Recording Streaming Gaming,Podcast Microphone for PC/Mac/iOS/Android Capacitive Mute A"
+     },
+     {
+      "product_id": "B07Y1C6GDS",
+      "category": "microphone",
+      "price_cents": 8399,
+      "in_stock": true,
+      "retrieval_score": 5.5513,
+      "title": "FIFINE Studio Condenser USB Microphone Computer PC Microphone Kit with Adjustable Scissor Arm Stand Shock Mount for Inst"
+     },
+     {
+      "product_id": "B07QVNXBDL",
+      "category": "microphone",
+      "price_cents": 4199,
+      "in_stock": true,
+      "retrieval_score": 5.5384,
+      "title": "USB Microphone Kit 192KHZ/24BIT MAONO AU-A04T PC Condenser Podcast Streaming Cardioid Mic Plug & Play for Computer, YouT"
+     }
+    ],
+    "oracle": {
+     "feasible": false,
+     "reasons": [
+      "over_budget:cheapest_6498_cents"
+     ],
+     "bundle": null,
+     "cheapest_total_cents": 6498
+    },
+    "attempts": [
+     {
+      "text": "{\"decision\": \"infeasible\", \"product_ids\": [], \"total_cents\": 0, \"explanation\": \"No valid bundle: the cheapest in-stock combination costs 6198 cents, above the 6000-cent budget.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": false,
+       "format_ok": true,
+       "decision": "infeasible",
+       "valid_bundle": false,
+       "correct": true,
+       "errors": [],
+       "uncited_ids": [],
+       "optimality_gap": null
+      }
+     }
+    ],
+    "decision": "abstain_with_reason",
+    "answer": {
+     "decision": "infeasible",
+     "product_ids": [],
+     "total_cents": 0,
+     "explanation": "No valid bundle: the cheapest in-stock combination costs 6198 cents, above the 6000-cent budget."
+    },
+    "correct_vs_oracle": true
+   }
+  },
+  {
+   "label": "Keyboard-mouse combo + mouse pad under $50",
+   "status": 200,
+   "trace": {
+    "request_id": "8ad59f1b-3592-4bbe-86ba-0f04a3180a4b",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a wireless keyboard mouse combo and mouse pad bundle under $50.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.17643498722463846,
+     "retrieve": 4.454236011952162,
+     "features": 3.994364000391215,
+     "solve": 0.246387004153803,
+     "generate_and_verify": 1635.1531370019075,
+     "total": 1644.0388390037697,
+     "llm_calls": 2
+    },
+    "parsed": {
+     "required_categories": [
+      "keyboard_mouse_combo",
+      "mouse_pad"
+     ],
+     "budget_cents": 5000,
+     "adjective": "wireless",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+     "B07XDWCLYF",
+     "B074WH7LD3",
+     "B087G13144",
+     "B084VJM8T8",
+     "B08C544J5G",
+     "B07XNNLN9N",
+     "B08CMMW5Y4",
+     "B07WV12VTL",
+     "B088TGTXZJ",
+     "B00T3YKV9O",
+     "B072C93TQL",
+     "B07D33ZV9R",
+     "B07QXRQ5Y3",
+     "B07Q2978NJ",
+     "B08B554NVT",
+     "B08TR9XLLT"
+    ],
+    "evidence": [
+     {
+      "product_id": "B07XDWCLYF",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 4699,
+      "in_stock": true,
+      "retrieval_score": 17.1192,
+      "title": "Wireless Keyboard and Mouse, WisFox Full-Size Wireless Mouse and Keyboard Combo, 2.4GHz Silent USB Wireless Keyboard Mou"
+     },
+     {
+      "product_id": "B074WH7LD3",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 2899,
+      "in_stock": false,
+      "retrieval_score": 15.447,
+      "title": "logitech MK850 Performance Wireless Keyboard and Mouse Combo(Renewed)"
+     },
+     {
+      "product_id": "B087G13144",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 1699,
+      "in_stock": false,
+      "retrieval_score": 14.5754,
+      "title": "Wireless Keyboard and Mouse, WisFox 2.4GHz Compact Keyboard Mouse Combo, Small Quiet USB Laptop Keyboard Portable Mini W"
+     },
+     {
+      "product_id": "B084VJM8T8",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 3099,
+      "in_stock": false,
+      "retrieval_score": 14.3787,
+      "title": "Wireless Keyboard and Mouse, UHURU 2.4GHz USB Full-Sized Keyboard and Mouse Combo, Wireless Keyboard with Palm Rest, 3 L"
+     },
+     {
+      "product_id": "B08C544J5G",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 3499,
+      "in_stock": true,
+      "retrieval_score": 13.7015,
+      "title": "Wireless Keyboard Mouse Combo, 2.4GHz White Wireless Keyboard Typewriter, Letton Full Size Office Computer Retro Keyboar"
+     },
+     {
+      "product_id": "B07XNNLN9N",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 2499,
+      "in_stock": false,
+      "retrieval_score": 13.5362,
+      "title": "Wireless Keyboard and Mouse Combo Silent, RATEL 2.4GHz Ultra-Thin Full Sized Wireless Keyboard Mouse Set with USB Receiv"
+     },
+     {
+      "product_id": "B08CMMW5Y4",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 2699,
+      "in_stock": true,
+      "retrieval_score": 13.4494,
+      "title": "Wireless Keyboard and Mouse Combo, seenda Ultra Quiet Full Size Rechargeable Keyboard Mouse Set with Long Battery Life 3"
+     },
+     {
+      "product_id": "B07WV12VTL",
+      "category": "keyboard_mouse_combo",
+      "price_cents": 1499,
+      "in_stock": false,
+      "retrieval_score": 13.3855,
+      "title": "Wireless Keyboard and Mouse Combo, Kolaura Ultra Thin Rechargeable Full Size 2.4GHz Keyboard Mouse Set for Windows, Lapt"
+     },
+     {
+      "product_id": "B088TGTXZJ",
+      "category": "mouse_pad",
+      "price_cents": 899,
+      "in_stock": false,
+      "retrieval_score": 12.3495,
+      "title": "Marvel Heroes Mouse Pad Office Mouse Pad Gaming Mouse Pad Mat Mouse Pad"
+     },
+     {
+      "product_id": "B00T3YKV9O",
+      "category": "mouse_pad",
+      "price_cents": 899,
+      "in_stock": false,
+      "retrieval_score": 11.7306,
+      "title": "Colorful Bubbles Mousepad Anti-Slip Mouse Pad Mat Mice Mousepad Desktop Mouse Pad Laptop Mouse Pad Gaming Mouse Pad"
+     },
+     {
+      "product_id": "B072C93TQL",
+      "category": "mouse_pad",
+      "price_cents": 3099,
+      "in_stock": true,
+      "retrieval_score": 11.1863,
+      "title": "VictSing Ergonomic Mouse Pad, Mouse Pad with Gel Wrist Support Wrist Rest, Large Mouse Pad Pain Relief Non-Slip PU Base "
+     },
+     {
+      "product_id": "B07D33ZV9R",
+      "category": "mouse_pad",
+      "price_cents": 4899,
+      "in_stock": true,
+      "retrieval_score": 10.7808,
+      "title": "Pingpi Gaming Mouse Pad Custom,Rainbow Ocean Round Mouse Pad"
+     },
+     {
+      "product_id": "B07QXRQ5Y3",
+      "category": "mouse_pad",
+      "price_cents": 1299,
+      "in_stock": true,
+      "retrieval_score": 9.9383,
+      "title": "2.4 GHz Wireless Mouse, Six-Button Silent Wireless Computer Mice with 1200/1600/2400 Adjustable Portable USB Mouse for D"
+     },
+     {
+      "product_id": "B07Q2978NJ",
+      "category": "mouse_pad",
+      "price_cents": 1799,
+      "in_stock": false,
+      "retrieval_score": 9.8715,
+      "title": "Oriday Productivity Mouse Pad, Gaming Mouse Pad Custom, Inspirational and Motivational Design for Women (Black Chic)"
+     },
+     {
+      "product_id": "B08B554NVT",
+      "category": "mouse_pad",
+      "price_cents": 3399,
+      "in_stock": true,
+      "retrieval_score": 9.5985,
+      "title": "ILAVSHON Gaming Mouse Pad Neoprene Non-Slip Mouse Mat"
+     },
+     {
+      "product_id": "B08TR9XLLT",
+      "category": "mouse_pad",
+      "price_cents": 799,
+      "in_stock": true,
+      "retrieval_score": 9.531,
+      "title": "RGB Gaming Mouse Pad, LED Soft Extra Extended Large Mouse Pad, Anti-Slip Rubber Base, Computer Keyboard Mouse Mat - 31.5"
+     }
+    ],
+    "oracle": {
+     "feasible": true,
+     "reasons": [],
+     "bundle": {
+      "product_ids": [
+       "B08C544J5G",
+       "B07QXRQ5Y3"
+      ],
+      "total_cents": 4798
+     },
+     "score": 23.6398
+    },
+    "attempts": [
+     {
+      "text": "{\"decision\": \"bundle\", \"product_ids\": [\"B07XDWCLYF\", \"B072C93TQL\"], \"total_cents\": 7798, \"explanation\": \"Selected [B07XDWCLYF] keyboard mouse combo at 4699 cents and [B072C93TQL] mouse pad at 3099 cents; total 7798 of 5000 cents, all in stock. The cheapest in the evidence is [B08C544J5G] at 3499 cents, but the combination is above the 5000-cent budget.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": true,
+       "format_ok": true,
+       "decision": "bundle",
+       "valid_bundle": false,
+       "correct": false,
+       "errors": [
+        "over_budget"
+       ],
+       "uncited_ids": [],
+       "optimality_gap": null
+      }
+     },
+     {
+      "text": "{\"decision\": \"bundle\", \"product_ids\": [\"B08C544J5G\", \"B072C93TQL\"], \"total_cents\": 6598, \"explanation\": \"Selected [B08C544J5G] keyboard mouse combo at 3499 cents and [B072C93TQL] mouse pad at 3099 cents; total 6598 of 5000 cents, all in stock. The cheapest in the evidence is [B08C544J5G] at 3499 cents, but the combination is above the 5000-cent budget.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": true,
+       "format_ok": true,
+       "decision": "bundle",
+       "valid_bundle": false,
+       "correct": false,
+       "errors": [
+        "over_budget"
+       ],
+       "uncited_ids": [],
+       "optimality_gap": null
+      }
+     }
+    ],
+    "decision": "withheld_unverified",
+    "answer": {
+     "decision": "bundle",
+     "product_ids": [
+      "B08C544J5G",
+      "B072C93TQL"
+     ],
+     "total_cents": 6598,
+     "explanation": "Selected [B08C544J5G] keyboard mouse combo at 3499 cents and [B072C93TQL] mouse pad at 3099 cents; total 6598 of 5000 cents, all in stock. The cheapest in the evidence is [B08C544J5G] at 3499 cents, but the combination is above the 5000-cent budget."
+    },
+    "correct_vs_oracle": false
+   }
+  },
+  {
+   "label": "Monitor + laptop stand under $150",
+   "status": 200,
+   "trace": {
+    "request_id": "8d11067e-b44c-410f-9ed1-1abab175a46b",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a monitor and laptop stand bundle under $150.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.15796400839462876,
+     "retrieve": 3.677465982036665,
+     "features": 3.588004008634016,
+     "solve": 0.15551398973912,
+     "generate_and_verify": 924.2733400024008,
+     "total": 931.8651189969387,
+     "llm_calls": 2
+    },
+    "parsed": {
+     "required_categories": [
+      "monitor",
+      "laptop_stand"
+     ],
+     "budget_cents": 15000,
+     "adjective": "",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+     "B0123J0DRA",
+     "B08DGZCPSW",
+     "B01D3BDXQA",
+     "B015G2MYLO",
+     "B003HT88JQ",
+     "B007HRRAJ8",
+     "B008OJ7C6Y",
+     "B00Y7OMI0U",
+     "B07YKL62TX",
+     "B07T4G7RJY",
+     "B07FBBK8CY",
+     "B01KLE7UAW",
+     "B00J0823FI",
+     "B079DNGNGQ",
+     "B07VKRJNHF",
+     "B01M69KU15"
+    ],
+    "evidence": [
+     {
+      "product_id": "B0123J0DRA",
+      "category": "monitor",
+      "price_cents": 18699,
+      "in_stock": false,
+      "retrieval_score": 3.9929,
+      "title": "Clearblue Advanced Fertility Monitor, Touch Screen Monitor, 1ct"
+     },
+     {
+      "product_id": "B08DGZCPSW",
+      "category": "monitor",
+      "price_cents": 14199,
+      "in_stock": false,
+      "retrieval_score": 3.947,
+      "title": "OneTouch Verio Flex Blood Glucose Monitor - Blood Sugar Monitor"
+     },
+     {
+      "product_id": "B01D3BDXQA",
+      "category": "monitor",
+      "price_cents": 12299,
+      "in_stock": true,
+      "retrieval_score": 3.9298,
+      "title": "SAMSUNG 32 inch CF391 Curved Monitor (LC32F391FWNXZA) - 1080p, Dual Monitor, Laptop Monitor, Monitor Stand/Riser/Mount C"
+     },
+     {
+      "product_id": "B015G2MYLO",
+      "category": "monitor",
+      "price_cents": 11899,
+      "in_stock": false,
+      "retrieval_score": 3.8681,
+      "title": "Home Monitor Remote Lync"
+     },
+     {
+      "product_id": "B003HT88JQ",
+      "category": "monitor",
+      "price_cents": 10899,
+      "in_stock": true,
+      "retrieval_score": 3.7415,
+      "title": "Polar Ft1 Heart Rate Monitor, Black"
+     },
+     {
+      "product_id": "B007HRRAJ8",
+      "category": "monitor",
+      "price_cents": 28199,
+      "in_stock": false,
+      "retrieval_score": 3.7415,
+      "title": "KIB M21VW Micro Monitor System, White"
+     },
+     {
+      "product_id": "B008OJ7C6Y",
+      "category": "monitor",
+      "price_cents": 9699,
+      "in_stock": true,
+      "retrieval_score": 3.7415,
+      "title": "Snuza Hero (SE) Baby Movement Monitor"
+     },
+     {
+      "product_id": "B00Y7OMI0U",
+      "category": "monitor",
+      "price_cents": 44799,
+      "in_stock": true,
+      "retrieval_score": 3.7415,
+      "title": "Kidde RemoteLync Monitor 120V Plug-in"
+     },
+     {
+      "product_id": "B07YKL62TX",
+      "category": "laptop_stand",
+      "price_cents": 3999,
+      "in_stock": true,
+      "retrieval_score": 9.9237,
+      "title": "Portable Folding Laptop Stand Laptop Stand, Adjustable Laptop Stand, Dj Laptop Stand - Black, with Carry Bag, for DJs, H"
+     },
+     {
+      "product_id": "B07T4G7RJY",
+      "category": "laptop_stand",
+      "price_cents": 1699,
+      "in_stock": false,
+      "retrieval_score": 9.6048,
+      "title": "Laptop Stand Adjustable Laptop Computer Stand Multi-Angle Stand Phone Stand Portable Foldable Laptop Riser Notebook Hold"
+     },
+     {
+      "product_id": "B07FBBK8CY",
+      "category": "laptop_stand",
+      "price_cents": 2799,
+      "in_stock": true,
+      "retrieval_score": 8.9954,
+      "title": "Laptop Stand Holder Mount Adjustable Angle Portable Notebook Stand Laptop Support Cooling Stand Tablet Holder Folding De"
+     },
+     {
+      "product_id": "B01KLE7UAW",
+      "category": "laptop_stand",
+      "price_cents": 2699,
+      "in_stock": false,
+      "retrieval_score": 8.8133,
+      "title": "Laptop Stand Cooling Pad Nnewvante Cooler Pad Laptop Desk Laptop Table Bamboo 100% Cooling Fan Stand for Laptops"
+     },
+     {
+      "product_id": "B00J0823FI",
+      "category": "laptop_stand",
+      "price_cents": 2899,
+      "in_stock": false,
+      "retrieval_score": 8.5447,
+      "title": "Hercules Laptop Stand"
+     },
+     {
+      "product_id": "B079DNGNGQ",
+      "category": "laptop_stand",
+      "price_cents": 2299,
+      "in_stock": false,
+      "retrieval_score": 8.4725,
+      "title": "VANKYO Aluminum Tripod Projector Stand, Adjustable Laptop Stand, Multi-Function Stand, Computer Stand Adjustable Height "
+     },
+     {
+      "product_id": "B07VKRJNHF",
+      "category": "laptop_stand",
+      "price_cents": 3299,
+      "in_stock": false,
+      "retrieval_score": 8.3169,
+      "title": "HUANUO Adjustable Laptop Stand for Desk, Adjustable Height Laptop Riser - Easy to Sit or Stand with 9 Adjustable Angles,"
+     },
+     {
+      "product_id": "B01M69KU15",
+      "category": "laptop_stand",
+      "price_cents": 1299,
+      "in_stock": true,
+      "retrieval_score": 8.1211,
+      "title": "Pyle Audio Mobile DJ PA Speaker Stands, Laptop Stand, Multifunction Stand, Adjustable Tripod Laptop Projector Stand, 30\""
+     }
+    ],
+    "oracle": {
+     "feasible": true,
+     "reasons": [],
+     "bundle": {
+      "product_ids": [
+       "B008OJ7C6Y",
+       "B07YKL62TX"
+      ],
+      "total_cents": 13698
+     },
+     "score": 13.6652
+    },
+    "attempts": [
+     {
+      "text": "{\"decision\": \"bundle\", \"product_ids\": [\"B01D3BDXQA\", \"B07YKL62TX\"], \"total_cents\": 16298, \"explanation\": \"Selected [B01D3BDXQA] monitor at 12299 cents and [B07YKL62TX] laptop stand at 3999 cents; total 16298 of 15000 cents, all in stock.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": true,
+       "format_ok": true,
+       "decision": "bundle",
+       "valid_bundle": false,
+       "correct": false,
+       "errors": [
+        "over_budget"
+       ],
+       "uncited_ids": [],
+       "optimality_gap": null
+      }
+     },
+     {
+      "text": "{\"decision\": \"infeasible\", \"product_ids\": [], \"total_cents\": 0, \"explanation\": \"No valid bundle: the cheapest in-stock combination costs 15598 cents, above the 15000-cent budget.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": true,
+       "format_ok": true,
+       "decision": "infeasible",
+       "valid_bundle": false,
+       "correct": false,
+       "errors": [
+        "false_abstention"
+       ],
+       "uncited_ids": [],
+       "optimality_gap": null
+      }
+     }
+    ],
+    "decision": "abstain_with_reason",
+    "answer": {
+     "decision": "infeasible",
+     "product_ids": [],
+     "total_cents": 0,
+     "explanation": "No valid bundle: the cheapest in-stock combination costs 15598 cents, above the 15000-cent budget."
+    },
+    "correct_vs_oracle": false
+   }
+  },
+  {
+   "label": "Impossible budget ($5)",
+   "status": 200,
+   "trace": {
+    "request_id": "1050de14-0cea-409b-8cad-b05b333e136a",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a wireless keyboard and mouse bundle under $5.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.19448500825092196,
+     "retrieve": 4.7575839853379875,
+     "features": 3.466761001618579,
+     "solve": 0.14756401651538908,
+     "generate_and_verify": 329.6796409995295,
+     "total": 338.258865987882,
+     "llm_calls": 1
+    },
+    "parsed": {
+     "required_categories": [
+      "keyboard",
+      "mouse"
+     ],
+     "budget_cents": 500,
+     "adjective": "wireless",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+     "B005HNHRA6",
+     "B002MMY4WY",
+     "B08735C6X5",
+     "B09798BQKY",
+     "B016QO64FI",
+     "B003VAGXWK",
+     "B00LFJBP0Y",
+     "B07QJ4YJ53",
+     "B079YL79ZC",
+     "B07KNS34ZD",
+     "B00ZR6GZ42",
+     "B094698CSV",
+     "B00O3TIZXS",
+     "B00WTXBYA6",
+     "B011DG5B4E",
+     "B0869BZ2T9"
+    ],
+    "evidence": [
+     {
+      "product_id": "B005HNHRA6",
+      "category": "keyboard",
+      "price_cents": 4099,
+      "in_stock": false,
+      "retrieval_score": 6.4735,
+      "title": "HP Wireless Elite Keyboard v2"
+     },
+     {
+      "product_id": "B002MMY4WY",
+      "category": "keyboard",
+      "price_cents": 5299,
+      "in_stock": false,
+      "retrieval_score": 6.4102,
+      "title": "Logitech K350 Wireless Wave Ergonomic Keyboard with Unifying Wireless Technology - Black"
+     },
+     {
+      "product_id": "B08735C6X5",
+      "category": "keyboard",
+      "price_cents": 4199,
+      "in_stock": true,
+      "retrieval_score": 6.134,
+      "title": "Mini Wireless Keyboard,Rii F8 Wireless 2.4G Keyboard with Touchpad Mouse Combo,IR Learning,Backlit Keyboard Controller f"
+     },
+     {
+      "product_id": "B09798BQKY",
+      "category": "keyboard",
+      "price_cents": 5599,
+      "in_stock": true,
+      "retrieval_score": 6.134,
+      "title": "Wireless Keyboard, 2.4G Ergonomic Wireless Computer Keyboard, Enlarged Indicator Light, Full Size PC Keyboard with Numer"
+     },
+     {
+      "product_id": "B016QO64FI",
+      "category": "keyboard",
+      "price_cents": 1499,
+      "in_stock": false,
+      "retrieval_score": 6.1019,
+      "title": "Apple Magic Keyboard (Wireless, Rechargable) (US English) - Silver"
+     },
+     {
+      "product_id": "B003VAGXWK",
+      "category": "keyboard",
+      "price_cents": 10999,
+      "in_stock": true,
+      "retrieval_score": 5.934,
+      "title": "Logitech K800 Wireless Illuminated Keyboard \u2014 Backlit Keyboard, Fast-Charging, Dropout-Free 2.4GHz Connection"
+     },
+     {
+      "product_id": "B00LFJBP0Y",
+      "category": "keyboard",
+      "price_cents": 6899,
+      "in_stock": false,
+      "retrieval_score": 5.934,
+      "title": "Laser Keyboard, Virtual Wireless Bluetooth Portable Projection Keyboard for Smart Phone PC Tablet Laptop"
+     },
+     {
+      "product_id": "B07QJ4YJ53",
+      "category": "keyboard",
+      "price_cents": 1799,
+      "in_stock": false,
+      "retrieval_score": 5.9335,
+      "title": "Mini USB Wireless Keyboard Small Computer Wireless Keyboards Slim Compact External Keyboard for Laptop Tablet Windows PC"
+     },
+     {
+      "product_id": "B079YL79ZC",
+      "category": "mouse",
+      "price_cents": 1699,
+      "in_stock": true,
+      "retrieval_score": 8.0001,
+      "title": "Logitech Wireless Performance Plus Mouse for PC and Mac, Large Mouse, Long Range Wireless Mouse"
+     },
+     {
+      "product_id": "B07KNS34ZD",
+      "category": "mouse",
+      "price_cents": 2899,
+      "in_stock": true,
+      "retrieval_score": 7.9176,
+      "title": "Bluetooth Mouse Rechargeable Wireless Mouse for MacBook Pro,Bluetooth Wireless Mouse for Laptop PC Computer (Silver)"
+     },
+     {
+      "product_id": "B00ZR6GZ42",
+      "category": "mouse",
+      "price_cents": 4499,
+      "in_stock": false,
+      "retrieval_score": 7.639,
+      "title": "Logitech Wireless Mouse M185 - Silver"
+     },
+     {
+      "product_id": "B094698CSV",
+      "category": "mouse",
+      "price_cents": 1799,
+      "in_stock": true,
+      "retrieval_score": 7.4934,
+      "title": "Halpilt Wireless Mouse Chargeable Portable Silent Wireless Mouse USB and Type-C Dual Mode Wireless Mouse 3 Adjustable DP"
+     },
+     {
+      "product_id": "B00O3TIZXS",
+      "category": "mouse",
+      "price_cents": 1499,
+      "in_stock": true,
+      "retrieval_score": 7.4909,
+      "title": "Logitech Wireless Mouse M185 (Swift Grey)"
+     },
+     {
+      "product_id": "B00WTXBYA6",
+      "category": "mouse",
+      "price_cents": 3599,
+      "in_stock": false,
+      "retrieval_score": 7.4909,
+      "title": "Logitech Plug-and-Play Wireless Mouse"
+     },
+     {
+      "product_id": "B011DG5B4E",
+      "category": "mouse",
+      "price_cents": 2799,
+      "in_stock": true,
+      "retrieval_score": 7.4909,
+      "title": "Logitech M510 Wireless Mouse-Black (Renewed)"
+     },
+     {
+      "product_id": "B0869BZ2T9",
+      "category": "mouse",
+      "price_cents": 1399,
+      "in_stock": true,
+      "retrieval_score": 7.455,
+      "title": "Wireless Bluetooth Mouse for Laptop, Rechargeable Mouse 2.4G USB Optical Wireless Mouse, LED Slim Dual Mode(Bluetooth 5."
+     }
+    ],
+    "oracle": {
+     "feasible": false,
+     "reasons": [
+      "over_budget:cheapest_5598_cents"
+     ],
+     "bundle": null,
+     "cheapest_total_cents": 5598
+    },
+    "attempts": [
+     {
+      "text": "{\"decision\": \"infeasible\", \"product_ids\": [], \"total_cents\": 0, \"explanation\": \"No valid bundle: the cheapest in-stock combination costs 5698 cents, above the 500-cent budget.\"}",
+      "parse": "strict",
+      "score": {
+       "feasible": false,
+       "format_ok": true,
+       "decision": "infeasible",
+       "valid_bundle": false,
+       "correct": true,
+       "errors": [],
+       "uncited_ids": [],
+       "optimality_gap": null
+      }
+     }
+    ],
+    "decision": "abstain_with_reason",
+    "answer": {
+     "decision": "infeasible",
+     "product_ids": [],
+     "total_cents": 0,
+     "explanation": "No valid bundle: the cheapest in-stock combination costs 5698 cents, above the 500-cent budget."
+    },
+    "correct_vs_oracle": true
+   }
+  },
+  {
+   "label": "Stale features (8 h old)",
+   "status": 200,
+   "trace": {
+    "request_id": "8f3588e9-ec86-4e53-99f9-9d0e61d84e09",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a quiet wireless keyboard and mouse bundle under $100.",
+    "now": "2026-10-01T10:00:00+00:00",
+    "timings_ms": {
+     "validate": 0.19696500385180116,
+     "retrieve": 4.520498012425378,
+     "features": 3.7000869924668223
+    },
+    "parsed": {
+     "required_categories": [
+      "keyboard",
+      "mouse"
+     ],
+     "budget_cents": 10000,
+     "adjective": "quiet wireless",
+     "require_in_stock": true
+    },
+    "feature_watermark": {
+     "as_of": "2026-10-01T02:00:00+00:00",
+     "export_tag": "ingest_2",
+     "snapshot_ids": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+     }
+    },
+    "feature_snapshot_age_s": 28800.0,
+    "decision": "stale_features",
+    "reason": "feature snapshot older than the freshness limit; no availability or price claims made",
+    "evidence_ids": [
+     "B07RK2RZ4B",
+     "B07FLKYRFB",
+     "B086JHXL7W",
+     "B01ER4B7K6",
+     "B075KMZ4MX",
+     "B07KCRTN9Q",
+     "B07VHZFSN9",
+     "B085VK6KFL",
+     "B08CBC64S3",
+     "B07Q7G5ML6",
+     "B071D14RLB",
+     "B07X4D3BR6",
+     "B07QMRCXBQ",
+     "B079YL79ZC",
+     "B07KNS34ZD",
+     "B00ZR6GZ42"
+    ],
+    "evidence": [
+     {
+      "product_id": "B07RK2RZ4B",
+      "category": "keyboard",
+      "retrieval_score": 11.3139,
+      "title": "Wireless Keyboard,J JOYACCESS Full Size Rechargeable Quiet Thin Keyboard Wireless for Laptop,Computer,Desktop,PC,Surface"
+     },
+     {
+      "product_id": "B07FLKYRFB",
+      "category": "keyboard",
+      "retrieval_score": 10.853,
+      "title": "KLIM Chroma Rechargeable Wireless Gaming Keyboard + Slim, Durable, Ergonomic, Quiet, Waterproof, Silent Keys + Backlit W"
+     },
+     {
+      "product_id": "B086JHXL7W",
+      "category": "keyboard",
+      "retrieval_score": 10.853,
+      "title": "Seenda Wireless Bluetooth Keyboard - Universal Rechargeable Wireless Keyboard with Number Pad Full-Size Ergonomic Slim Q"
+     },
+     {
+      "product_id": "B01ER4B7K6",
+      "category": "keyboard",
+      "retrieval_score": 10.1786,
+      "title": "CORSAIR K70 Mechanical Gaming Keyboard - USB Passthrough & Media Controls - Tactile & Quiet - Cherry MX Brown"
+     },
+     {
+      "product_id": "B075KMZ4MX",
+      "category": "keyboard",
+      "retrieval_score": 9.6282,
+      "title": "Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functio"
+     },
+     {
+      "product_id": "B07KCRTN9Q",
+      "category": "keyboard",
+      "retrieval_score": 9.6282,
+      "title": "Redragon K582 SURARA RGB LED Backlit Mechanical Gaming Keyboard with 104 Keys-Linear and Quiet-Red Switches"
+     },
+     {
+      "product_id": "B07VHZFSN9",
+      "category": "keyboard",
+      "retrieval_score": 9.5205,
+      "title": "Redragon K511 PRO RGB Gaming Keyboard Wired LED Backlit Programmable Macro Keyboard 104 Keys Quiet Silent Membrane Keybo"
+     },
+     {
+      "product_id": "B085VK6KFL",
+      "category": "keyboard",
+      "retrieval_score": 9.3721,
+      "title": "NPET K10 Gaming Keyboard USB Wired Floating Keyboard, Quiet Ergonomic Water-Resistant Mechanical Feeling Keyboard, Ultra"
+     },
+     {
+      "product_id": "B08CBC64S3",
+      "category": "mouse",
+      "retrieval_score": 12.2859,
+      "title": "Macally Wireless Bluetooth Mouse Rechargeable - Simple Workspace Bluetooth Mouse for Laptop, Desktop PC, Mac, MacBook Pr"
+     },
+     {
+      "product_id": "B07Q7G5ML6",
+      "category": "mouse",
+      "retrieval_score": 12.2121,
+      "title": "Left-Handed Mouse, Jelly Comb Wireless 2.4GHz Left Hand Ergonomic Vertical Mouse with USB Receiver, Sensitive and Quiet "
+     },
+     {
+      "product_id": "B071D14RLB",
+      "category": "mouse",
+      "retrieval_score": 11.571,
+      "title": "Bluetooth Mouse FENIFOX Slim Mini Whisper-Quiet Flat Portable Wireless Mice Rechargeable Compatible with Laptop,PC,Table"
+     },
+     {
+      "product_id": "B07X4D3BR6",
+      "category": "mouse",
+      "retrieval_score": 11.5083,
+      "title": "Logitech Pebble M350 Wireless Mouse with Bluetooth or USB - Silent, Slim Computer Mouse with Quiet Click for iPad, Lapto"
+     },
+     {
+      "product_id": "B07QMRCXBQ",
+      "category": "mouse",
+      "retrieval_score": 10.2016,
+      "title": "Bluetooth Mouse for Laptop/iPad/iPhone/Mac(iOS 13.1.2 and Later Version Only)/Android PC,Wireless Mouse Slim USB Recharg"
+     },
+     {
+      "product_id": "B079YL79ZC",
+      "category": "mouse",
+      "retrieval_score": 8.0001,
+      "title": "Logitech Wireless Performance Plus Mouse for PC and Mac, Large Mouse, Long Range Wireless Mouse"
+     },
+     {
+      "product_id": "B07KNS34ZD",
+      "category": "mouse",
+      "retrieval_score": 7.9176,
+      "title": "Bluetooth Mouse Rechargeable Wireless Mouse for MacBook Pro,Bluetooth Wireless Mouse for Laptop PC Computer (Silver)"
+     },
+     {
+      "product_id": "B00ZR6GZ42",
+      "category": "mouse",
+      "retrieval_score": 7.639,
+      "title": "Logitech Wireless Mouse M185 - Silver"
+     }
+    ]
+   }
+  },
+  {
+   "label": "Vague request (no budget)",
+   "status": 200,
+   "trace": {
+    "request_id": "8a4acdff-be9b-43ba-ba28-229f5777bb64",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "I want something nice for my desk.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {},
+    "decision": "invalid_request",
+    "error": "no budget found (expected e.g. 'under $100')"
+   }
+  },
+  {
+   "label": "Redis down (feature store outage)",
+   "status": 503,
+   "trace": {
+    "request_id": "dead005c-33ae-45a8-ad3d-bc7b08a4c871",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a quiet wireless keyboard and mouse bundle under $100.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+     "total": 7167.766501981532
+    },
+    "parsed": {
+     "required_categories": [
+      "keyboard",
+      "mouse"
+     ],
+     "budget_cents": 10000,
+     "adjective": "quiet wireless",
+     "require_in_stock": true
+    },
+    "decision": "features_unavailable",
+    "error": "ConnectionError: Error 111 connecting to 127.0.0.1:6390. Connection refused."
+   },
+   "source": "experiments/gate_f/ray_serve/probe_redis_down.json"
+  }
+ ]
+}

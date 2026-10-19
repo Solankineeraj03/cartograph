@@ -1,0 +1,105 @@
+{
+  "experiment": "gate_c_feature_platform",
+  "status": "measured_local",
+  "seed": 7,
+  "config": {
+    "sim": "/home/user/cartograph/data/ops_sim_v1",
+    "work": "/home/user/cartograph/work/gate_c_v5",
+    "evidence": "/home/user/cartograph/runs/gate_c/drills_v5",
+    "redis_server": "/home/user/cartograph/opt/redis-7.4.6/src/redis-server",
+    "redis_port": 6390,
+    "cpus_per_node": 4,
+    "samples": 5000,
+    "seed": 7,
+    "simulator": {
+      "simulator_version": "ops-sim-v1",
+      "seed": 20260901,
+      "config": {
+        "start": "2026-09-01T00:00:00+00:00",
+        "days": 30,
+        "batch_cutoff": "2026-09-21T00:00:00+00:00",
+        "buckets": 64,
+        "price_changes_per_month": 2.0,
+        "stock_changes_per_month": 1.5,
+        "initial_in_stock": 0.85,
+        "delay_median_s": 120,
+        "late_fraction": 0.03,
+        "late_delay_hours": [
+          6,
+          72
+        ],
+        "duplicate_fraction": 0.005,
+        "invalid_fraction": 0.001,
+        "interaction_active_fraction": 0.2
+      }
+    }
+  },
+  "command": [
+    "/home/user/cartograph/venvs/platform/bin/python",
+    "/home/user/cartograph/repo/cartograph/gate_c.py",
+    "--sim",
+    "/home/user/cartograph/data/ops_sim_v1",
+    "--work",
+    "/home/user/cartograph/work/gate_c_v5",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_c/drills_v5",
+    "--redis-server",
+    "/home/user/cartograph/opt/redis-7.4.6/src/redis-server"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-17T17:29:24.753507+00:00",
+  "git": {
+    "commit": "b00009cffdcad589113bea3c9a3883f8a5a3e980",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/platform/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ]
+  },
+  "inputs": {
+    "simulation_manifest": {
+      "path": "/home/user/cartograph/data/ops_sim_v1/simulation_manifest.json",
+      "sha256": "54b65d5b170d3807c593cbd60adb0d4c871095f755bcdf547d07799c96e19cfb"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/platform.lock.txt",
+    "sha256": "8fb48979d838400b21069bb83edede53c10a808f54b915a0a44689435c0c3b86",
+    "present": true
+  },
+  "extra": {
+    "exports": {
+      "ingest_1": {
+        "price": "5eea2017aedf09703ceddfdaf00a578167d74c0c45bc0fa218b53c0e817accc6",
+        "stock": "dfa27ff2760fc0cb7345b8c1fc417e8ca83c696135e11a1003fa80a14929b4df",
+        "popularity": "ea8f7f77e6a8fb4932dc7d7fc7b66afb9452793ad775a7ae7872b831f87fbac6"
+      },
+      "ingest_2": {
+        "price": "d169481e8898edd9d84aaee9377c6c45e08f195f239d9cd221e48b16dd888d5b",
+        "stock": "4ccba6651c04d0410f37470f7b7d6ec3f2a6820873fcd999c41781243ca7fadb",
+        "popularity": "a65d91e64dd6716a5d7a9b78b41f382138082674814d0b5a5c4cac34abb7bf29"
+      }
+    }
+  },
+  "duration_seconds": 1257.77,
+  "finished_at_utc": "2026-10-17T17:50:22.599536+00:00",
+  "outputs_sha256": {
+    "config.json": "3567b84a2cca822705f4127c01581398c63549439b648b519d97af670d3276e0",
+    "environment-lock.txt": "8fb48979d838400b21069bb83edede53c10a808f54b915a0a44689435c0c3b86",
+    "metrics.json": "a91944d701cb143fb719216c63cc0fa186647b48894e687b7005e671d4b1eb04",
+    "per_example.jsonl": "58acd8d64544b142be6e70696a71533d3adef260eb7bf134efb379a5834cb145"
+  }
+}

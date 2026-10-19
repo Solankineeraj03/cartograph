@@ -1,0 +1,28 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "trained_checkpoint": false,
+  "device": "cpu",
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "timings_s": {
+    "queries_dev": 1.373786570969969,
+    "queries_test": 4.550874690990895
+  },
+  "products_reused_from": "/home/user/cartograph/data/embeddings/minilm-1110a243/728e301ef1fb.npy",
+  "sha256": {
+    "products.npy": "1c1dae08c01c4c7fdabfced77e65eb53dd20e67278432255e05e63e66c2d789b",
+    "queries_dev.npy": "5ddb9ff302e3c593c96ae70bbc00d4157c2e800d1cc56148f4885afdbcc29299",
+    "queries_test.npy": "5c0416be587541cea670f27ce0606d5afcd48162ef06ffa75c21242f4cd71874"
+  },
+  "slice_id": "728e301ef1fb"
+}

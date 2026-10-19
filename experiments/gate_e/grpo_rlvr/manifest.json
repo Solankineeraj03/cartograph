@@ -1,0 +1,95 @@
+{
+  "experiment": "gate_e_grpo_rlvr",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "tasks": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+    "reward": "verifier",
+    "allow_synthetic_rm": false,
+    "out": "/home/user/cartograph/checkpoints/align/grpo_rlvr",
+    "evidence": "/home/user/cartograph/runs/gate_e/grpo_rlvr",
+    "max_tasks": 2000,
+    "group": 4,
+    "accum": 4,
+    "steps": 300,
+    "beta": 0.04,
+    "lr": 1e-05,
+    "max_prompt_length": 1280,
+    "max_completion_length": 384,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/training/bin/python",
+    "/home/user/cartograph/repo/cartograph/align.py",
+    "grpo",
+    "--policy",
+    "/home/user/cartograph/checkpoints/align/sft_merged",
+    "--tasks",
+    "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+    "--out",
+    "/home/user/cartograph/checkpoints/align/grpo_rlvr",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_e/grpo_rlvr",
+    "--steps",
+    "300"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-17T20:17:21.286673+00:00",
+  "git": {
+    "commit": "cb425e479d11dcf8ff16b88493236e383daeb51f",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/training/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "cuda_visible_devices": "1",
+    "devices": [
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "tasks": {
+      "path": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+      "sha256": "b74df74821c63a39a4b00ca658c6c84ec3f90a672c77f1c77c9d4b2668e412a3"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/training.lock.txt",
+    "sha256": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "present": true
+  },
+  "extra": {
+    "prompt_tokens_max": 1197,
+    "seconds": 4598.404606835,
+    "group_stats": {
+      "groups": 1200,
+      "all_equal": 1061
+    },
+    "peak_reserved_gib": 11.369140625
+  },
+  "duration_seconds": 4604.623,
+  "finished_at_utc": "2026-10-17T21:34:06.172650+00:00",
+  "outputs_sha256": {
+    "completion_samples.jsonl": "6210159b31fbf9dcbe84f7c3a0513311eebbef495f3f7459c892a2122574e5cd",
+    "config.json": "ffbfe6cf143e8b14c9438582c35f4b9c7c397baaccc51e07d4bc90604a77b4b5",
+    "environment-lock.txt": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "train_log.jsonl": "3a9d7ac81612615cdb4593e6c4007fe4c6d9db62d8cf4a08941e3611e2602644"
+  }
+}

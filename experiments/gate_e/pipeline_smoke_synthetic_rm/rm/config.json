@@ -1,0 +1,12 @@
+{
+  "base": "qwen2.5-0.5b-instruct",
+  "pairs": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+  "test_pairs": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+  "out": "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic",
+  "evidence": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/rm",
+  "epochs": 1.0,
+  "lr": 0.0001,
+  "seed": 13,
+  "max_length": 1600,
+  "label_source": "verifier_v1"
+}

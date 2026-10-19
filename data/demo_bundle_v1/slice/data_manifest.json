@@ -1,0 +1,82 @@
+{
+  "slice_id": "728e301ef1fb",
+  "esci_commit": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+  "source_license": "Apache-2.0",
+  "source_url": "https://github.com/amazon-science/esci-data",
+  "rules": {
+    "locale": "us",
+    "small_version": 1,
+    "dev_fraction": 0.1,
+    "dev_salt": "cartograph-dev-v1",
+    "group_key": "nfkc casefold, non-alphanumerics to space, tokens sorted and deduplicated",
+    "product_text": "title + ' Brand: ' + brand + ' Color: ' + color + ' ' + bullet points; missing fields omitted; truncated to max_text_chars",
+    "max_text_chars": 2000
+  },
+  "input_sha256": {
+    "shopping_queries_dataset_examples.parquet": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+    "shopping_queries_dataset_products.parquet": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265",
+    "shopping_queries_dataset_sources.csv": "a5fed8ecc016443de40bf3c63098f0e3f23bbe4daa4236f1c38b8c3184778c50"
+  },
+  "output_sha256": {
+    "judgments.parquet": "fb38802986f5bda2453eb01233c1ac019ea96f5e689ec1ae96827b49318bc9e9",
+    "products.parquet": "3bc9ca1a667934d02769d3acf7797948310dec866dc0843aec2ff2979328371c",
+    "queries.parquet": "eaca729d104a813533b7ecdef27ddd6121ad81c5e6b0ebae1ba1a1197bff84f1"
+  },
+  "audit": {
+    "duplicate_query_product_rows": 0,
+    "conflicting_query_product_labels": 0,
+    "raw_query_shared_by_multiple_query_ids": 0,
+    "raw_query_in_both_official_splits": 0,
+    "normalized_query_shared_by_multiple_query_ids": 11,
+    "normalized_query_in_both_official_splits": 5,
+    "group_key_shared_by_multiple_query_ids": 50,
+    "group_key_in_both_official_splits": 22,
+    "group_product_pairs_with_conflicting_labels": 221,
+    "test_judgments": 181701,
+    "test_judgments_on_products_unseen_in_train": 135143,
+    "test_products_unseen_in_train": 130144,
+    "queries_all_irrelevant": 0,
+    "queries_without_E_or_S": 0,
+    "label_counts_by_split": {
+      "dev": {
+        "E": 18440,
+        "S": 14799,
+        "I": 7025,
+        "C": 1947
+      },
+      "test": {
+        "E": 79708,
+        "S": 63563,
+        "I": 30331,
+        "C": 8099
+      },
+      "train": {
+        "E": 163134,
+        "S": 132669,
+        "I": 63975,
+        "C": 17126
+      },
+      "train_excluded_test_overlap": {
+        "E": 245,
+        "S": 160,
+        "I": 116,
+        "C": 17
+      }
+    },
+    "catalog_products": 482105,
+    "judged_products_missing_from_product_table": 0,
+    "products_with_empty_title": 0,
+    "queries_by_split": {
+      "train": 18777,
+      "test": 8956,
+      "dev": 2089,
+      "train_excluded_test_overlap": 22
+    },
+    "judgments_by_split": {
+      "train": 376904,
+      "test": 181701,
+      "dev": 42211,
+      "train_excluded_test_overlap": 538
+    }
+  }
+}

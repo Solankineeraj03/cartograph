@@ -1,0 +1,140 @@
+{
+  "experiment": "gate_a_esci_slice",
+  "status": "measured_local",
+  "seed": null,
+  "config": {
+    "rules": {
+      "locale": "us",
+      "small_version": 1,
+      "dev_fraction": 0.1,
+      "dev_salt": "cartograph-dev-v1",
+      "group_key": "nfkc casefold, non-alphanumerics to space, tokens sorted and deduplicated",
+      "product_text": "title + ' Brand: ' + brand + ' Color: ' + color + ' ' + bullet points; missing fields omitted; truncated to max_text_chars",
+      "max_text_chars": 2000
+    },
+    "esci_commit": "7916cdf6ab75a462e77f20ab40428a10923998d5"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/esci.py",
+    "--raw",
+    "/home/user/cartograph/data/raw/esci/7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "--out",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_a/esci_slice"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-15T00:27:58.751944+00:00",
+  "git": {
+    "commit": "1da52a71fc35dce63bedc7786a39a60a6aca2a14",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": [
+      "certifi==2026.7.22",
+      "charset-normalizer==3.5.2",
+      "cloudpickle==3.1.2",
+      "filelock==4.1.2",
+      "fsspec==2026.9.0",
+      "hf-xet==1.7.0",
+      "huggingface-hub==0.36.2",
+      "idna==3.20",
+      "jinja2==3.1.6",
+      "joblib==1.6.0",
+      "markupsafe==3.0.4",
+      "mpmath==1.3.0",
+      "networkx==3.6.1",
+      "numpy==2.2.4",
+      "nvidia-cublas-cu12==12.4.5.8",
+      "nvidia-cuda-cupti-cu12==12.4.127",
+      "nvidia-cuda-nvrtc-cu12==12.4.127",
+      "nvidia-cuda-runtime-cu12==12.4.127",
+      "nvidia-cudnn-cu12==9.1.0.70",
+      "nvidia-cufft-cu12==11.2.1.3",
+      "nvidia-curand-cu12==10.3.5.147",
+      "nvidia-cusolver-cu12==11.6.1.9",
+      "nvidia-cusparse-cu12==12.3.1.170",
+      "nvidia-cusparselt-cu12==0.6.2",
+      "nvidia-nccl-cu12==2.21.5",
+      "nvidia-nvjitlink-cu12==12.4.127",
+      "nvidia-nvtx-cu12==12.4.127",
+      "packaging==26.3",
+      "pandas==2.2.3",
+      "pillow==12.3.0",
+      "pyarrow==19.0.1",
+      "python-dateutil==2.9.0.post0",
+      "pytz==2026.5",
+      "pyyaml==6.0.3",
+      "regex==2026.9.29",
+      "requests==2.34.2",
+      "safetensors==0.8.0",
+      "scikit-learn==1.6.1",
+      "scipy==1.15.2",
+      "sentence-transformers==3.4.1",
+      "six==1.17.0",
+      "sympy==1.13.1",
+      "threadpoolctl==3.7.0",
+      "tokenizers==0.21.4",
+      "torch==2.6.0+cu124",
+      "tqdm==4.67.1",
+      "transformers==4.48.3",
+      "triton==3.2.0",
+      "typing-extensions==4.16.0",
+      "tzdata==2026.5",
+      "urllib3==2.8.0"
+    ],
+    "pip_freeze_sha256": "092025197ad7870979c772757b996c7530fbf50408040f13036523a3c8a9fc24"
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": true,
+    "cuda_visible_devices": null,
+    "devices": [
+      "NVIDIA GeForce RTX 3090",
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "shopping_queries_dataset_examples.parquet": {
+      "path": "/home/user/cartograph/data/raw/esci/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset_examples.parquet",
+      "sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a"
+    },
+    "shopping_queries_dataset_products.parquet": {
+      "path": "/home/user/cartograph/data/raw/esci/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset_products.parquet",
+      "sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265"
+    },
+    "shopping_queries_dataset_sources.csv": {
+      "path": "/home/user/cartograph/data/raw/esci/7916cdf6ab75a462e77f20ab40428a10923998d5/shopping_queries_dataset_sources.csv",
+      "sha256": "a5fed8ecc016443de40bf3c63098f0e3f23bbe4daa4236f1c38b8c3184778c50"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "5ca9fed362fae523976397f0ef30184489136d217cbd310dbead29025813f3d8",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb"
+  },
+  "duration_seconds": 21.865,
+  "finished_at_utc": "2026-10-15T00:28:22.656140+00:00",
+  "outputs_sha256": {
+    "audit.json": "dcba72c6a6b4a67c3829a8c9ebac7b4ed3a4cbb7311b59675b9c678fe2e69868",
+    "config.json": "78281c5d9040207a9bd90256f256eb4e38483648c71fb85adc768d8781eaab26",
+    "data_manifest.json": "0e4a8273f82e7d9443b1ac523fd7049f8526ed2a709a7e28d2e8ee87f3d36bb3",
+    "environment-lock.txt": "5ca9fed362fae523976397f0ef30184489136d217cbd310dbead29025813f3d8"
+  }
+}

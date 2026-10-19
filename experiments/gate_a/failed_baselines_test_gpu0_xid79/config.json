@@ -1,0 +1,32 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "evidence": "/home/user/cartograph/runs/gate_a/baselines_test",
+  "split": "test",
+  "max_queries": null,
+  "depth": 100,
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "encoder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "no_dense": false,
+  "device": "cuda",
+  "batch_size": 256,
+  "embedding_cache": "/home/user/cartograph/data/embeddings/minilm-1110a243/728e301ef1fb.npy",
+  "latency_queries": 1000,
+  "bootstrap": 1000,
+  "seed": 13,
+  "slice_id": "728e301ef1fb",
+  "gain_convention": {
+    "E": 1.0,
+    "S": 0.1,
+    "C": 0.01,
+    "I": 0.0
+  },
+  "relevant_for_recall": [
+    "E",
+    "S"
+  ],
+  "rrf_k": 60,
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75
+  }
+}

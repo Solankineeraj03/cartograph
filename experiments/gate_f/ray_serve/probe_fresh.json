@@ -1,0 +1,96 @@
+{
+  "status": 200,
+  "client_ms": 766.5533569816034,
+  "trace": {
+    "request_id": "be0aea24-4ea3-4c1f-b9d7-5ef16d5ea864",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a quiet wireless keyboard and mouse bundle under $100. Only include available products and explain the tradeoffs.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+      "validate": 0.06699201185256243,
+      "retrieve": 3.4295590012334287,
+      "features": 3.350436978507787,
+      "solve": 0.22516600438393652,
+      "generate_and_verify": 742.6738530048169,
+      "total": 749.7593970037997,
+      "llm_calls": 1
+    },
+    "parsed": {
+      "required_categories": [
+        "keyboard",
+        "mouse"
+      ],
+      "budget_cents": 10000,
+      "adjective": "quiet wireless",
+      "require_in_stock": true
+    },
+    "feature_watermark": {
+      "as_of": "2026-10-01T02:00:00+00:00",
+      "export_tag": "ingest_2",
+      "snapshot_ids": {
+        "price": 7213477351932751475,
+        "stock": 8033777127656018672,
+        "popularity": 583474201836631185
+      }
+    },
+    "feature_snapshot_age_s": 7200.0,
+    "evidence_ids": [
+      "B07RK2RZ4B",
+      "B07FLKYRFB",
+      "B086JHXL7W",
+      "B01ER4B7K6",
+      "B075KMZ4MX",
+      "B07KCRTN9Q",
+      "B07VHZFSN9",
+      "B085VK6KFL",
+      "B08CBC64S3",
+      "B07Q7G5ML6",
+      "B071D14RLB",
+      "B07X4D3BR6",
+      "B07QMRCXBQ",
+      "B079YL79ZC",
+      "B07KNS34ZD",
+      "B00ZR6GZ42"
+    ],
+    "oracle": {
+      "feasible": true,
+      "reasons": [],
+      "bundle": {
+        "product_ids": [
+          "B07RK2RZ4B",
+          "B07QMRCXBQ"
+        ],
+        "total_cents": 3398
+      },
+      "score": 21.5155
+    },
+    "attempts": [
+      {
+        "text": "{\"decision\": \"bundle\", \"product_ids\": [\"B07RK2RZ4B\", \"B07QMRCXBQ\"], \"total_cents\": 3398, \"explanation\": \"Selected [B07RK2RZ4B] keyboard at 1899 cents and [B07QMRCXBQ] mouse at 1499 cents; total 3398 of 10000 cents, all in stock. Tradeoff: [B07KCRTN9Q] is 500 cents cheaper but matched the request less closely.\"}",
+        "parse": "strict",
+        "score": {
+          "feasible": true,
+          "format_ok": true,
+          "decision": "bundle",
+          "valid_bundle": true,
+          "correct": true,
+          "errors": [],
+          "uncited_ids": [],
+          "optimality_gap": 0.0
+        }
+      }
+    ],
+    "decision": "verified_bundle",
+    "answer": {
+      "decision": "bundle",
+      "product_ids": [
+        "B07RK2RZ4B",
+        "B07QMRCXBQ"
+      ],
+      "total_cents": 3398,
+      "explanation": "Selected [B07RK2RZ4B] keyboard at 1899 cents and [B07QMRCXBQ] mouse at 1499 cents; total 3398 of 10000 cents, all in stock. Tradeoff: [B07KCRTN9Q] is 500 cents cheaper but matched the request less closely."
+    },
+    "correct_vs_oracle": true
+  }
+}

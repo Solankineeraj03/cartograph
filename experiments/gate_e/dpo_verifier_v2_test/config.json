@@ -1,0 +1,15 @@
+{
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+  "engine": "vllm",
+  "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "adapter": "/home/user/cartograph/checkpoints/align/dpo_verifier_v2/adapter",
+  "quantization": null,
+  "base_url": "http://127.0.0.1:8000",
+  "device": "cuda",
+  "max_tasks": null,
+  "max_new_tokens": 256,
+  "evidence": "/home/user/cartograph/runs/gate_e/dpo_verifier_v2_test",
+  "model_id": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "model_revision": null,
+  "decoding": "greedy"
+}

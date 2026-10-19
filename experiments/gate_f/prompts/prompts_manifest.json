@@ -1,0 +1,11 @@
+{
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+  "tokenizer": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "n": 500,
+  "prompt_tokens": {
+    "min": 895,
+    "median": 1045,
+    "max": 1200
+  },
+  "sha256": "2527c27556011e9df0ad1a4eaf820124db08669f9c837d4d902f970e3cbaaf5a"
+}

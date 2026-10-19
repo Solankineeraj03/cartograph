@@ -1,0 +1,8 @@
+/home/user/cartograph/repo/cartograph/feast_repo.py:34: DeprecationWarning: Entity value_type will be mandatory in the next release. Please specify a value_type for entity 'product'.
+  product = Entity(name="product", join_keys=["product_id"])
+Materializing [1m[32m3[0m feature views from [1m[32m2026-08-02 02:00:00+00:00[0m to [1m[32m2026-10-01 02:00:00+00:00[0m into the [1m[32mredis[0m online store.
+
+[1m[32mprice[0m:
+[1m[32mstock[0m:
+[1m[32mpopularity[0m:
+{"materialized_until": "2026-10-01T02:00:00+00:00", "export_tag": "ingest_2"}

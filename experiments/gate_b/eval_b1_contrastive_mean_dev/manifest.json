@@ -1,0 +1,85 @@
+{
+  "experiment": "gate_b_dimensionality",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "product_vectors": "/home/user/cartograph/data/vectors/b1_contrastive_mean/products.npy",
+    "query_vectors": "/home/user/cartograph/data/vectors/b1_contrastive_mean/queries_dev.npy",
+    "split": "dev",
+    "dims": "",
+    "prefix_only": false,
+    "evidence": "/home/user/cartograph/runs/gate_b/eval_b1_contrastive_mean_dev",
+    "threads": 24,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/dims.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--product-vectors",
+    "/home/user/cartograph/data/vectors/b1_contrastive_mean/products.npy",
+    "--query-vectors",
+    "/home/user/cartograph/data/vectors/b1_contrastive_mean/queries_dev.npy",
+    "--split",
+    "dev",
+    "--dims=",
+    "--threads",
+    "24",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_b/eval_b1_contrastive_mean_dev"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-15T08:49:10.686556+00:00",
+  "git": {
+    "commit": "ba14b9dc801990a784fe41ad571ef824bdf54a49",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "product_vectors": {
+      "path": "/home/user/cartograph/data/vectors/b1_contrastive_mean/products.npy",
+      "sha256": "c895b82b9ab2667d97cdd6cfd62c3c95789d2de6e9eff9c78a92b34b53df8bd0"
+    },
+    "query_vectors": {
+      "path": "/home/user/cartograph/data/vectors/b1_contrastive_mean/queries_dev.npy",
+      "sha256": "490e8d38c96501b2990088bb4859b8112f266a47f961beb72c5fb97fa7b6735c"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb"
+  },
+  "duration_seconds": 14.24,
+  "finished_at_utc": "2026-10-15T08:49:25.525055+00:00",
+  "outputs_sha256": {
+    "config.json": "5478f9fb0977e0ebdaf5565fcd11374cb2c30e4abc8f481cc66ed05e722d77bb",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "bd336d6f07ca8459b89de35a5f07e9096487fde117df16188269fd2fb9fb0aa7",
+    "per_example.jsonl": "eb14778f00fe2ff2496cb5e52793935e0aaa322ed012cd2cffef2b9b0813dc25"
+  }
+}

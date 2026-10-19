@@ -1,0 +1,77 @@
+{
+  "release": "v1-sft-pca256",
+  "created_at_utc": "2026-10-18T06:46:28.889760+00:00",
+  "git": {
+    "commit": "cd68556e51dfd3e84498abd18344647dc067a4e7",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "components": {
+    "data_slice": "728e301ef1fb",
+    "feature_export_tag": "ingest_2",
+    "iceberg_snapshots": {
+      "price": 7213477351932751475,
+      "stock": 8033777127656018672,
+      "popularity": 583474201836631185
+    },
+    "generator_base": "Qwen/Qwen2.5-1.5B-Instruct@989aa798",
+    "verifier": "cartograph/verifier.py",
+    "retrieval": "b1+pca256",
+    "adapter": "sft_full_v1"
+  },
+  "files": {
+    "slice_products": {
+      "path": "/home/user/cartograph/data/processed/esci_us_small_v1/products.parquet",
+      "sha256": "3bc9ca1a667934d02769d3acf7797948310dec866dc0843aec2ff2979328371c"
+    },
+    "slice_judgments": {
+      "path": "/home/user/cartograph/data/processed/esci_us_small_v1/judgments.parquet",
+      "sha256": "fb38802986f5bda2453eb01233c1ac019ea96f5e689ec1ae96827b49318bc9e9"
+    },
+    "features_price": {
+      "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/price.parquet",
+      "sha256": "d169481e8898edd9d84aaee9377c6c45e08f195f239d9cd221e48b16dd888d5b"
+    },
+    "features_stock": {
+      "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/stock.parquet",
+      "sha256": "4ccba6651c04d0410f37470f7b7d6ec3f2a6820873fcd999c41781243ca7fadb"
+    },
+    "features_popularity": {
+      "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/popularity.parquet",
+      "sha256": "a65d91e64dd6716a5d7a9b78b41f382138082674814d0b5a5c4cac34abb7bf29"
+    },
+    "pca256_basis": {
+      "path": "/home/user/cartograph/data/vectors/b1_pca256/pca.npz",
+      "sha256": "6b71722cbbde2cc241efa278cf0e9534c9af8b7bfc2342721fab5573826c7829"
+    },
+    "encoder_b1_weights": {
+      "path": "/home/user/cartograph/checkpoints/encoders/b1_contrastive_mean/model.safetensors",
+      "sha256": "3507fffd86213e95788a8c3ab9e0d6044a10b66cb952b4fd6399543083a88c7a"
+    },
+    "adapter": {
+      "path": "/home/user/cartograph/checkpoints/sft/full_v1/adapter/adapter_model.safetensors",
+      "sha256": "63d343e8627190cdde22256b08b4cd323ea20b787130e3cc3831c09af480e24c"
+    }
+  },
+  "code_sha256": {
+    "verifier.py": "4a3714db584011ec12693b146a17b9898b424fa7e969d6c30e3eaf9c281ddfc4",
+    "solver.py": "f3462d73814d82f3297e7ffb09b10bf4866c982e9fa33f1ecd4f6850de967475",
+    "assistant.py": "ec0854d62ab1f63fb8fa07b78c63b0c9a29a991c14a6988e419435a8d420bff2",
+    "retrieval.py": "cbcc667720c65935e5e11aa636bbfd8575ff91f79adda83a687859af1cc24e04",
+    "features.py": "0f54bac925cbea53071e4469e7cc8dcaa265d8f5fab85abb6a90149dc322fe4e"
+  },
+  "env_locks": {
+    "platform.lock.txt": "8fb48979d838400b21069bb83edede53c10a808f54b915a0a44689435c0c3b86",
+    "retrieval.lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "serving.lock.txt": "732a27854cff780ea5e1049121bc929f7b252aba4d0457b1c12e022e1c59f08a",
+    "training.lock.txt": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b"
+  },
+  "metrics": {
+    "ndcg@10": 0.30199854542634474,
+    "task_correct": 0.748,
+    "parity_mismatches": 0,
+    "probes_rejected": 1.0
+  },
+  "release_id": "2406781e60ea"
+}

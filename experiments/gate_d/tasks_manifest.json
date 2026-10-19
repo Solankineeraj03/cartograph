@@ -1,0 +1,44 @@
+{
+  "train": {
+    "tasks": 3000,
+    "attempts": 3000,
+    "seed": 101,
+    "feasible_fraction": 0.79,
+    "products_in_evidence": 441
+  },
+  "test": {
+    "tasks": 500,
+    "attempts": 500,
+    "seed": 202,
+    "feasible_fraction": 0.806,
+    "products_in_evidence": 450
+  },
+  "product_overlap_train_test": 0,
+  "export": {
+    "tag": "ingest_2",
+    "tables": {
+      "price": {
+        "iceberg_table": "features.price_state",
+        "snapshot_id": 7213477351932751475,
+        "rows": 1439540,
+        "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/price.parquet",
+        "sha256": "d169481e8898edd9d84aaee9377c6c45e08f195f239d9cd221e48b16dd888d5b"
+      },
+      "stock": {
+        "iceberg_table": "features.stock_state",
+        "snapshot_id": 8033777127656018672,
+        "rows": 1203598,
+        "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/stock.parquet",
+        "sha256": "4ccba6651c04d0410f37470f7b7d6ec3f2a6820873fcd999c41781243ca7fadb"
+      },
+      "popularity": {
+        "iceberg_table": "features.popularity_state",
+        "snapshot_id": 583474201836631185,
+        "rows": 2849959,
+        "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/popularity.parquet",
+        "sha256": "a65d91e64dd6716a5d7a9b78b41f382138082674814d0b5a5c4cac34abb7bf29"
+      }
+    },
+    "events_snapshot_id": 5116180000030739141
+  }
+}

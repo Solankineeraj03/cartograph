@@ -1,0 +1,40 @@
+{
+  "raw": {
+    "n": 500,
+    "correct": 1.0,
+    "format_ok": 1.0,
+    "valid_bundle_on_feasible": 1.0,
+    "correct_abstention_on_infeasible": 1.0,
+    "false_abstention_on_feasible": 0.0,
+    "bundle_offered_on_infeasible": 0.0,
+    "fabricated_id_rate": 0.0,
+    "mean_optimality_gap": 0.0,
+    "optimal_rate_on_feasible": 1.0,
+    "error_counts": {}
+  },
+  "wrapped": {
+    "n": 500,
+    "correct": 1.0,
+    "format_ok": 1.0,
+    "valid_bundle_on_feasible": 1.0,
+    "correct_abstention_on_infeasible": 1.0,
+    "false_abstention_on_feasible": 0.0,
+    "bundle_offered_on_infeasible": 0.0,
+    "fabricated_id_rate": 0.0,
+    "mean_optimality_gap": 0.0,
+    "optimal_rate_on_feasible": 1.0,
+    "error_counts": {}
+  },
+  "shown": {
+    "verified_bundle": 403,
+    "abstain_with_reason": 97,
+    "withheld_unverified": 0
+  },
+  "generate_calls": 500,
+  "latency_ms_per_call": {
+    "p50": 0.005729991244152188,
+    "p95": 0.006591009150724857,
+    "p99": 0.009214394522132349
+  },
+  "latency_note": "engine=solver, sequential task loop, includes retries"
+}

@@ -1,0 +1,203 @@
+{
+  "ray": {
+    "version": "2.58.0",
+    "alive_nodes": 2,
+    "cpus": 8.0,
+    "note": "Two raylets on one physical host; not a multi-machine cluster."
+  },
+  "ingest_1": {
+    "batch": "batch_1",
+    "read_rows": 3588270,
+    "valid_rows": 3584780,
+    "quarantined_rows": 3490,
+    "appended_events": 3584780,
+    "skipped_already_committed": 0,
+    "appended_quarantine": 3490,
+    "feature_rows": {
+      "price": 1117488,
+      "stock": 960547,
+      "popularity": 2848974
+    },
+    "snapshots": {
+      "ops.events": 6019920828495107411,
+      "ops.events_quarantine": 3089897811052517560,
+      "features.price_state": 6079197826478104564,
+      "features.stock_state": 2476164608469684414,
+      "features.popularity_state": 2578156294908064715
+    },
+    "seconds": 205.7322530149977,
+    "raw_rows": 3606157,
+    "planted_duplicates": 17887,
+    "planted_invalid": 3490,
+    "matches_pandas_reference": true,
+    "duplicate_event_ids_committed": 0,
+    "quarantine_reasons": {
+      "invalid_price": 3490
+    }
+  },
+  "worker_failure": {
+    "injected": true,
+    "marker": {
+      "bucket": 7,
+      "pid": 63645
+    }
+  },
+  "replay_batch_1": {
+    "appended_events": 0,
+    "events_snapshot_unchanged": true
+  },
+  "ingest_2": {
+    "batch": "batch_2",
+    "read_rows": 1441844,
+    "valid_rows": 1440411,
+    "quarantined_rows": 1433,
+    "appended_events": 1440410,
+    "skipped_already_committed": 1,
+    "appended_quarantine": 1433,
+    "feature_rows": {
+      "price": 1439540,
+      "stock": 1203598,
+      "popularity": 2849959
+    },
+    "snapshots": {
+      "ops.events": 5116180000030739141,
+      "ops.events_quarantine": 3123744761128781321,
+      "features.price_state": 7213477351932751475,
+      "features.stock_state": 8033777127656018672,
+      "features.popularity_state": 583474201836631185
+    },
+    "seconds": 132.900226740996
+  },
+  "exports": {
+    "ingest_1": {
+      "tag": "ingest_1",
+      "tables": {
+        "price": {
+          "iceberg_table": "features.price_state",
+          "snapshot_id": 6079197826478104564,
+          "rows": 1117488,
+          "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_1/price.parquet",
+          "sha256": "5eea2017aedf09703ceddfdaf00a578167d74c0c45bc0fa218b53c0e817accc6"
+        },
+        "stock": {
+          "iceberg_table": "features.stock_state",
+          "snapshot_id": 2476164608469684414,
+          "rows": 960547,
+          "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_1/stock.parquet",
+          "sha256": "dfa27ff2760fc0cb7345b8c1fc417e8ca83c696135e11a1003fa80a14929b4df"
+        },
+        "popularity": {
+          "iceberg_table": "features.popularity_state",
+          "snapshot_id": 2578156294908064715,
+          "rows": 2848974,
+          "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_1/popularity.parquet",
+          "sha256": "ea8f7f77e6a8fb4932dc7d7fc7b66afb9452793ad775a7ae7872b831f87fbac6"
+        }
+      },
+      "events_snapshot_id": 6019920828495107411
+    },
+    "ingest_2": {
+      "tag": "ingest_2",
+      "tables": {
+        "price": {
+          "iceberg_table": "features.price_state",
+          "snapshot_id": 7213477351932751475,
+          "rows": 1439540,
+          "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/price.parquet",
+          "sha256": "d169481e8898edd9d84aaee9377c6c45e08f195f239d9cd221e48b16dd888d5b"
+        },
+        "stock": {
+          "iceberg_table": "features.stock_state",
+          "snapshot_id": 8033777127656018672,
+          "rows": 1203598,
+          "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/stock.parquet",
+          "sha256": "4ccba6651c04d0410f37470f7b7d6ec3f2a6820873fcd999c41781243ca7fadb"
+        },
+        "popularity": {
+          "iceberg_table": "features.popularity_state",
+          "snapshot_id": 583474201836631185,
+          "rows": 2849959,
+          "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/popularity.parquet",
+          "sha256": "a65d91e64dd6716a5d7a9b78b41f382138082674814d0b5a5c4cac34abb7bf29"
+        }
+      },
+      "events_snapshot_id": 5116180000030739141
+    }
+  },
+  "schema_evolution": {
+    "current_columns": [
+      "product_id",
+      "feature_ts",
+      "created_ts",
+      "price_cents",
+      "price_event_epoch",
+      "currency"
+    ],
+    "ingest_1_rows_readable": 1117488,
+    "ingest_1_currency_all_null": "column absent in old snapshot read"
+  },
+  "historical_seconds": 2.443743859999813,
+  "historical_rows_missing_by_view": {
+    "popularity": 168,
+    "price": 16,
+    "stock": 25
+  },
+  "historical_vs_reference": {
+    "price": {
+      "match": 5001,
+      "mismatch": 0
+    },
+    "stock": {
+      "match": 5001,
+      "mismatch": 0
+    },
+    "popularity": {
+      "match": 5001,
+      "mismatch": 0
+    }
+  },
+  "naive_event_time_join_disagreements": {
+    "price": 33,
+    "stock": 20
+  },
+  "samples": 5001,
+  "history_stable_across_late_ingest": {
+    "cutoffs_before_boundary": 2981,
+    "identical": 2981,
+    "different": 0
+  },
+  "materialization": {
+    "seconds": [
+      49.40250492900668,
+      39.41455124599452
+    ],
+    "keys": 482104,
+    "repeat_identical": true
+  },
+  "parity_offline_rows_missing_by_view": {
+    "popularity": 0,
+    "price": 0,
+    "stock": 0
+  },
+  "online_offline_parity": {
+    "products": 2000,
+    "features": 8,
+    "mismatches": 0
+  },
+  "missing_and_stale": {
+    "missing_product_status": "missing",
+    "fresh_product_status": "ok",
+    "after_7h_status": "stale",
+    "after_7h_snapshot_age_s": 25200.0
+  },
+  "online_fetch_latency_ms_batch50": {
+    "n": 500,
+    "p50": 4.5809469957021065,
+    "p95": 5.984191009338246,
+    "p99": 6.514489028049865
+  },
+  "redis_outage": {
+    "behavior": "FeaturesUnavailable raised; no values served",
+    "error": "ConnectionError: Error 111 connecting to 127.0.0.1:6390. Connection refused."
+  }
+}

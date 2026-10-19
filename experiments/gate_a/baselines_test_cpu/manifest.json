@@ -1,0 +1,119 @@
+{
+  "experiment": "gate_a_retrieval_baselines",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "evidence": "/home/user/cartograph/runs/gate_a/baselines_test_cpu",
+    "split": "test",
+    "max_queries": null,
+    "depth": 100,
+    "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "encoder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "no_dense": false,
+    "device": "cpu",
+    "batch_size": 128,
+    "embedding_cache": "/home/user/cartograph/data/embeddings/minilm-1110a243/728e301ef1fb.npy",
+    "latency_queries": 500,
+    "bootstrap": 1000,
+    "seed": 13,
+    "threads": 16,
+    "slice_id": "728e301ef1fb",
+    "gain_convention": {
+      "E": 1.0,
+      "S": 0.1,
+      "C": 0.01,
+      "I": 0.0
+    },
+    "relevant_for_recall": [
+      "E",
+      "S"
+    ],
+    "rrf_k": 60,
+    "bm25": {
+      "k1": 1.5,
+      "b": 0.75
+    }
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/eval_retrieval.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--split",
+    "test",
+    "--device",
+    "cpu",
+    "--threads",
+    "16",
+    "--batch-size",
+    "128",
+    "--latency-queries",
+    "500",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_a/baselines_test_cpu",
+    "--embedding-cache",
+    "/home/user/cartograph/data/embeddings/minilm-1110a243/728e301ef1fb.npy"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-15T00:31:46.370422+00:00",
+  "git": {
+    "commit": "19cd62e7a858df725fab535d1cb3f47f646e9f51",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "products.parquet": {
+      "path": "/home/user/cartograph/data/processed/esci_us_small_v1/products.parquet",
+      "sha256": "3bc9ca1a667934d02769d3acf7797948310dec866dc0843aec2ff2979328371c"
+    },
+    "queries.parquet": {
+      "path": "/home/user/cartograph/data/processed/esci_us_small_v1/queries.parquet",
+      "sha256": "eaca729d104a813533b7ecdef27ddd6121ad81c5e6b0ebae1ba1a1197bff84f1"
+    },
+    "judgments.parquet": {
+      "path": "/home/user/cartograph/data/processed/esci_us_small_v1/judgments.parquet",
+      "sha256": "fb38802986f5bda2453eb01233c1ac019ea96f5e689ec1ae96827b49318bc9e9"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "5ca9fed362fae523976397f0ef30184489136d217cbd310dbead29025813f3d8",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb",
+    "encoder": {
+      "name": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    }
+  },
+  "duration_seconds": 5153.566,
+  "finished_at_utc": "2026-10-15T01:57:40.298294+00:00",
+  "outputs_sha256": {
+    "config.json": "eac447be98332f7634d8312d14f3a98a1a60897307a02e395906c506da51be99",
+    "environment-lock.txt": "5ca9fed362fae523976397f0ef30184489136d217cbd310dbead29025813f3d8",
+    "metrics.json": "9267bcc9277d69c374bb39aeba7af71286e0b83e8c8119fb399f1b51068cf555",
+    "per_example.jsonl": "837e205bde884f6a35163a898aeb47ceacf3e64b308a6a71f67229921afc9318",
+    "rankings.jsonl.gz": "ebe746299613d17d60ea051dbe683478a17e5d182447422c8e54bc8f86202261"
+  }
+}

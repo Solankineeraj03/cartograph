@@ -1,0 +1,47 @@
+INFO 10-18 01:50:25 [__init__.py:216] Automatically detected platform cuda.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7f0b0bfb6ac0>, seed=13, num_prompts=128, dataset_name='custom', no_stream=False, dataset_path='/home/user/cartograph/runs/gate_f/prompts/prompts.jsonl', no_oversample=False, custom_output_len=128, custom_skip_chat_template=True, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 0}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='vllm', endpoint_type=None, base_url='http://127.0.0.1:8011', host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=32, model='cartograph', tokenizer='/home/user/cartograph/checkpoints/align/sft_merged', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir='/home/user/cartograph/runs/gate_f/bf16_maxseqs16', result_filename='c32.json', ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='50,95,99', goodput=None, request_id_prefix='benchmark-serving', top_p=None, top_k=None, min_p=None, temperature=0.0, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600)
+Starting initial single prompt test run...
+Waiting for endpoint to become up in 600 seconds
+ |          | 00:00 elapsed, ? remaining |          | 00:00 elapsed, 00:07 remaining |          | 00:00 elapsed, 166:03:55 remaining
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 32
+  0%|          | 0/128 [00:00<?, ?it/s]  1%|          | 1/128 [00:00<02:02,  1.04it/s]  6%|▋         | 8/128 [00:01<00:12,  9.69it/s] 13%|█▎        | 17/128 [00:02<00:14,  7.89it/s] 18%|█▊        | 23/128 [00:02<00:09, 11.17it/s] 21%|██        | 27/128 [00:02<00:07, 12.66it/s] 25%|██▌       | 32/128 [00:02<00:06, 15.07it/s] 27%|██▋       | 35/128 [00:03<00:12,  7.74it/s] 30%|██▉       | 38/128 [00:04<00:10,  8.84it/s] 33%|███▎      | 42/128 [00:04<00:07, 10.82it/s] 37%|███▋      | 47/128 [00:04<00:05, 13.59it/s] 39%|███▉      | 50/128 [00:05<00:10,  7.43it/s] 42%|████▏     | 54/128 [00:05<00:07,  9.32it/s] 45%|████▌     | 58/128 [00:05<00:06, 11.24it/s] 48%|████▊     | 62/128 [00:06<00:05, 13.20it/s] 51%|█████     | 65/128 [00:07<00:08,  7.31it/s] 53%|█████▎    | 68/128 [00:07<00:06,  8.73it/s] 56%|█████▋    | 72/128 [00:07<00:05, 10.89it/s] 59%|█████▉    | 76/128 [00:07<00:04, 12.97it/s] 62%|██████▎   | 80/128 [00:07<00:03, 14.80it/s] 64%|██████▍   | 82/128 [00:08<00:06,  6.99it/s] 67%|██████▋   | 86/128 [00:08<00:04,  9.14it/s] 70%|███████   | 90/128 [00:09<00:03, 11.24it/s] 73%|███████▎  | 94/128 [00:09<00:02, 13.25it/s] 76%|███████▌  | 97/128 [00:10<00:04,  7.12it/s] 78%|███████▊  | 100/128 [00:10<00:03,  8.53it/s] 81%|████████▏ | 104/128 [00:10<00:02, 10.80it/s] 84%|████████▍ | 108/128 [00:10<00:01, 12.92it/s] 88%|████████▊ | 112/128 [00:11<00:01, 14.76it/s] 89%|████████▉ | 114/128 [00:11<00:01,  7.17it/s]100%|██████████| 128/128 [00:11<00:00, 10.70it/s]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     128       
+Maximum request concurrency:             32        
+Benchmark duration (s):                  11.96     
+Total input tokens:                      132843    
+Total generated tokens:                  16384     
+Request throughput (req/s):              10.70     
+Output token throughput (tok/s):         1369.80   
+Peak output token throughput (tok/s):    2042.00   
+Peak concurrent requests:                48.00     
+Total Token throughput (tok/s):          12476.28  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1446.54   
+Median TTFT (ms):                        1680.69   
+P50 TTFT (ms):                           1680.69   
+P95 TTFT (ms):                           1839.60   
+P99 TTFT (ms):                           1969.22   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          10.81     
+Median TPOT (ms):                        11.56     
+P50 TPOT (ms):                           11.56     
+P95 TPOT (ms):                           12.10     
+P99 TPOT (ms):                           12.23     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           10.81     
+Median ITL (ms):                         7.16      
+P50 ITL (ms):                            7.16      
+P95 ITL (ms):                            9.57      
+P99 ITL (ms):                            95.62     
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          2819.00   
+Median E2EL (ms):                        3159.72   
+P50 E2EL (ms):                           3159.72   
+P95 E2EL (ms):                           3309.21   
+P99 E2EL (ms):                           3432.67   
+==================================================

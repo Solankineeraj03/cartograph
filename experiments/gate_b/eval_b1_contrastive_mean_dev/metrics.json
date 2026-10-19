@@ -1,0 +1,45 @@
+{
+  "split": "dev",
+  "n_queries": 2089,
+  "pca_fit_vectors": 319972,
+  "variants": {
+    "native_384": {
+      "dim": 384,
+      "raw_float32_bytes": 740513280,
+      "exact_search_ms_per_query": 1.5036159789286885
+    }
+  },
+  "quality": {
+    "ndcg@10": {
+      "n_queries": 2089,
+      "native_384": {
+        "mean": 0.32069356883058725,
+        "ci95": [
+          0.3093103204902355,
+          0.3320089546170092
+        ]
+      }
+    },
+    "recall@50": {
+      "n_queries": 2089,
+      "native_384": {
+        "mean": 0.42895160938217314,
+        "ci95": [
+          0.4159662218167338,
+          0.4413372943753279
+        ]
+      }
+    },
+    "judged@10": {
+      "n_queries": 2089,
+      "native_384": {
+        "mean": 0.3282431785543322,
+        "ci95": [
+          0.31632120631881283,
+          0.3399712781235041
+        ]
+      }
+    }
+  },
+  "latency_note": "exact CPU matmul, 24 threads, batches of 256 queries"
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv*/
+artifacts/
+data/raw/
+data/processed/
+checkpoints/
+.env
+*.egg-info/
+data/demo_bundle_v1/*.parquet
+data/demo_bundle_v1/*/*.parquet

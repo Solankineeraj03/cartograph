@@ -1,0 +1,3 @@
+raw A 0.690 B 0.688 delta -0.002 ci95 [-0.010, 0.004] discordant B-only 1 A-only 2
+wrapped A 0.748 B 0.746 delta -0.002 ci95 [-0.010, 0.004] discordant B-only 1 A-only 2
+sft_merged raw {'correct': 0.69, 'optimal_rate_on_feasible': 0.8314606741573034, 'false_abstention_on_feasible': 0.02729528535980149} {'false_abstention': 11, 'incorrect_total': 46, 'out_of_stock': 10, 'over_budget': 104, 'unknown_product': 4}

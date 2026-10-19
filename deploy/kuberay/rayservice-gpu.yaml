@@ -1,0 +1,39 @@
+# GPU variant (implemented_unrun): needs a Linux node with the NVIDIA device plugin. One vLLM replica per GPU.
+# Image: built from the serve_app environment lock (envs/serve_app.lock.txt) with the merged SFT checkpoint mounted.
+apiVersion: ray.io/v1
+kind: RayService
+metadata:
+  name: cartograph-gpu
+spec:
+  serveConfigV2: |
+    applications:
+      - name: cartograph
+        import_path: cartograph.serve_app:build
+        route_prefix: /
+  rayClusterConfig:
+    rayVersion: "2.49.2"
+    headGroupSpec:
+      rayStartParams: {num-cpus: "0"}
+      template:
+        spec:
+          containers:
+            - name: ray-head
+              image: cartograph-gpu:release
+              resources: {requests: {cpu: "2", memory: 8Gi}, limits: {cpu: "4", memory: 8Gi}}
+    workerGroupSpecs:
+      - groupName: gpu
+        replicas: 1
+        minReplicas: 1
+        maxReplicas: 1
+        rayStartParams: {num-gpus: "1"}
+        template:
+          spec:
+            containers:
+              - name: ray-worker
+                image: cartograph-gpu:release
+                resources:
+                  requests: {cpu: "4", memory: 24Gi, nvidia.com/gpu: 1}
+                  limits: {cpu: "8", memory: 24Gi, nvidia.com/gpu: 1}
+                readinessProbe:
+                  httpGet: {path: /health, port: 8000}
+                  periodSeconds: 10

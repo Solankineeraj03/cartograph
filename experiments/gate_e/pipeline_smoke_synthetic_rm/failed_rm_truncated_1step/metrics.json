@@ -1,0 +1,8 @@
+{
+  "label_source": "verifier_v1",
+  "train_pairs": 500,
+  "test_pairs": 107,
+  "pairwise_accuracy": 0.14953271028037382,
+  "agreement_with_longer_answer": 0.6542056074766355,
+  "note": "Synthetic verifier labels: this measures pipeline function, not human preference."
+}

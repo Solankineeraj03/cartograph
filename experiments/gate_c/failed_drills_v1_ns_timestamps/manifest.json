@@ -1,0 +1,91 @@
+{
+  "experiment": "gate_c_feature_platform",
+  "status": "failed",
+  "seed": 7,
+  "config": {
+    "sim": "/home/user/cartograph/data/ops_sim_v1",
+    "work": "/home/user/cartograph/work/gate_c_v1",
+    "evidence": "/home/user/cartograph/runs/gate_c/drills_v1",
+    "redis_server": "/home/user/cartograph/opt/redis-7.4.6/src/redis-server",
+    "redis_port": 6390,
+    "cpus_per_node": 4,
+    "samples": 5000,
+    "seed": 7,
+    "simulator": {
+      "simulator_version": "ops-sim-v1",
+      "seed": 20260901,
+      "config": {
+        "start": "2026-09-01T00:00:00+00:00",
+        "days": 30,
+        "batch_cutoff": "2026-09-21T00:00:00+00:00",
+        "buckets": 64,
+        "price_changes_per_month": 2.0,
+        "stock_changes_per_month": 1.5,
+        "initial_in_stock": 0.85,
+        "delay_median_s": 120,
+        "late_fraction": 0.03,
+        "late_delay_hours": [
+          6,
+          72
+        ],
+        "duplicate_fraction": 0.005,
+        "invalid_fraction": 0.001,
+        "interaction_active_fraction": 0.2
+      }
+    }
+  },
+  "command": [
+    "/home/user/cartograph/venvs/platform/bin/python",
+    "/home/user/cartograph/repo/cartograph/gate_c.py",
+    "--sim",
+    "/home/user/cartograph/data/ops_sim_v1",
+    "--work",
+    "/home/user/cartograph/work/gate_c_v1",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_c/drills_v1",
+    "--redis-server",
+    "/home/user/cartograph/opt/redis-7.4.6/src/redis-server"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-15T00:44:01.580951+00:00",
+  "git": {
+    "commit": "d7c047a9e098bbde153b7481e06b3be71be6ecf0",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/platform/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ]
+  },
+  "inputs": {
+    "simulation_manifest": {
+      "path": "/home/user/cartograph/data/ops_sim_v1/simulation_manifest.json",
+      "sha256": "e757fe588677cf0baa86ee8f410bb254b65d92332d4bb1473eb359d5c7515c51"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/platform.lock.txt",
+    "sha256": "8fb48979d838400b21069bb83edede53c10a808f54b915a0a44689435c0c3b86",
+    "present": true
+  },
+  "extra": {},
+  "duration_seconds": 73.292,
+  "finished_at_utc": "2026-10-15T00:45:14.965832+00:00",
+  "error": "ArrowInvalid: ('Casting from timestamp[ns, tz=UTC] to timestamp[us, tz=UTC] would lose data: 1789405208926360332', 'Conversion failed for column event_time with type timestamp[ns, tz=UTC][pyarrow]')",
+  "outputs_sha256": {
+    "config.json": "8513fc12aff6ae90f1d8dcd80a0ea27992d36e51081bac29aa792f5b3442c958",
+    "environment-lock.txt": "8fb48979d838400b21069bb83edede53c10a808f54b915a0a44689435c0c3b86"
+  }
+}

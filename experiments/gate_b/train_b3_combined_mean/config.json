@@ -1,0 +1,28 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "out": "/home/user/cartograph/checkpoints/encoders/b3_combined_mean",
+  "evidence": "/home/user/cartograph/runs/gate_b/train_b3_combined_mean",
+  "base": "sentence-transformers/all-MiniLM-L6-v2",
+  "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "pooling": "mean",
+  "objective": "contrastive+graded",
+  "matryoshka": "",
+  "steps": 1000,
+  "batch_queries": 32,
+  "graded_products": 4,
+  "lr": 2e-05,
+  "warmup": 0.1,
+  "tau": 0.05,
+  "query_len": 32,
+  "doc_len": 256,
+  "seed": 13,
+  "device": "cpu",
+  "threads": 24,
+  "rank": {
+    "E": 3,
+    "S": 2,
+    "C": 1,
+    "I": 0
+  },
+  "slice_id": "728e301ef1fb"
+}

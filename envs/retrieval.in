@@ -1,0 +1,11 @@
+# Gate A/B: data audit, BM25, encoder baselines and fine-tuning (Linux x86_64, CUDA 12.4 wheels)
+torch==2.6.0
+sentence-transformers==3.4.1
+transformers==4.48.3
+numpy==2.2.4
+scipy==1.15.2
+pandas==2.2.3
+pyarrow==19.0.1
+scikit-learn==1.6.1
+tqdm==4.67.1
+qdrant-client==1.19.0

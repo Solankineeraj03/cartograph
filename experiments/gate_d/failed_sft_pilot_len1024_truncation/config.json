@@ -1,0 +1,26 @@
+{
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+  "model": "qwen2.5-1.5b-instruct",
+  "out": "/home/user/cartograph/checkpoints/sft/pilot",
+  "evidence": "/home/user/cartograph/runs/gate_d/sft_pilot",
+  "max_examples": null,
+  "pilot_steps": 20,
+  "epochs": 2.0,
+  "lr": 0.0002,
+  "rank": 16,
+  "batch": 1,
+  "accum": 16,
+  "max_length": 1024,
+  "gradient_checkpointing": false,
+  "cpu": false,
+  "seed": 13,
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "label_source": "solver_template_v1",
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": "all-linear"
+  }
+}

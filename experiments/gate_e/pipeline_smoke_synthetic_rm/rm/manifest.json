@@ -1,0 +1,95 @@
+{
+  "experiment": "gate_e_reward_model",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "base": "qwen2.5-0.5b-instruct",
+    "pairs": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+    "test_pairs": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+    "out": "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic",
+    "evidence": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/rm",
+    "epochs": 1.0,
+    "lr": 0.0001,
+    "seed": 13,
+    "max_length": 1600,
+    "label_source": "verifier_v1"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/training/bin/python",
+    "/home/user/cartograph/repo/cartograph/align.py",
+    "rm",
+    "--pairs",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+    "--test-pairs",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+    "--out",
+    "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/rm"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-18T17:43:17.365187+00:00",
+  "git": {
+    "commit": "cf810d7a369624d3bc11fb04e3ae2827c79fb84d",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/training/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "cuda_visible_devices": "1",
+    "devices": [
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "pairs": {
+      "path": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+      "sha256": "3f984f1927c549c203050a914bc4092deeb17d0bf27a614281a55d1c2463e546"
+    },
+    "test_pairs": {
+      "path": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+      "sha256": "103a59bcfac32dd38aca168724c77f42792231b635f412c58a92ffc175f49c63"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/training.lock.txt",
+    "sha256": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "present": true
+  },
+  "extra": {
+    "sequence_tokens_max": 1323,
+    "train_steps": 32,
+    "metrics": {
+      "label_source": "verifier_v1",
+      "train_pairs": 500,
+      "test_pairs": 107,
+      "pairwise_accuracy": 0.616822429906542,
+      "agreement_with_longer_answer": 0.42990654205607476,
+      "note": "Synthetic verifier labels: this measures pipeline function, not human preference."
+    }
+  },
+  "duration_seconds": 136.228,
+  "finished_at_utc": "2026-10-18T17:45:34.197419+00:00",
+  "outputs_sha256": {
+    "config.json": "22c473ae95ed835cc3f34849b70164614e99c375ecac45ba71a20fb564e08821",
+    "environment-lock.txt": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "metrics.json": "b9ca0ef1a239089c48508021901a03913e8c198e47a0ec0d6e002f4d82dc60b5",
+    "per_example.jsonl": "5eee507cbba1fe8e52dab5e7732c7dce15eab9f76da517c2346cf2c226fcc924"
+  }
+}

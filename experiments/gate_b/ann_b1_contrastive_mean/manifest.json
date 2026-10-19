@@ -1,0 +1,84 @@
+{
+  "experiment": "gate_b_qdrant_ann",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "vectors": "/home/user/cartograph/data/vectors/b1_contrastive_mean",
+    "qdrant": "/home/user/cartograph/opt/qdrant-1.19.0/qdrant",
+    "work": "/home/user/cartograph/work/qdrant_b1_contrastive_mean",
+    "evidence": "/home/user/cartograph/runs/gate_b/ann_b1_contrastive_mean",
+    "port": 6343,
+    "builds": "16:100,32:200",
+    "efs": "16,32,64,128,256",
+    "select_recall": 0.95,
+    "max_queries": 2000,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/ann.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--vectors",
+    "/home/user/cartograph/data/vectors/b1_contrastive_mean",
+    "--qdrant",
+    "/home/user/cartograph/opt/qdrant-1.19.0/qdrant",
+    "--work",
+    "/home/user/cartograph/work/qdrant_b1_contrastive_mean",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_b/ann_b1_contrastive_mean"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-17T17:38:18.056402+00:00",
+  "git": {
+    "commit": "2475f6e99b001049e8f9422d9ee537f31286968a",
+    "dirty": true,
+    "dirty_files": [
+      "M envs/serving.in"
+    ],
+    "diff_sha256": "0cdca0edacbb20ba8193dc4415bd438e7859e933bf0b99f19109e7158a0639b3"
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "products.npy": {
+      "path": "/home/user/cartograph/data/vectors/b1_contrastive_mean/products.npy",
+      "sha256": "c895b82b9ab2667d97cdd6cfd62c3c95789d2de6e9eff9c78a92b34b53df8bd0"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb",
+    "vectors_sha256": "c895b82b9ab2667d97cdd6cfd62c3c95789d2de6e9eff9c78a92b34b53df8bd0"
+  },
+  "duration_seconds": 246.058,
+  "finished_at_utc": "2026-10-17T17:42:25.797380+00:00",
+  "outputs_sha256": {
+    "config.json": "feefe28807d3d3007645720d153a131e5a8ac4556c0266ae4a3995831e3dbe73",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "f2f876a9f9ac8eda1a27823b512c871d4aeda3ef4923ae58278e529cb8e9a777",
+    "per_example.jsonl": "39e40ddbc6b661ff34dd64a9deeedfc0b34dfad834310749c3ac96d0ceda101f",
+    "qdrant.log": "6f4d0f9a482735fcc187a76a8d03ea4da4337a283d3b6993610a6fad41ae2b24"
+  }
+}

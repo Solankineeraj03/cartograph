@@ -1,0 +1,92 @@
+/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/qdrant_client/qdrant_remote.py:290: UserWarning: Failed to obtain server version. Unable to check client-server compatibility. Set check_compatibility=False to skip version check.
+  show_warning(
+{
+  "collection": "m16_efc100",
+  "hnsw_ef": 32,
+  "rule": "min dev p95 with recall@10 >= 0.95",
+  "test": {
+    "ann_recall@10_vs_exact": 0.953,
+    "ann_recall@100_vs_exact": 0.9338900000000001,
+    "ndcg@10": 0.3042948169677827,
+    "latency_ms": {
+      "n": 2000,
+      "p50": 2.9419664933811873,
+      "p95": 3.684129091561772,
+      "p99": 4.020804703177419
+    }
+  },
+  "test_quality_vs_exact": {
+    "ndcg@10": {
+      "n_queries": 2000,
+      "exact": {
+        "mean": 0.31258197080562483,
+        "ci95": [
+          0.2998011510318948,
+          0.32486132512631155
+        ]
+      },
+      "ann": {
+        "mean": 0.3042948169677827,
+        "ci95": [
+          0.29102786557604576,
+          0.3164765211432873
+        ],
+        "delta_vs_exact": {
+          "mean": -0.00828715383784216,
+          "ci95": [
+            -0.011176208999275749,
+            -0.005677613365327114
+          ]
+        }
+      }
+    },
+    "recall@50": {
+      "n_queries": 2000,
+      "exact": {
+        "mean": 0.4210522439685749,
+        "ci95": [
+          0.408651406033252,
+          0.4337515996543798
+        ]
+      },
+      "ann": {
+        "mean": 0.40479465177556706,
+        "ci95": [
+          0.39258314872544414,
+          0.4178903723393691
+        ],
+        "delta_vs_exact": {
+          "mean": -0.01625759219300783,
+          "ci95": [
+            -0.019497983983913843,
+            -0.012956733122104672
+          ]
+        }
+      }
+    },
+    "judged@10": {
+      "n_queries": 2000,
+      "exact": {
+        "mean": 0.32205,
+        "ci95": [
+          0.31,
+          0.33490499999999995
+        ]
+      },
+      "ann": {
+        "mean": 0.3153,
+        "ci95": [
+          0.30210000000000004,
+          0.32735250000000005
+        ],
+        "delta_vs_exact": {
+          "mean": -0.00675,
+          "ci95": [
+            -0.009,
+            -0.0045000000000000005
+          ]
+        }
+      }
+    }
+  }
+}

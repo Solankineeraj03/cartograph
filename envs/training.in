@@ -1,0 +1,12 @@
+# Gates D/E: SFT, DPO, reward model, GRPO (Linux x86_64, CUDA 12.8 wheels)
+torch==2.8.0
+transformers==4.57.1
+trl==0.24.0
+peft==0.17.1
+accelerate==1.10.1
+datasets==4.2.0
+bitsandbytes==0.48.1
+numpy==2.2.4
+pandas==2.2.3
+pyarrow==21.0.0
+scipy==1.15.2

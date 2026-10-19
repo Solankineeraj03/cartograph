@@ -1,0 +1,68 @@
+2026-10-18 12:01:58,071	INFO worker.py:1951 -- Started a local Ray instance.
+[36m(ProxyActor pid=519386)[0m INFO 2026-10-18 12:02:00,117 proxy gpu-host -- Proxy starting on node df6b7a9eab4d6ba20d55cfb119080369a92bbd2cf5c8e61761b7b542 (HTTP port: 8012).
+INFO 2026-10-18 12:02:00,200 serve 519040 -- Started Serve in namespace "serve".
+INFO 2026-10-18 12:02:00,205 serve 519040 -- Connecting to existing Serve app in namespace "serve". New http options will not be applied.
+WARNING 2026-10-18 12:02:00,205 serve 519040 -- The new client HTTP config differs from the existing one in the following fields: ['port', 'location']. The new HTTP config is ignored.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/cartograph/repo/cartograph/serve_app.py", line 197, in <module>
+    main()
+  File "/home/user/cartograph/repo/cartograph/serve_app.py", line 193, in main
+    serve.run(build(), name="cartograph", route_prefix="/", blocking=True)
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/api.py", line 699, in run
+    handle = _run(
+             ^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/api.py", line 609, in _run
+    return _run_many(
+           ^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/api.py", line 587, in _run_many
+    return client.deploy_applications(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/client.py", line 53, in check
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/client.py", line 298, in deploy_applications
+    ray.get(
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/_private/worker.py", line 2882, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/_private/worker.py", line 968, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(AttributeError): [36mray::ServeController.deploy_applications()[39m (pid=519387, ip=gpu-host, actor_id=73b729e8717b9d4065f9f67401000000, repr=<ray.serve._private.controller.ServeController object at 0x7f6f369dedd0>)
+  File "/home/user/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/controller.py", line 780, in deploy_applications
+    self.application_state_manager.deploy_apps(name_to_deployment_args)
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/application_state.py", line 965, in deploy_apps
+    deployment_infos = {
+                       ^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/application_state.py", line 966, in <dictcomp>
+    params["deployment_name"]: deploy_args_to_deployment_info(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/deploy_utils.py", line 66, in deploy_args_to_deployment_info
+    deployment_config = DeploymentConfig.from_proto_bytes(deployment_config_proto_bytes)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/config.py", line 350, in from_proto_bytes
+    return cls.from_proto(proto)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/config.py", line 280, in from_proto
+    data = _proto_to_dict(proto)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/serve_app/lib/python3.11/site-packages/ray/serve/_private/config.py", line 67, in _proto_to_dict
+    if field.label == FieldDescriptor.LABEL_REPEATED:
+       ^^^^^^^^^^^
+AttributeError: 'google._upb._message.FieldDescriptor' object has no attribute 'label'
+[36m(ProxyActor pid=519386)[0m INFO 2026-10-18 12:02:00,197 proxy gpu-host -- Got updated endpoints: {}.

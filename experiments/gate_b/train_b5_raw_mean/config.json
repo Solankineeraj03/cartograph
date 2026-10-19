@@ -1,0 +1,28 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "out": "/home/user/cartograph/checkpoints/encoders/b5_raw_mean",
+  "evidence": "/home/user/cartograph/runs/gate_b/train_b5_raw_mean",
+  "base": "nreimers/MiniLM-L6-H384-uncased",
+  "base_revision": "3276f0fac9d818781d7a1327b3ff818fc4e643c0",
+  "pooling": "mean",
+  "objective": "contrastive",
+  "matryoshka": "",
+  "steps": 1000,
+  "batch_queries": 32,
+  "graded_products": 4,
+  "lr": 5e-05,
+  "warmup": 0.1,
+  "tau": 0.05,
+  "query_len": 32,
+  "doc_len": 256,
+  "seed": 13,
+  "device": "cpu",
+  "threads": 24,
+  "rank": {
+    "E": 3,
+    "S": 2,
+    "C": 1,
+    "I": 0
+  },
+  "slice_id": "728e301ef1fb"
+}

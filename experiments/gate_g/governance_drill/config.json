@@ -1,0 +1,9 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "sim": "/home/user/cartograph/data/ops_sim_v1",
+  "export": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2",
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+  "runs": "/home/user/cartograph/runs",
+  "artifacts": "/home/user/cartograph",
+  "evidence": "/home/user/cartograph/runs/gate_g/governance_drill"
+}

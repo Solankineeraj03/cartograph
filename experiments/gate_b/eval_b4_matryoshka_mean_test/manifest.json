@@ -1,0 +1,86 @@
+{
+  "experiment": "gate_b_dimensionality",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "product_vectors": "/home/user/cartograph/data/vectors/b4_matryoshka_mean/products.npy",
+    "query_vectors": "/home/user/cartograph/data/vectors/b4_matryoshka_mean/queries_test.npy",
+    "split": "test",
+    "dims": "256,128,64",
+    "prefix_only": true,
+    "evidence": "/home/user/cartograph/runs/gate_b/eval_b4_matryoshka_mean_test",
+    "threads": 24,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/dims.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--product-vectors",
+    "/home/user/cartograph/data/vectors/b4_matryoshka_mean/products.npy",
+    "--query-vectors",
+    "/home/user/cartograph/data/vectors/b4_matryoshka_mean/queries_test.npy",
+    "--split",
+    "test",
+    "--dims=256,128,64",
+    "--prefix-only",
+    "--threads",
+    "24",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_b/eval_b4_matryoshka_mean_test"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-16T02:19:29.390077+00:00",
+  "git": {
+    "commit": "891550a865bcd8f1e61619f4ae8027788d951477",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "product_vectors": {
+      "path": "/home/user/cartograph/data/vectors/b4_matryoshka_mean/products.npy",
+      "sha256": "d3ee9e9126cae1a289c4ccfc7f56e254e2fb70bb0842b0a9d53236027b78e110"
+    },
+    "query_vectors": {
+      "path": "/home/user/cartograph/data/vectors/b4_matryoshka_mean/queries_test.npy",
+      "sha256": "8833bf330a72d8828151fe24b5da291dba1caa39e2f88281412bc1173e45f9a4"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb"
+  },
+  "duration_seconds": 102.31,
+  "finished_at_utc": "2026-10-16T02:21:12.229626+00:00",
+  "outputs_sha256": {
+    "config.json": "e74b46bb86aaccba2d8b1a2b9b47f0179d86f04186cec00517d9474d79fb5adb",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "89d2f6677e4e8e3a5d4d9a013aca12b9c046298471dc024b065d21ee3f3b8874",
+    "per_example.jsonl": "be48f756f38d98ac1cfd4b0e496b2a00507caeaf4ad85d9de79fbb9f07617ca6"
+  }
+}

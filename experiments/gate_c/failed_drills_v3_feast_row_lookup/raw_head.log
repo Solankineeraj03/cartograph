@@ -1,0 +1,250 @@
+2026-10-15 01:34:45,214	INFO worker.py:1833 -- Connecting to existing Ray cluster at address: gpu-host:44883...
+2026-10-15 01:34:45,286	INFO worker.py:2024 -- Connected to Ray cluster.
+2026-10-15 01:34:46,226	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034gCakZ5FHfYoO63WSmg7_0. Full logs are in /home/user/cartograph/ray_tmp/ray/session_2026-10-15_01-34-42_221272_42120/logs/ray-data
+2026-10-15 01:34:46,226	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034gCakZ5FHfYoO63WSmg7_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> HashShuffleOperator[Shuffle(key_columns=('bucket',), num_partitions=200)] -> TaskPoolMapOperator[MapBatches(validate_bucket)]
+2026-10-15 01:34:46,228	INFO __init__.py:56 -- Progress will be logged because stdout is a non-interactive terminal.
+2026-10-15 01:34:46,296	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:34:46,297	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:34:46,297	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-15 01:34:46,298	INFO logging_progress.py:181 -- 
+2026-10-15 01:34:46,298	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-15 01:34:46,298	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-15 01:34:46,298	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-15 01:34:46,298	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:34:46,298	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:34:46,298	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:34:46,298	INFO logging_progress.py:231 --     - Shuffle: 0/1
+2026-10-15 01:34:46,299	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:34:46,300	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:34:46,300	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:34:46,300	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:34:47,701	INFO hash_shuffle.py:1662 -- Estimated memory requirement for shuffling aggregator (partitions=200, aggregators=8, dataset (estimate)=0.5GiB): shuffle=60.5MiB, output=60.5MiB, total_base=121.1MiB, shuffle_aggregator_memory_estimate_skew_factor=1.3, total_with_skew=157.4MiB
+2026-10-15 01:34:56,351	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:34:56,351	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:34:56,351	INFO logging_progress.py:227 -- Active & requested resources: 8/8 CPU, 8.1GiB/494.4GiB memory, 113.0MiB/150.0MiB object store
+2026-10-15 01:34:56,351	INFO logging_progress.py:181 -- 
+2026-10-15 01:34:56,351	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:34:56,351	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 1.8KiB object store
+2026-10-15 01:34:56,351	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2366688/3606382
+2026-10-15 01:34:56,351	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 20 (1.7KiB); Resources: 2.0 CPU, 15.1MiB memory, 82.8MiB object store
+2026-10-15 01:34:56,351	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 1862551/1
+2026-10-15 01:34:56,352	INFO logging_progress.py:233 --   Tasks: 4 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 5 (37.4MiB); Resources: 6.0 CPU, 8.1GiB memory, 30.2MiB object store
+2026-10-15 01:34:56,352	INFO logging_progress.py:231 --     - Shuffle: 1862551/3612220
+2026-10-15 01:34:56,352	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:34:56,352	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:34:56,352	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:34:56,352	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:35:06,425	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:35:06,425	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:35:06,426	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 8.1GiB/494.4GiB memory, 52.7MiB/150.0MiB object store
+2026-10-15 01:35:06,426	INFO logging_progress.py:181 -- 
+2026-10-15 01:35:06,426	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:35:06,426	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 1.4KiB object store
+2026-10-15 01:35:06,426	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2650127/3608684
+2026-10-15 01:35:06,426	INFO logging_progress.py:233 --   Tasks: 3 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 14 (1.2KiB); Resources: 3.0 CPU, 22.7MiB memory, 37.6MiB object store
+2026-10-15 01:35:06,426	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 2538862/1
+2026-10-15 01:35:06,426	INFO logging_progress.py:233 --   Tasks: 2; Actors: 0; Queued blocks: 0 (0.0B); Resources: 4.0 CPU, 8.0GiB memory, 15.1MiB object store
+2026-10-15 01:35:06,426	INFO logging_progress.py:231 --     - Shuffle: 2538862/3610826
+2026-10-15 01:35:06,426	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:35:06,426	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:35:06,426	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:06,426	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:35:16,490	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:35:16,490	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:35:16,490	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 8.1GiB/494.4GiB memory, 52.7MiB/150.0MiB object store
+2026-10-15 01:35:16,490	INFO logging_progress.py:181 -- 
+2026-10-15 01:35:16,490	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:35:16,490	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 340.0B object store
+2026-10-15 01:35:16,490	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3382115/3607589
+2026-10-15 01:35:16,490	INFO logging_progress.py:233 --   Tasks: 3 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (85.0B); Resources: 3.0 CPU, 22.7MiB memory, 37.6MiB object store
+2026-10-15 01:35:16,490	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 3271223/1
+2026-10-15 01:35:16,490	INFO logging_progress.py:233 --   Tasks: 2; Actors: 0; Queued blocks: 0 (0.0B); Resources: 4.0 CPU, 8.0GiB memory, 15.1MiB object store
+2026-10-15 01:35:16,490	INFO logging_progress.py:231 --     - Shuffle: 3271223/3609625
+2026-10-15 01:35:16,491	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:35:16,491	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:35:16,491	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:16,491	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:35:26,562	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:35:26,562	INFO logging_progress.py:225 -- Total Progress: 618782/?
+2026-10-15 01:35:26,562	INFO logging_progress.py:227 -- Active & requested resources: 20/8 CPU, 8.2GiB/494.4GiB memory, 416.6MiB/150.0MiB object store
+2026-10-15 01:35:26,562	INFO logging_progress.py:181 -- 
+2026-10-15 01:35:26,562	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:35:26,562	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:26,562	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3606157/3606157
+2026-10-15 01:35:26,562	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:26,562	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 3606157/?
+2026-10-15 01:35:26,562	INFO logging_progress.py:233 --   Tasks: 8; Actors: 0; Queued blocks: 0 (0.0B); Resources: 2.0 CPU, 8.0GiB memory, 166.2MiB object store
+2026-10-15 01:35:26,562	INFO logging_progress.py:231 --     - Shuffle: 3606157/3605710
+2026-10-15 01:35:26,562	INFO logging_progress.py:231 --     - Reduce: 2365856/?
+2026-10-15 01:35:26,562	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 1124154/?
+2026-10-15 01:35:26,562	INFO logging_progress.py:233 --   Tasks: 18; Actors: 0; Queued blocks: 7 (0.0B); Resources: 18.0 CPU, 161.0MiB memory, 250.3MiB object store
+2026-10-15 01:35:26,562	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:35:36,662	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:35:36,663	INFO logging_progress.py:225 -- Total Progress: 1570218/?
+2026-10-15 01:35:36,663	INFO logging_progress.py:227 -- Active & requested resources: 19/8 CPU, 8.1GiB/494.4GiB memory, 453.9MiB/150.0MiB object store
+2026-10-15 01:35:36,663	INFO logging_progress.py:181 -- 
+2026-10-15 01:35:36,663	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:35:36,663	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:36,663	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3606157/3606157
+2026-10-15 01:35:36,663	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:36,663	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 3606157/?
+2026-10-15 01:35:36,663	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 2.0 CPU, 8.0GiB memory, 197.0MiB object store
+2026-10-15 01:35:36,663	INFO logging_progress.py:231 --     - Shuffle: 3606157/3605710
+2026-10-15 01:35:36,663	INFO logging_progress.py:231 --     - Reduce: 3606157/?
+2026-10-15 01:35:36,663	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 2130172/?
+2026-10-15 01:35:36,663	INFO logging_progress.py:233 --   Tasks: 17 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 8 (45.7MiB); Resources: 17.0 CPU, 152.9MiB memory, 256.8MiB object store
+2026-10-15 01:35:36,663	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:35:46,744	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:35:46,744	INFO logging_progress.py:225 -- Total Progress: 2242958/?
+2026-10-15 01:35:46,745	INFO logging_progress.py:227 -- Active & requested resources: 17/8 CPU, 8.1GiB/494.4GiB memory, 340.0MiB/150.0MiB object store
+2026-10-15 01:35:46,745	INFO logging_progress.py:181 -- 
+2026-10-15 01:35:46,745	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:35:46,745	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:46,745	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3606157/3606157
+2026-10-15 01:35:46,745	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:46,745	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 3606157/?
+2026-10-15 01:35:46,745	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 2.0 CPU, 8.0GiB memory, 181.8MiB object store
+2026-10-15 01:35:46,745	INFO logging_progress.py:231 --     - Shuffle: 3606157/3605710
+2026-10-15 01:35:46,745	INFO logging_progress.py:231 --     - Reduce: 3606157/?
+2026-10-15 01:35:46,745	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 2242958/?
+2026-10-15 01:35:46,745	INFO logging_progress.py:233 --   Tasks: 15 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 8 (45.7MiB); Resources: 15.0 CPU, 135.0MiB memory, 158.2MiB object store
+2026-10-15 01:35:46,745	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:35:56,764	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCakZ5FHfYoO63WSmg7_0 =======
+2026-10-15 01:35:56,764	INFO logging_progress.py:225 -- Total Progress: 2968988/?
+2026-10-15 01:35:56,764	INFO logging_progress.py:227 -- Active & requested resources: 8/8 CPU, 8.1GiB/494.4GiB memory, 172.8MiB/150.0MiB object store
+2026-10-15 01:35:56,764	INFO logging_progress.py:181 -- 
+2026-10-15 01:35:56,764	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:35:56,764	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:56,764	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3606157/3606157
+2026-10-15 01:35:56,764	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:35:56,764	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 3606157/?
+2026-10-15 01:35:56,764	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 2.0 CPU, 8.0GiB memory, 91.1MiB object store
+2026-10-15 01:35:56,764	INFO logging_progress.py:231 --     - Shuffle: 3606157/3605710
+2026-10-15 01:35:56,765	INFO logging_progress.py:231 --     - Reduce: 3606157/?
+2026-10-15 01:35:56,765	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 2968988/?
+2026-10-15 01:35:56,765	INFO logging_progress.py:233 --   Tasks: 6 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 8 (45.7MiB); Resources: 6.0 CPU, 53.1MiB memory, 81.7MiB object store
+2026-10-15 01:35:56,765	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:36:10,422	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034gCakZ5FHfYoO63WSmg7_0 execution finished in 84.19 seconds
+2026-10-15 01:36:19,107	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034gCd6lcYCBKz2UDirlyc_0. Full logs are in /home/user/cartograph/ray_tmp/ray/session_2026-10-15_01-34-42_221272_42120/logs/ray-data
+2026-10-15 01:36:19,107	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034gCd6lcYCBKz2UDirlyc_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(<lambda>)]
+2026-10-15 01:36:19,144	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCd6lcYCBKz2UDirlyc_0 =======
+2026-10-15 01:36:19,144	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:36:19,144	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-15 01:36:19,144	INFO logging_progress.py:181 -- 
+2026-10-15 01:36:19,144	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:36:19,144	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 63 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-15 01:36:19,144	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:36:29,218	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCd6lcYCBKz2UDirlyc_0 =======
+2026-10-15 01:36:29,218	INFO logging_progress.py:225 -- Total Progress: 693689/4926290
+2026-10-15 01:36:29,218	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 94.9MiB/494.4GiB memory, 148.7MiB/150.0MiB object store
+2026-10-15 01:36:29,218	INFO logging_progress.py:181 -- 
+2026-10-15 01:36:29,218	INFO logging_progress.py:231 -- MapBatches(<lambda>): 770198/4929267
+2026-10-15 01:36:29,218	INFO logging_progress.py:233 --   Tasks: 7 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 47 (0.0B); Resources: 7.0 CPU, 94.9MiB memory, 148.7MiB object store
+2026-10-15 01:36:29,219	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:36:39,235	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCd6lcYCBKz2UDirlyc_0 =======
+2026-10-15 01:36:39,235	INFO logging_progress.py:225 -- Total Progress: 1769699/4921903
+2026-10-15 01:36:39,235	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 94.6MiB/494.4GiB memory, 149.4MiB/150.0MiB object store
+2026-10-15 01:36:39,235	INFO logging_progress.py:181 -- 
+2026-10-15 01:36:39,235	INFO logging_progress.py:231 -- MapBatches(<lambda>): 1848089/4924380
+2026-10-15 01:36:39,235	INFO logging_progress.py:233 --   Tasks: 7 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 34 (0.0B); Resources: 7.0 CPU, 94.6MiB memory, 149.4MiB object store
+2026-10-15 01:36:39,235	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:36:49,236	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCd6lcYCBKz2UDirlyc_0 =======
+2026-10-15 01:36:49,236	INFO logging_progress.py:225 -- Total Progress: 2387304/4928628
+2026-10-15 01:36:49,236	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 94.8MiB/494.4GiB memory, 162.5MiB/150.0MiB object store
+2026-10-15 01:36:49,236	INFO logging_progress.py:181 -- 
+2026-10-15 01:36:49,236	INFO logging_progress.py:231 -- MapBatches(<lambda>): 2540766/4925564
+2026-10-15 01:36:49,237	INFO logging_progress.py:233 --   Tasks: 7 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 25 (0.0B); Resources: 7.0 CPU, 94.8MiB memory, 162.5MiB object store
+2026-10-15 01:36:49,237	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:36:59,240	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCd6lcYCBKz2UDirlyc_0 =======
+2026-10-15 01:36:59,240	INFO logging_progress.py:225 -- Total Progress: 2695625/4929077
+2026-10-15 01:36:59,240	INFO logging_progress.py:227 -- Active & requested resources: 6/8 CPU, 81.3MiB/494.4GiB memory, 162.6MiB/150.0MiB object store
+2026-10-15 01:36:59,240	INFO logging_progress.py:181 -- 
+2026-10-15 01:36:59,240	INFO logging_progress.py:231 -- MapBatches(<lambda>): 2925983/4930720
+2026-10-15 01:36:59,240	INFO logging_progress.py:233 --   Tasks: 6 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 22 (0.0B); Resources: 6.0 CPU, 81.3MiB memory, 162.6MiB object store
+2026-10-15 01:36:59,240	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:37:09,248	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCd6lcYCBKz2UDirlyc_0 =======
+2026-10-15 01:37:09,248	INFO logging_progress.py:225 -- Total Progress: 3926224/4927026
+2026-10-15 01:37:09,248	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 94.8MiB/494.4GiB memory, 176.4MiB/150.0MiB object store
+2026-10-15 01:37:09,248	INFO logging_progress.py:181 -- 
+2026-10-15 01:37:09,248	INFO logging_progress.py:231 -- MapBatches(<lambda>): 4159375/4927026
+2026-10-15 01:37:09,248	INFO logging_progress.py:233 --   Tasks: 7 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 6 (0.0B); Resources: 7.0 CPU, 94.8MiB memory, 176.4MiB object store
+2026-10-15 01:37:09,248	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:37:19,351	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034gCd6lcYCBKz2UDirlyc_0 execution finished in 60.24 seconds
+/home/user/cartograph/repo/cartograph/pipeline.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  frame = pd.read_json("\n".join(subset.row), lines=True, dtype=False)
+/home/user/cartograph/venvs/platform/lib/python3.11/site-packages/pyiceberg/table/__init__.py:721: UserWarning: Delete operation did not match any records
+  self.delete(
+/home/user/cartograph/repo/cartograph/pipeline.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  frame = pd.read_json("\n".join(subset.row), lines=True, dtype=False)
+/home/user/cartograph/venvs/platform/lib/python3.11/site-packages/pyiceberg/table/__init__.py:721: UserWarning: Delete operation did not match any records
+  self.delete(
+/home/user/cartograph/repo/cartograph/pipeline.py:154: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  frame = pd.read_json("\n".join(subset.row), lines=True, dtype=False)
+/home/user/cartograph/venvs/platform/lib/python3.11/site-packages/pyiceberg/table/__init__.py:721: UserWarning: Delete operation did not match any records
+  self.delete(
+2026-10-15 01:38:11,116	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034gCfws5OFcS7XO74byPy_0. Full logs are in /home/user/cartograph/ray_tmp/ray/session_2026-10-15_01-34-42_221272_42120/logs/ray-data
+2026-10-15 01:38:11,116	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034gCfws5OFcS7XO74byPy_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> HashShuffleOperator[Shuffle(key_columns=('bucket',), num_partitions=200)] -> TaskPoolMapOperator[MapBatches(validate_bucket)]
+2026-10-15 01:38:11,132	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCfws5OFcS7XO74byPy_0 =======
+2026-10-15 01:38:11,132	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:38:11,133	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-15 01:38:11,133	INFO logging_progress.py:181 -- 
+2026-10-15 01:38:11,133	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-15 01:38:11,133	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-15 01:38:11,133	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-15 01:38:11,133	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:38:11,133	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:38:11,133	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:38:11,133	INFO logging_progress.py:231 --     - Shuffle: 0/1
+2026-10-15 01:38:11,133	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:38:11,133	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:38:11,133	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:38:11,133	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:38:11,475	INFO hash_shuffle.py:1662 -- Estimated memory requirement for shuffling aggregator (partitions=200, aggregators=8, dataset (estimate)=0.5GiB): shuffle=60.5MiB, output=60.5MiB, total_base=121.1MiB, shuffle_aggregator_memory_estimate_skew_factor=1.3, total_with_skew=157.4MiB
+2026-10-15 01:38:21,162	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCfws5OFcS7XO74byPy_0 =======
+2026-10-15 01:38:21,162	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:38:21,162	INFO logging_progress.py:227 -- Active & requested resources: 8/8 CPU, 8.1GiB/494.4GiB memory, 83.1MiB/150.0MiB object store
+2026-10-15 01:38:21,162	INFO logging_progress.py:181 -- 
+2026-10-15 01:38:21,162	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:38:21,162	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 2.2KiB object store
+2026-10-15 01:38:21,162	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2087066/3610060
+2026-10-15 01:38:21,162	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 25 (2.1KiB); Resources: 2.0 CPU, 15.1MiB memory, 52.9MiB object store
+2026-10-15 01:38:21,162	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 1805359/1
+2026-10-15 01:38:21,162	INFO logging_progress.py:233 --   Tasks: 4 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (7.5MiB); Resources: 6.0 CPU, 8.1GiB memory, 30.2MiB object store
+2026-10-15 01:38:21,162	INFO logging_progress.py:231 --     - Shuffle: 1805359/3610718
+2026-10-15 01:38:21,162	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:38:21,162	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:38:21,162	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:38:21,163	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:38:31,228	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCfws5OFcS7XO74byPy_0 =======
+2026-10-15 01:38:31,228	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:38:31,228	INFO logging_progress.py:227 -- Active & requested resources: 8/8 CPU, 8.1GiB/494.4GiB memory, 90.6MiB/150.0MiB object store
+2026-10-15 01:38:31,228	INFO logging_progress.py:181 -- 
+2026-10-15 01:38:31,228	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:38:31,228	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 935.0B object store
+2026-10-15 01:38:31,229	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2987651/3607730
+2026-10-15 01:38:31,229	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 9 (765.0B); Resources: 2.0 CPU, 15.1MiB memory, 60.4MiB object store
+2026-10-15 01:38:31,229	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 2650127/1
+2026-10-15 01:38:31,229	INFO logging_progress.py:233 --   Tasks: 4 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 2 (15.0MiB); Resources: 6.0 CPU, 8.1GiB memory, 30.2MiB object store
+2026-10-15 01:38:31,229	INFO logging_progress.py:231 --     - Shuffle: 2650127/3608684
+2026-10-15 01:38:31,229	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:38:31,229	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:38:31,229	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:38:31,229	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:38:41,308	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCfws5OFcS7XO74byPy_0 =======
+2026-10-15 01:38:41,308	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:38:41,308	INFO logging_progress.py:227 -- Active & requested resources: 7/8 CPU, 8.1GiB/494.4GiB memory, 60.2MiB/150.0MiB object store
+2026-10-15 01:38:41,308	INFO logging_progress.py:181 -- 
+2026-10-15 01:38:41,308	INFO logging_progress.py:231 -- ListFiles: 64/64
+2026-10-15 01:38:41,308	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 170.0B object store
+2026-10-15 01:38:41,308	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3494388/3607110
+2026-10-15 01:38:41,308	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 2.0 CPU, 15.1MiB memory, 37.6MiB object store
+2026-10-15 01:38:41,308	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 3327184/1
+2026-10-15 01:38:41,308	INFO logging_progress.py:233 --   Tasks: 3; Actors: 0; Queued blocks: 0 (0.0B); Resources: 5.0 CPU, 8.0GiB memory, 22.6MiB object store
+2026-10-15 01:38:41,309	INFO logging_progress.py:231 --     - Shuffle: 3327184/3609149
+2026-10-15 01:38:41,309	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:38:41,309	INFO logging_progress.py:231 -- MapBatches(validate_bucket): 0/1
+2026-10-15 01:38:41,309	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:38:41,309	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:38:51,311	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034gCfws5OFcS7XO74byPy_0 =======
+2026-10-15 01:38:51,311	INFO logging_progress.py:225 -- Total Progress: 56787/?
+2026-10-15 01:38:51,311	INFO logging_progress.

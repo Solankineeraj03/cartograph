@@ -1,0 +1,92 @@
+/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+{
+  "collection": "m32_efc200",
+  "hnsw_ef": 32,
+  "rule": "min dev p95 with recall@10 >= 0.95",
+  "test": {
+    "ann_recall@10_vs_exact": 0.9619500000000001,
+    "ann_recall@100_vs_exact": 0.94199,
+    "ndcg@10": 0.2670987584943504,
+    "latency_ms": {
+      "n": 2000,
+      "p50": 3.3099304419010878,
+      "p95": 3.7531795271206647,
+      "p99": 4.112536576576531
+    }
+  },
+  "test_quality_vs_exact": {
+    "ndcg@10": {
+      "n_queries": 2000,
+      "exact": {
+        "mean": 0.27235147543888866,
+        "ci95": [
+          0.2600608066986596,
+          0.2843845109481931
+        ]
+      },
+      "ann": {
+        "mean": 0.2670987584943504,
+        "ci95": [
+          0.25463549189698115,
+          0.278633025503917
+        ],
+        "delta_vs_exact": {
+          "mean": -0.0052527169445383,
+          "ci95": [
+            -0.007601592081790353,
+            -0.0029240164955751306
+          ]
+        }
+      }
+    },
+    "recall@50": {
+      "n_queries": 2000,
+      "exact": {
+        "mean": 0.38336376716228676,
+        "ci95": [
+          0.37111980079525597,
+          0.3964235925581865
+        ]
+      },
+      "ann": {
+        "mean": 0.3730324960555622,
+        "ci95": [
+          0.35986092191950053,
+          0.38515621425004865
+        ],
+        "delta_vs_exact": {
+          "mean": -0.010331271106724584,
+          "ci95": [
+            -0.012859383308758614,
+            -0.008183018637663728
+          ]
+        }
+      }
+    },
+    "judged@10": {
+      "n_queries": 2000,
+      "exact": {
+        "mean": 0.2923,
+        "ci95": [
+          0.27984500000000007,
+          0.30455125
+        ]
+      },
+      "ann": {
+        "mean": 0.28764999999999996,
+        "ci95": [
+          0.27489874999999997,
+          0.30005125000000005
+        ],
+        "delta_vs_exact": {
+          "mean": -0.0046500000000000005,
+          "ci95": [
+            -0.006350000000000001,
+            -0.0030987500000000012
+          ]
+        }
+      }
+    }
+  }
+}

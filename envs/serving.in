@@ -1,0 +1,10 @@
+# Gate F/G: vLLM engine, Ray Serve pipeline, load generation (Linux x86_64, CUDA 12.8)
+vllm==0.11.0
+transformers==4.57.1
+ray[serve]==2.49.2
+aiohttp==3.12.15
+numpy<2.3
+pandas==2.2.3
+pyarrow==19.0.1
+scipy==1.15.2
+bitsandbytes==0.48.1

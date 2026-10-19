@@ -1,0 +1,45 @@
+{
+  "raw": {
+    "n": 500,
+    "correct": 0.0,
+    "format_ok": 0.0,
+    "valid_bundle_on_feasible": 0.0,
+    "correct_abstention_on_infeasible": 0.0,
+    "false_abstention_on_feasible": 0.0,
+    "bundle_offered_on_infeasible": 0.0,
+    "fabricated_id_rate": 0.0,
+    "mean_optimality_gap": null,
+    "optimal_rate_on_feasible": null,
+    "error_counts": {
+      "invalid_schema": 500
+    }
+  },
+  "wrapped": {
+    "n": 500,
+    "correct": 0.19,
+    "format_ok": 0.982,
+    "valid_bundle_on_feasible": 0.0,
+    "correct_abstention_on_infeasible": 0.979381443298969,
+    "false_abstention_on_feasible": 0.9826302729528535,
+    "bundle_offered_on_infeasible": 0.0,
+    "fabricated_id_rate": 0.0,
+    "mean_optimality_gap": null,
+    "optimal_rate_on_feasible": null,
+    "error_counts": {
+      "false_abstention": 396,
+      "invalid_schema": 9
+    }
+  },
+  "shown": {
+    "verified_bundle": 0,
+    "abstain_with_reason": 491,
+    "withheld_unverified": 9
+  },
+  "generate_calls": 927,
+  "latency_ms_per_call": {
+    "p50": 431.5238420094829,
+    "p95": 852.81908789766,
+    "p99": 1060.0200517787016
+  },
+  "latency_note": "engine=vllm, sequential task loop, includes retries"
+}

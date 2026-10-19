@@ -1,0 +1,32 @@
+{
+  "sim": "/home/user/cartograph/data/ops_sim_v1",
+  "work": "/home/user/cartograph/work/gate_c_v1",
+  "evidence": "/home/user/cartograph/runs/gate_c/drills_v1",
+  "redis_server": "/home/user/cartograph/opt/redis-7.4.6/src/redis-server",
+  "redis_port": 6390,
+  "cpus_per_node": 4,
+  "samples": 5000,
+  "seed": 7,
+  "simulator": {
+    "simulator_version": "ops-sim-v1",
+    "seed": 20260901,
+    "config": {
+      "start": "2026-09-01T00:00:00+00:00",
+      "days": 30,
+      "batch_cutoff": "2026-09-21T00:00:00+00:00",
+      "buckets": 64,
+      "price_changes_per_month": 2.0,
+      "stock_changes_per_month": 1.5,
+      "initial_in_stock": 0.85,
+      "delay_median_s": 120,
+      "late_fraction": 0.03,
+      "late_delay_hours": [
+        6,
+        72
+      ],
+      "duplicate_fraction": 0.005,
+      "invalid_fraction": 0.001,
+      "interaction_active_fraction": 0.2
+    }
+  }
+}

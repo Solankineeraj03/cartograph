@@ -1,0 +1,10 @@
+# Gate B (Qdrant) and Gate C (Ray Data, Iceberg, Feast, Redis); CPU only, Linux x86_64
+ray[data]==2.58.0
+pyiceberg[sql-sqlite,pyarrow]==0.12.0
+feast[redis]==0.66.0
+redis==7.4.1
+qdrant-client==1.19.0
+numpy==2.2.4
+pandas==2.2.3
+pyarrow==19.0.1
+scipy==1.15.2

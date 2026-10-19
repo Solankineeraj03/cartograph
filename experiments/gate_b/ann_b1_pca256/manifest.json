@@ -1,0 +1,82 @@
+{
+  "experiment": "gate_b_qdrant_ann",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "vectors": "/home/user/cartograph/data/vectors/b1_pca256",
+    "qdrant": "/home/user/cartograph/opt/qdrant-1.19.0/qdrant",
+    "work": "/home/user/cartograph/work/qdrant_b1_pca256",
+    "evidence": "/home/user/cartograph/runs/gate_b/ann_b1_pca256",
+    "port": 6343,
+    "builds": "16:100,32:200",
+    "efs": "16,32,64,128,256",
+    "select_recall": 0.95,
+    "max_queries": 2000,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/ann.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--vectors",
+    "/home/user/cartograph/data/vectors/b1_pca256",
+    "--qdrant",
+    "/home/user/cartograph/opt/qdrant-1.19.0/qdrant",
+    "--work",
+    "/home/user/cartograph/work/qdrant_b1_pca256",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_b/ann_b1_pca256"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-17T17:34:39.545031+00:00",
+  "git": {
+    "commit": "2475f6e99b001049e8f9422d9ee537f31286968a",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "products.npy": {
+      "path": "/home/user/cartograph/data/vectors/b1_pca256/products.npy",
+      "sha256": "e0d0d011e547678399335bf2f820dc792c487bfce5941fc74f41f0159b8b41dd"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb",
+    "vectors_sha256": "e0d0d011e547678399335bf2f820dc792c487bfce5941fc74f41f0159b8b41dd"
+  },
+  "duration_seconds": 215.555,
+  "finished_at_utc": "2026-10-17T17:38:16.632613+00:00",
+  "outputs_sha256": {
+    "config.json": "2f232806f5599a54f14f637fea687197149cc1255b4b8f0e7ede6f1df8a7adaf",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "fd3cfe945f8a579f2602afdeaf7720de06ecf1ef3fd2a402f49253fcdc98d703",
+    "per_example.jsonl": "600944a8e31d500419a3e7e3c5045a7fc3fe6f20c4750869ce868ea10c168c3c",
+    "qdrant.log": "fd4fd78cd882103109f954f41a1d7727df92a4a45be407d86973fb24e5c65dc0"
+  }
+}

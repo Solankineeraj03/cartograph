@@ -1,0 +1,27 @@
+{
+  "tag": "ingest_1",
+  "tables": {
+    "price": {
+      "iceberg_table": "features.price_state",
+      "snapshot_id": 6079197826478104564,
+      "rows": 1117488,
+      "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_1/price.parquet",
+      "sha256": "5eea2017aedf09703ceddfdaf00a578167d74c0c45bc0fa218b53c0e817accc6"
+    },
+    "stock": {
+      "iceberg_table": "features.stock_state",
+      "snapshot_id": 2476164608469684414,
+      "rows": 960547,
+      "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_1/stock.parquet",
+      "sha256": "dfa27ff2760fc0cb7345b8c1fc417e8ca83c696135e11a1003fa80a14929b4df"
+    },
+    "popularity": {
+      "iceberg_table": "features.popularity_state",
+      "snapshot_id": 2578156294908064715,
+      "rows": 2848974,
+      "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_1/popularity.parquet",
+      "sha256": "ea8f7f77e6a8fb4932dc7d7fc7b66afb9452793ad775a7ae7872b831f87fbac6"
+    }
+  },
+  "events_snapshot_id": 6019920828495107411
+}

@@ -1,0 +1,167 @@
+0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:32:02,981	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:32:02,981	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:32:02,981	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:32:02,981	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:32:02,981	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:32:11,970	WARNING issue_detector_manager.py:75 -- Only 7 out of 8 hash-shuffle aggregators are ready after 20476.9 secs. This might indicate resource contention for cluster resources (available CPUs: 6.25, required CPUs: 2.0). Cluster only has 479.42 GiB available memory, required memory: 8.00 GiB. 489.50 GiB total memory. Consider increasing cluster size or reducing the number of aggregators via `DataContext.max_hash_shuffle_aggregators`. Will continue checking every 30s.
+2026-10-15 01:32:11,970	WARNING issue_detector_manager.py:105 -- Found 1 issues. To disable issue detection, run DataContext.get_current().issue_detectors_config.detectors = [].
+2026-10-15 01:32:12,987	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:32:12,987	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:32:12,987	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:32:12,987	INFO logging_progress.py:181 -- 
+2026-10-15 01:32:12,987	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:32:12,987	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:32:12,987	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:32:12,987	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:32:12,987	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:32:12,987	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:32:12,987	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:32:23,048	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:32:23,048	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:32:23,048	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:32:23,048	INFO logging_progress.py:181 -- 
+2026-10-15 01:32:23,048	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:32:23,048	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:32:23,048	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:32:23,048	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:32:23,048	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:32:23,048	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:32:23,049	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:32:33,090	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:32:33,091	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:32:33,091	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:32:33,091	INFO logging_progress.py:181 -- 
+2026-10-15 01:32:33,091	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:32:33,091	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:32:33,091	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:32:33,091	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:32:33,091	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:32:33,091	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:32:33,091	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:32:41,982	WARNING issue_detector_manager.py:75 -- Only 7 out of 8 hash-shuffle aggregators are ready after 20506.9 secs. This might indicate resource contention for cluster resources (available CPUs: 6.25, required CPUs: 2.0). Cluster only has 479.42 GiB available memory, required memory: 8.00 GiB. 489.50 GiB total memory. Consider increasing cluster size or reducing the number of aggregators via `DataContext.max_hash_shuffle_aggregators`. Will continue checking every 30s.
+2026-10-15 01:32:41,982	WARNING issue_detector_manager.py:105 -- Found 1 issues. To disable issue detection, run DataContext.get_current().issue_detectors_config.detectors = [].
+2026-10-15 01:32:43,100	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:32:43,100	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:32:43,100	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:32:43,100	INFO logging_progress.py:181 -- 
+2026-10-15 01:32:43,100	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:32:43,100	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:32:43,100	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:32:43,100	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:32:43,100	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:32:43,101	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:32:43,101	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:32:53,162	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:32:53,162	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:32:53,162	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:32:53,162	INFO logging_progress.py:181 -- 
+2026-10-15 01:32:53,162	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:32:53,162	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:32:53,162	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:32:53,162	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:32:53,162	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:32:53,162	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:32:53,162	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:33:03,209	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:33:03,209	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:33:03,209	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:33:03,209	INFO logging_progress.py:181 -- 
+2026-10-15 01:33:03,210	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:33:03,210	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:33:03,210	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:33:03,210	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:33:03,210	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:33:03,210	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:33:03,210	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:33:11,990	WARNING issue_detector_manager.py:75 -- Only 7 out of 8 hash-shuffle aggregators are ready after 20536.9 secs. This might indicate resource contention for cluster resources (available CPUs: 6.25, required CPUs: 2.0). Cluster only has 479.42 GiB available memory, required memory: 8.00 GiB. 489.50 GiB total memory. Consider increasing cluster size or reducing the number of aggregators via `DataContext.max_hash_shuffle_aggregators`. Will continue checking every 30s.
+2026-10-15 01:33:11,991	WARNING issue_detector_manager.py:105 -- Found 1 issues. To disable issue detection, run DataContext.get_current().issue_detectors_config.detectors = [].
+2026-10-15 01:33:13,211	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:33:13,211	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:33:13,211	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:33:13,211	INFO logging_progress.py:181 -- 
+2026-10-15 01:33:13,211	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:33:13,211	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:33:13,211	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:33:13,211	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:33:13,211	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:33:13,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:33:13,211	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:33:23,275	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:33:23,275	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:33:23,275	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:33:23,275	INFO logging_progress.py:181 -- 
+2026-10-15 01:33:23,275	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:33:23,275	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:33:23,276	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:33:23,276	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:33:23,276	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:33:23,276	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:33:23,276	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:33:33,320	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:33:33,320	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:33:33,320	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:33:33,321	INFO logging_progress.py:181 -- 
+2026-10-15 01:33:33,321	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:33:33,321	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:33:33,321	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:33:33,321	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:33:33,321	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:33:33,321	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:33:33,321	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:33:42,006	WARNING issue_detector_manager.py:75 -- Only 7 out of 8 hash-shuffle aggregators are ready after 20566.9 secs. This might indicate resource contention for cluster resources (available CPUs: 6.25, required CPUs: 2.0). Cluster only has 479.42 GiB available memory, required memory: 8.00 GiB. 489.50 GiB total memory. Consider increasing cluster size or reducing the number of aggregators via `DataContext.max_hash_shuffle_aggregators`. Will continue checking every 30s.
+2026-10-15 01:33:42,006	WARNING issue_detector_manager.py:105 -- Found 1 issues. To disable issue detection, run DataContext.get_current().issue_detectors_config.detectors = [].
+2026-10-15 01:33:43,328	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:33:43,328	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:33:43,328	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:33:43,328	INFO logging_progress.py:181 -- 
+2026-10-15 01:33:43,328	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:33:43,328	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:33:43,328	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:33:43,328	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:33:43,328	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:33:43,328	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:33:43,328	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:33:53,390	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:33:53,390	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:33:53,390	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:33:53,390	INFO logging_progress.py:181 -- 
+2026-10-15 01:33:53,390	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:33:53,390	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:33:53,390	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:33:53,391	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:33:53,391	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:33:53,391	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:33:53,391	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:34:03,437	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:34:03,437	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:34:03,437	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:34:03,437	INFO logging_progress.py:181 -- 
+2026-10-15 01:34:03,437	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:34:03,437	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:34:03,437	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:34:03,437	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:34:03,438	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:34:03,438	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:34:03,438	INFO logging_progress.py:192 -- =================================================================
+2026-10-15 01:34:12,021	WARNING issue_detector_manager.py:75 -- Only 7 out of 8 hash-shuffle aggregators are ready after 20596.9 secs. This might indicate resource contention for cluster resources (available CPUs: 6.25, required CPUs: 2.0). Cluster only has 479.42 GiB available memory, required memory: 8.00 GiB. 489.50 GiB total memory. Consider increasing cluster size or reducing the number of aggregators via `DataContext.max_hash_shuffle_aggregators`. Will continue checking every 30s.
+2026-10-15 01:34:12,021	WARNING issue_detector_manager.py:105 -- Found 1 issues. To disable issue detection, run DataContext.get_current().issue_detectors_config.detectors = [].
+2026-10-15 01:34:13,444	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034g49ZCAdzWrr3BCD9gZV_0 =======
+2026-10-15 01:34:13,444	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-15 01:34:13,445	INFO logging_progress.py:227 -- Active & requested resources: 3/8 CPU, 11.1GiB/489.5GiB memory, 0.0B/150.0MiB object store
+2026-10-15 01:34:13,445	INFO logging_progress.py:181 -- 
+2026-10-15 01:34:13,445	INFO logging_progress.py:231 -- Shuffle(key_columns=('bucket',), num_partitions=200): 0/1
+2026-10-15 01:34:13,445	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 3.0 CPU, 11.1GiB memory, 0.0B object store
+2026-10-15 01:34:13,445	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-15 01:34:13,445	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-15 01:34:13,445	INFO logging_progress.py:231 -- MapBatches(<lambda>): 0/1
+2026-10-15 01:34:13,445	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-15 01:34:13,445	INFO logging_progress.py:192 -- =================================================================
+*** SIGTERM received at time=1792046054 on cpu 1 ***
+PC: @     0x7fdb40d6623f  (unknown)  clock_nanosleep
+    @     0x7fdb40ff3420  (unknown)  (unknown)
+[2026-10-15 01:34:14,782 E 4104436 4104436] logging.cc:474: *** SIGTERM received at time=1792046054 on cpu 1 ***
+[2026-10-15 01:34:14,782 E 4104436 4104436] logging.cc:474: PC: @     0x7fdb40d6623f  (unknown)  clock_nanosleep
+[2026-10-15 01:34:14,782 E 4104436 4104436] logging.cc:474:     @     0x7fdb40ff3420  (unknown)  (unknown)
+2026-10-15 01:34:14,871	INFO streaming_executor.py:365 -- ⚠️  Dataset dataset_034g49ZCAdzWrr3BCD9gZV_0 execution failed
+[2026-10-15 01:34:15,371 E 4104436 4104962] core_worker.cc:516: :info_message: Attempting to recover 2 lost objects by resubmitting their tasks or setting a new primary location from existing copies. To disable object reconstruction, set @ray.remote(max_retries=0).

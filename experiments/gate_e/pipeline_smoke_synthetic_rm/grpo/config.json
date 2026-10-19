@@ -1,0 +1,18 @@
+{
+  "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+  "reward": "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic/reward_model",
+  "allow_synthetic_rm": true,
+  "out": "/home/user/cartograph/checkpoints/align/grpo_rm_smoke",
+  "evidence": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/grpo",
+  "max_tasks": 64,
+  "group": 4,
+  "accum": 4,
+  "steps": 3,
+  "beta": 0.04,
+  "lr": 1e-05,
+  "temperature": 1.0,
+  "max_prompt_length": 1280,
+  "max_completion_length": 384,
+  "seed": 13
+}

@@ -1,0 +1,15 @@
+{
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+  "engine": "vllm",
+  "model": "qwen2.5-1.5b-instruct",
+  "adapter": "/home/user/cartograph/checkpoints/sft/full_v1/adapter",
+  "quantization": null,
+  "base_url": "http://127.0.0.1:8000",
+  "device": "cuda",
+  "max_tasks": null,
+  "max_new_tokens": 256,
+  "evidence": "/home/user/cartograph/runs/gate_d/sft_vllm_test",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "decoding": "greedy"
+}

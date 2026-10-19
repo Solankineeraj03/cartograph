@@ -1,0 +1,102 @@
+{
+  "experiment": "gate_e_grpo_rlhf",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "tasks": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+    "reward": "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic/reward_model",
+    "allow_synthetic_rm": true,
+    "out": "/home/user/cartograph/checkpoints/align/grpo_rm_smoke",
+    "evidence": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/grpo",
+    "max_tasks": 64,
+    "group": 4,
+    "accum": 4,
+    "steps": 3,
+    "beta": 0.04,
+    "lr": 1e-05,
+    "temperature": 1.0,
+    "max_prompt_length": 1280,
+    "max_completion_length": 384,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/training/bin/python",
+    "/home/user/cartograph/repo/cartograph/align.py",
+    "grpo",
+    "--policy",
+    "/home/user/cartograph/checkpoints/align/sft_merged",
+    "--tasks",
+    "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+    "--reward",
+    "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic/reward_model",
+    "--allow-synthetic-rm",
+    "--out",
+    "/home/user/cartograph/checkpoints/align/grpo_rm_smoke",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/grpo",
+    "--group",
+    "4",
+    "--steps",
+    "3",
+    "--max-tasks",
+    "64"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-18T17:41:55.953657+00:00",
+  "git": {
+    "commit": "d47d9b99df6263109e5e3e80a406fc43ad458c41",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/training/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "cuda_visible_devices": "1",
+    "devices": [
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "tasks": {
+      "path": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+      "sha256": "b74df74821c63a39a4b00ca658c6c84ec3f90a672c77f1c77c9d4b2668e412a3"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/training.lock.txt",
+    "sha256": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "present": true
+  },
+  "extra": {
+    "prompt_tokens_max": 1187,
+    "seconds": 47.62037888998748,
+    "group_stats": {
+      "groups": 0,
+      "all_equal": 0
+    },
+    "peak_reserved_gib": 7.3203125
+  },
+  "duration_seconds": 51.592,
+  "finished_at_utc": "2026-10-18T17:42:47.825267+00:00",
+  "outputs_sha256": {
+    "config.json": "1e4496d26927cbb761b5b63c0bf692b30214e55b2d208d0f3e6df404fd439aa4",
+    "environment-lock.txt": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "train_log.jsonl": "1499f831e1efbf9653265226ae207e6ef6e357c181dfce024d12abe8d7276fa7"
+  }
+}

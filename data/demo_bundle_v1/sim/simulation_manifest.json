@@ -1,0 +1,95 @@
+{
+  "simulator_version": "ops-sim-v1",
+  "seed": 20260901,
+  "config": {
+    "start": "2026-09-01T00:00:00+00:00",
+    "days": 30,
+    "batch_cutoff": "2026-09-21T00:00:00+00:00",
+    "buckets": 64,
+    "price_changes_per_month": 2.0,
+    "stock_changes_per_month": 1.5,
+    "initial_in_stock": 0.85,
+    "delay_median_s": 120,
+    "late_fraction": 0.03,
+    "late_delay_hours": [
+      6,
+      72
+    ],
+    "duplicate_fraction": 0.005,
+    "invalid_fraction": 0.001,
+    "interaction_active_fraction": 0.2
+  },
+  "synthetic": true,
+  "products": 482105,
+  "product_without_events": "0000306045",
+  "events_by_batch": {
+    "batch_1": 3606157,
+    "batch_2": 1449094
+  },
+  "category_rules": [
+    [
+      "keyboard_mouse_combo",
+      "keyboard (and|&|\\+) mouse|mouse (and|&|\\+) keyboard|keyboard mouse combo"
+    ],
+    [
+      "mouse_pad",
+      "mouse ?pad|mousepad|desk mat"
+    ],
+    [
+      "keyboard",
+      "\\bkeyboard\\b"
+    ],
+    [
+      "mouse",
+      "\\b(wireless|bluetooth|gaming|optical|ergonomic|computer|usb|silent|vertical) mouse\\b|\\bmice\\b"
+    ],
+    [
+      "headphones",
+      "headphone|headset|earbud|earphone"
+    ],
+    [
+      "monitor",
+      "\\bmonitor\\b(?! mount| arm| stand)"
+    ],
+    [
+      "webcam",
+      "webcam|web cam"
+    ],
+    [
+      "usb_hub",
+      "usb (c )?hub|docking station"
+    ],
+    [
+      "laptop_stand",
+      "laptop stand|monitor stand|monitor arm"
+    ],
+    [
+      "speaker",
+      "\\bspeakers?\\b"
+    ],
+    [
+      "microphone",
+      "microphone|\\bmic\\b"
+    ],
+    [
+      "charger",
+      "\\bcharger\\b|charging cable|power bank"
+    ]
+  ],
+  "category_counts": {
+    "other": 467427,
+    "headphones": 3645,
+    "charger": 3552,
+    "monitor": 1840,
+    "speaker": 1704,
+    "keyboard": 1479,
+    "microphone": 966,
+    "mouse": 450,
+    "mouse_pad": 308,
+    "webcam": 280,
+    "usb_hub": 188,
+    "keyboard_mouse_combo": 152,
+    "laptop_stand": 114
+  },
+  "generated_at_utc": "2026-10-15T00:48:35.744317+00:00"
+}

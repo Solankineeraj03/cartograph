@@ -1,0 +1,11 @@
+{
+  "requests": 60,
+  "kill_after": 10,
+  "killed_actor_ids": [
+    "SERVE_REPLICA::cartograph#Generator#jpkbt2s8"
+  ],
+  "errors_before_kill": 0,
+  "errors_after_kill": 0,
+  "first_success_after_kill_s": 22.536953362985514,
+  "note": "Generator replica actor killed with ray.kill(no_restart=True); the Serve controller must start a replacement."
+}

@@ -1,0 +1,20 @@
+{
+  "products": 14678,
+  "sources": {
+    "/home/user/cartograph/data/processed/esci_us_small_v1/products.parquet": "3bc9ca1a667934d02769d3acf7797948310dec866dc0843aec2ff2979328371c",
+    "/home/user/cartograph/data/ops_sim_v1/product_categories.parquet": "1b17dac66a884abdb826b7c409e9b49e362a18d742240f4ac485e764e96b13a4",
+    "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/price.parquet": "d169481e8898edd9d84aaee9377c6c45e08f195f239d9cd221e48b16dd888d5b",
+    "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/stock.parquet": "4ccba6651c04d0410f37470f7b7d6ec3f2a6820873fcd999c41781243ca7fadb",
+    "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/popularity.parquet": "a65d91e64dd6716a5d7a9b78b41f382138082674814d0b5a5c4cac34abb7bf29"
+  },
+  "bundle": {
+    "export/export_manifest.json": "6d7325952840a347a77bddd230e8c430b8631c4992808e698f1a0020c8680713",
+    "export/popularity.parquet": "c83c5d48479d2afb31fa717d6fa2ac6e088a2518d2068be4f56e8c2eae036318",
+    "export/price.parquet": "0eef6f227aefae6b23595b6587dd240579e81059a1ce758999b32cc2784240cb",
+    "export/stock.parquet": "1bbe3557f8213f71806a204bbbe482490b13f176da04e88ac65dcf9f3cf4e12b",
+    "sim/product_categories.parquet": "50f7874ac296bd402d633667e5aeed551e18af667a580fb995fe783034031b57",
+    "sim/simulation_manifest.json": "54b65d5b170d3807c593cbd60adb0d4c871095f755bcdf547d07799c96e19cfb",
+    "slice/data_manifest.json": "0e4a8273f82e7d9443b1ac523fd7049f8526ed2a709a7e28d2e8ee87f3d36bb3",
+    "slice/products.parquet": "36f5a4cf1e8046fc05681e94ee00e4e9feca9a70090004d3f7ab0c052faf941a"
+  }
+}

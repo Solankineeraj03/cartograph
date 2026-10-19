@@ -1,0 +1,11 @@
+{
+  "train_seconds": 60.16026074500405,
+  "device": "cuda",
+  "peak_allocated_gib": 2.059536933898926,
+  "peak_reserved_gib": 3.474609375,
+  "contrastive_queries": 18777,
+  "graded_queries": 18777,
+  "masked_known_positive_entries": 45,
+  "queries_without_hard_negative": 10549,
+  "slice_id": "728e301ef1fb"
+}

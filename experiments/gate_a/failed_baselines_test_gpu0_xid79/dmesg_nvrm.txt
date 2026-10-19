@@ -1,0 +1,12 @@
+[537327.710033] NVRM: GPU at PCI:0000:01:00: GPU-b418552f-20ac-e47b-7e70-fd50591e316d
+[537327.710043] NVRM: Xid (PCI:0000:01:00): 31, pid=3283801, name=python3, Ch 0000000d, intr 00000000. MMU Fault: ENGINE GRAPHICS GPC5 GPCCLIENT_T1_0 faulted @ 0x7f34_86000000. Fault is of type FAULT_PDE ACCESS_TYPE_VIRT_WRITE
+[537651.850270] NVRM: Xid (PCI:0000:01:00): 43, pid=3287277, name=t, Ch 0000000d
+[537668.912063] NVRM: Xid (PCI:0000:01:00): 43, pid=3287556, name=python3, Ch 0000000d
+[707750.002789] NVRM: Xid (PCI:0000:01:00): 79, GPU has fallen off the bus.
+[707750.002815] NVRM: GPU 0000:01:00.0: GPU has fallen off the bus.
+[707750.003057] NVRM: A GPU crash dump has been created. If possible, please run
+                NVRM: nvidia-bug-report.sh as root to collect this data before
+                NVRM: the NVIDIA kernel module is unloaded.
+[707750.003216] NVRM: Xid (PCI:0000:01:00): 154, GPU recovery action changed from 0x0 (None) to 0x2 (Node Reboot Required)
+[707750.003520] NVRM: GPU at PCI:0000:21:00: GPU-40de88a5-1a47-3fcc-34ad-68b07ef5a362
+[707750.003523] NVRM: Xid (PCI:0000:21:00): 154, GPU recovery action changed from 0x0 (None) to 0x2 (Node Reboot Required)

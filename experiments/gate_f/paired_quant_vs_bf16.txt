@@ -1,0 +1,6 @@
+== fp8 vs bf16
+raw A 0.690 B 0.676 delta -0.014 ci95 [-0.032, 0.002] discordant B-only 6 A-only 13
+wrapped A 0.748 B 0.730 delta -0.018 ci95 [-0.036, -0.002] discordant B-only 5 A-only 14
+== bitsandbytes vs bf16
+raw A 0.690 B 0.590 delta -0.100 ci95 [-0.138, -0.060] discordant B-only 29 A-only 79
+wrapped A 0.748 B 0.732 delta -0.016 ci95 [-0.046, 0.014] discordant B-only 28 A-only 36

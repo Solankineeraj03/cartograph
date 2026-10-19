@@ -1,0 +1,13 @@
+{
+  "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "pairs": "/home/user/cartograph/runs/gate_e/pairs_verifier_v1.jsonl",
+  "out": "/home/user/cartograph/checkpoints/align/dpo_verifier_v2",
+  "evidence": "/home/user/cartograph/runs/gate_e/dpo_verifier_v2",
+  "beta": 0.1,
+  "lr": 5e-06,
+  "accum": 16,
+  "epochs": 1.0,
+  "seed": 13,
+  "max_length": 1600,
+  "label_source": "verifier_v1"
+}

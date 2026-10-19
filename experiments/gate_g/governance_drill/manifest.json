@@ -1,0 +1,84 @@
+{
+  "experiment": "gate_g_governance_drill",
+  "status": "measured_local",
+  "seed": null,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "sim": "/home/user/cartograph/data/ops_sim_v1",
+    "export": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2",
+    "tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+    "runs": "/home/user/cartograph/runs",
+    "artifacts": "/home/user/cartograph",
+    "evidence": "/home/user/cartograph/runs/gate_g/governance_drill"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/gate_g_drill.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--sim",
+    "/home/user/cartograph/data/ops_sim_v1",
+    "--export",
+    "/home/user/cartograph/work/gate_c_v5/exports/ingest_2",
+    "--tasks",
+    "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+    "--runs",
+    "/home/user/cartograph/runs",
+    "--artifacts",
+    "/home/user/cartograph",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_g/governance_drill"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-18T06:46:26.934543+00:00",
+  "git": {
+    "commit": "cd68556e51dfd3e84498abd18344647dc067a4e7",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {},
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "release_ids": {
+      "v1": "2406781e60ea",
+      "degraded": "9f88347d33c2",
+      "v2": "31504bd1c8ea"
+    }
+  },
+  "duration_seconds": 48.68,
+  "finished_at_utc": "2026-10-18T06:47:16.789642+00:00",
+  "outputs_sha256": {
+    "config.json": "d05fde4832b62c88b88163f7af36df78405a8f75d45e36dfe64f8ef27d56cd8a",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "500b92f1aa63131b7ecbfa58c01749f295e17d6a83e8d9d63a1b295b246397f4",
+    "per_example.jsonl": "0c2112ae7e342e10358af5371fb3825931b503cbc265afd3f05e347b94e84cfb",
+    "registry.json": "653b15a7ec5a6f3f18c9dc1ec30741d7af731e92c0dea8cad438a39481b2fe3e",
+    "release_degraded.json": "b51829b984ccaab6a51645e96bbaa5ce77b9752d70baab083a5645a9bf9256e9",
+    "release_v1.json": "c8a3f620403ed922a112e5875e15a7dfcfc4db72169d604c543f40de96ba3eb4",
+    "release_v2.json": "095ac4e3fa8e2d76897f180dbc098621b73f140922c544fc137b24d1ddea2d85",
+    "traces.jsonl": "f50551e6d90f74fbb597d1b3ed2afcef7f4597660cec82c4d8e2b6ed3dc8dd3b"
+  }
+}

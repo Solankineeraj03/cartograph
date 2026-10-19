@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/cartograph/repo/cartograph/encode.py", line 77, in <module>
+    main()
+  File "/home/user/cartograph/repo/cartograph/encode.py", line 62, in main
+    np.save(target, encode(products.text.tolist(), 256))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/repo/cartograph/encode.py", line 39, in <lambda>
+    encode = lambda texts, max_len: encoder.encode(texts, max_len, args.batch_size, bf16=not args.fp32)  # noqa: E731
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/repo/cartograph/encoders.py", line 62, in encode
+    out[index] = F.normalize(vectors.float(), dim=-1).cpu().numpy()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: unspecified launch failure
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

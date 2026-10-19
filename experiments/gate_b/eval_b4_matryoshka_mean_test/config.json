@@ -1,0 +1,11 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "product_vectors": "/home/user/cartograph/data/vectors/b4_matryoshka_mean/products.npy",
+  "query_vectors": "/home/user/cartograph/data/vectors/b4_matryoshka_mean/queries_test.npy",
+  "split": "test",
+  "dims": "256,128,64",
+  "prefix_only": true,
+  "evidence": "/home/user/cartograph/runs/gate_b/eval_b4_matryoshka_mean_test",
+  "threads": 24,
+  "seed": 13
+}

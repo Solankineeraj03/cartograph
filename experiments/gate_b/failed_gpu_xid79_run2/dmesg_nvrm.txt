@@ -1,0 +1,10 @@
+[    9.089421] NVRM: loading NVIDIA UNIX x86_64 Kernel Module  570.207  Fri Nov 14 21:52:05 UTC 2025
+[33028.073828] NVRM: GPU at PCI:0000:01:00: GPU-b418552f-20ac-e47b-7e70-fd50591e316d
+[33028.073836] NVRM: Xid (PCI:0000:01:00): 79, GPU has fallen off the bus.
+[33028.073849] NVRM: GPU 0000:01:00.0: GPU has fallen off the bus.
+[33028.074007] NVRM: A GPU crash dump has been created. If possible, please run
+               NVRM: nvidia-bug-report.sh as root to collect this data before
+               NVRM: the NVIDIA kernel module is unloaded.
+[33028.074060] NVRM: Xid (PCI:0000:01:00): 154, GPU recovery action changed from 0x0 (None) to 0x2 (Node Reboot Required)
+[33028.074386] NVRM: GPU at PCI:0000:21:00: GPU-40de88a5-1a47-3fcc-34ad-68b07ef5a362
+[33028.074391] NVRM: Xid (PCI:0000:21:00): 154, GPU recovery action changed from 0x0 (None) to 0x2 (Node Reboot Required)

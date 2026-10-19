@@ -1,0 +1,13 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "product_vectors": "/home/user/cartograph/data/vectors/b1_contrastive_mean/products.npy",
+  "query_vectors": "/home/user/cartograph/data/vectors/b1_contrastive_mean/queries_dev.npy",
+  "split": "dev",
+  "dims": "256",
+  "prefix_only": false,
+  "evidence": "/home/user/cartograph/runs/gate_b/pca256_b1_fit",
+  "threads": 16,
+  "save_pca": 256,
+  "save_dir": "/home/user/cartograph/data/vectors/b1_pca256",
+  "seed": 13
+}

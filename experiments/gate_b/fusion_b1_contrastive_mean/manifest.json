@@ -1,0 +1,123 @@
+{
+  "experiment": "gate_b_hybrid_fusion",
+  "status": "measured_local",
+  "seed": null,
+  "config": {
+    "vectors": "/home/user/cartograph/data/vectors/b1_contrastive_mean",
+    "grid": [
+      [
+        "rrf",
+        10
+      ],
+      [
+        "rrf",
+        30
+      ],
+      [
+        "rrf",
+        60
+      ],
+      [
+        "rrf",
+        100
+      ],
+      [
+        "weighted",
+        0.1
+      ],
+      [
+        "weighted",
+        0.2
+      ],
+      [
+        "weighted",
+        0.3
+      ],
+      [
+        "weighted",
+        0.4
+      ],
+      [
+        "weighted",
+        0.5
+      ],
+      [
+        "weighted",
+        0.6
+      ],
+      [
+        "weighted",
+        0.7
+      ],
+      [
+        "weighted",
+        0.8
+      ],
+      [
+        "weighted",
+        0.9
+      ]
+    ],
+    "depth": 100,
+    "selection": "best dev NDCG@10"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/fusion.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--vectors",
+    "/home/user/cartograph/data/vectors/b1_contrastive_mean",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_b/fusion_b1_contrastive_mean"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-18T06:54:05.799753+00:00",
+  "git": {
+    "commit": "cff1d2fe210522738fa2a3e73a4b45a34306de9f",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "products.npy": {
+      "path": "/home/user/cartograph/data/vectors/b1_contrastive_mean/products.npy",
+      "sha256": "c895b82b9ab2667d97cdd6cfd62c3c95789d2de6e9eff9c78a92b34b53df8bd0"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "bm25_build_s": 24.779530085012084,
+    "slice_id": "728e301ef1fb"
+  },
+  "duration_seconds": 129.496,
+  "finished_at_utc": "2026-10-18T06:56:15.845633+00:00",
+  "outputs_sha256": {
+    "config.json": "3c4ce21c59aca8f9e6715747c67a23e75935483ab7f6c8b32d3dbdf5e6f54973",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "e9284836412b5ae4005135285b38823c416f31099694528f4d33d9efb7405c31",
+    "per_example.jsonl": "c0f7d091e15a2dadf705787589c2cce7325672560f51ad7abdeb21b58ab642f2"
+  }
+}

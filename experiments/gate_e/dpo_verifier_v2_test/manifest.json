@@ -1,0 +1,129 @@
+{
+  "experiment": "gate_d_eval_vllm",
+  "status": "measured_local",
+  "seed": null,
+  "config": {
+    "tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+    "engine": "vllm",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "adapter": "/home/user/cartograph/checkpoints/align/dpo_verifier_v2/adapter",
+    "quantization": null,
+    "base_url": "http://127.0.0.1:8000",
+    "device": "cuda",
+    "max_tasks": null,
+    "max_new_tokens": 256,
+    "evidence": "/home/user/cartograph/runs/gate_e/dpo_verifier_v2_test",
+    "model_id": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "model_revision": null,
+    "decoding": "greedy"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/serving/bin/python",
+    "/home/user/cartograph/repo/cartograph/eval_assistant.py",
+    "--tasks",
+    "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+    "--engine",
+    "vllm",
+    "--model",
+    "/home/user/cartograph/checkpoints/align/sft_merged",
+    "--adapter",
+    "/home/user/cartograph/checkpoints/align/dpo_verifier_v2/adapter",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_e/dpo_verifier_v2_test"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-18T17:52:31.878797+00:00",
+  "git": {
+    "commit": "b66897b13423f152b2b2a0f94d1dfdee994528a2",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/serving/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "cuda_visible_devices": "1",
+    "devices": [
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "tasks": {
+      "path": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl",
+      "sha256": "49f9cc0f7e1dd861965383f04a3fd044616b0f52fac589cdc6e926b48e44e567"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/serving.lock.txt",
+    "sha256": "732a27854cff780ea5e1049121bc929f7b252aba4d0457b1c12e022e1c59f08a",
+    "present": true
+  },
+  "extra": {
+    "tasks_manifest": {
+      "train": {
+        "tasks": 3000,
+        "attempts": 3000,
+        "seed": 101,
+        "feasible_fraction": 0.79,
+        "products_in_evidence": 441
+      },
+      "test": {
+        "tasks": 500,
+        "attempts": 500,
+        "seed": 202,
+        "feasible_fraction": 0.806,
+        "products_in_evidence": 450
+      },
+      "product_overlap_train_test": 0,
+      "export": {
+        "tag": "ingest_2",
+        "tables": {
+          "price": {
+            "iceberg_table": "features.price_state",
+            "snapshot_id": 7213477351932751475,
+            "rows": 1439540,
+            "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/price.parquet",
+            "sha256": "d169481e8898edd9d84aaee9377c6c45e08f195f239d9cd221e48b16dd888d5b"
+          },
+          "stock": {
+            "iceberg_table": "features.stock_state",
+            "snapshot_id": 8033777127656018672,
+            "rows": 1203598,
+            "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/stock.parquet",
+            "sha256": "4ccba6651c04d0410f37470f7b7d6ec3f2a6820873fcd999c41781243ca7fadb"
+          },
+          "popularity": {
+            "iceberg_table": "features.popularity_state",
+            "snapshot_id": 583474201836631185,
+            "rows": 2849959,
+            "path": "/home/user/cartograph/work/gate_c_v5/exports/ingest_2/popularity.parquet",
+            "sha256": "a65d91e64dd6716a5d7a9b78b41f382138082674814d0b5a5c4cac34abb7bf29"
+          }
+        },
+        "events_snapshot_id": 5116180000030739141
+      }
+    }
+  },
+  "duration_seconds": 591.701,
+  "finished_at_utc": "2026-10-18T18:02:24.680560+00:00",
+  "outputs_sha256": {
+    "config.json": "79b618278573bddd780d6547df0e3b40a3ae13457dbb34332f1669436f0270a7",
+    "environment-lock.txt": "732a27854cff780ea5e1049121bc929f7b252aba4d0457b1c12e022e1c59f08a",
+    "metrics.json": "24667f17d00b61a6699cf9a010b60f6a83a43b782aa0203f9dcf09ee0ea501c8",
+    "per_example.jsonl": "0c09e1b41e8bd2dc0aad77092780c49dde288ceebb2e8513341648ad2e726a98"
+  }
+}

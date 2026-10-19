@@ -1,0 +1,54 @@
+{
+  "raw": {
+    "n": 500,
+    "correct": 0.628,
+    "format_ok": 0.994,
+    "valid_bundle_on_feasible": 0.6228287841191067,
+    "correct_abstention_on_infeasible": 0.6494845360824743,
+    "false_abstention_on_feasible": 0.009925558312655087,
+    "bundle_offered_on_infeasible": 0.3402061855670103,
+    "fabricated_id_rate": 0.008,
+    "mean_optimality_gap": 0.1180378486055777,
+    "optimal_rate_on_feasible": 0.8406374501992032,
+    "error_counts": {
+      "false_abstention": 4,
+      "incorrect_total": 68,
+      "invalid_schema": 3,
+      "out_of_stock": 11,
+      "over_budget": 124,
+      "unknown_product": 4
+    }
+  },
+  "wrapped": {
+    "n": 500,
+    "correct": 0.712,
+    "format_ok": 0.994,
+    "valid_bundle_on_feasible": 0.6600496277915633,
+    "correct_abstention_on_infeasible": 0.9278350515463918,
+    "false_abstention_on_feasible": 0.13895781637717122,
+    "bundle_offered_on_infeasible": 0.061855670103092786,
+    "fabricated_id_rate": 0.008,
+    "mean_optimality_gap": 0.13285413533834586,
+    "optimal_rate_on_feasible": 0.8157894736842105,
+    "error_counts": {
+      "false_abstention": 56,
+      "incorrect_total": 59,
+      "invalid_schema": 3,
+      "out_of_stock": 7,
+      "over_budget": 36,
+      "unknown_product": 4
+    }
+  },
+  "shown": {
+    "verified_bundle": 266,
+    "abstain_with_reason": 146,
+    "withheld_unverified": 88
+  },
+  "generate_calls": 686,
+  "latency_ms_per_call": {
+    "p50": 859.7740104887635,
+    "p95": 1088.658028493228,
+    "p99": 1114.047528452647
+  },
+  "latency_note": "engine=vllm, sequential task loop, includes retries"
+}

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartograph</title>
+<meta name="description" content="A grounded product-discovery assistant with a measured ML platform: retrieval, feature store, fine-tuned LLM, verifier, and serving on one RTX 3090.">
+<link rel="stylesheet" href="site/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='%232a78d6'/></svg>">
+<script src="site/config.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="dot"></span>Cartograph</a>
+  <nav class="links"><a class="active" href="index.html">Project</a><a href="demo.html">Live demo</a><a href="#architecture">Architecture</a><a href="#results">Results</a><a href="#limits">Limits</a></nav>
+  <button class="theme-toggle" id="theme" aria-label="Toggle color theme">◐</button>
+</div></header>
+
+<main>
+<section><div class="wrap">
+  <div class="kicker">ML systems portfolio project</div>
+  <h1>A shopping assistant that never shows an unverified answer</h1>
+  <p class="lede">Ask “a quiet wireless keyboard and mouse under $100, only available products.” Cartograph retrieves candidates with a
+    fine-tuned hybrid search, reads point-in-time price and stock from a feature store, lets a fine-tuned 1.5B LLM pick a bundle, and
+    <strong>checks every selection</strong> (real product, in stock, one per category, exact total, within budget) before anyone sees it.
+    Every number on this page comes from a committed, reproducible experiment, including the ones that failed.</p>
+  <div class="row" style="margin-top:18px">
+    <a class="btn primary" href="demo.html">Try the demo →</a>
+    <a class="btn" data-repo="docs/REPORT.md" href="#">Technical report</a>
+    <a class="btn" data-repo="" href="#">GitHub</a>
+  </div>
+  <div class="grid tiles" style="margin-top:28px">
+    <div class="tile"><div class="label">Search quality (NDCG@10)</div><div class="value">0.353</div><div class="note">vs 0.302 keyword baseline, +17%</div></div>
+    <div class="tile"><div class="label">Assistant, correct decisions</div><div class="value">0% → 75%</div><div class="note">base model → fine-tuned + verifier retry</div></div>
+    <div class="tile"><div class="label">Bad answers caught</div><div class="value">3,481 / 3,481</div><div class="note">fabricated, over budget, out of stock…</div></div>
+    <div class="tile"><div class="label">Serving throughput</div><div class="value">53×</div><div class="note">vLLM vs sequential Transformers</div></div>
+    <div class="tile"><div class="label">Feature correctness</div><div class="value">5,001 / 5,001</div><div class="note">point-in-time lookups, 0 leaks</div></div>
+    <div class="tile"><div class="label">GPU worker killed</div><div class="value">0 / 60</div><div class="note">requests failed; recovered in 22.5 s</div></div>
+  </div>
+</div></section>
+
+<section id="architecture"><div class="wrap">
+  <div class="kicker">How a request flows</div>
+  <h2>Retrieve → read live features → generate → verify</h2>
+  <p class="muted">Median server time per stage, measured over 500 served requests on one RTX 3090. The LLM is almost all of it.</p>
+  <svg class="diagram" viewBox="0 0 1000 285" role="img" aria-label="Request flow: request, validate, retrieve, live features, exact solver, LLM, verifier, answer">
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+    <g class="node"><rect x="10" y="20" width="220" height="64" rx="10"/><text x="120" y="48" text-anchor="middle">Request</text><text class="sub" x="120" y="68" text-anchor="middle">“keyboard + mouse under $100”</text></g>
+    <g class="node"><rect x="260" y="20" width="220" height="64" rx="10"/><text x="370" y="48" text-anchor="middle">Validate &amp; parse</text><text class="sub" x="370" y="68" text-anchor="middle">categories, budget · 0.2 ms</text></g>
+    <g class="node key"><rect x="510" y="20" width="220" height="64" rx="10"/><text x="620" y="48" text-anchor="middle">Retrieve candidates</text><text class="sub" x="620" y="68" text-anchor="middle">per category · 4.6 ms</text></g>
+    <g class="node key"><rect x="760" y="20" width="230" height="64" rx="10"/><text x="875" y="48" text-anchor="middle">Live features</text><text class="sub" x="875" y="68" text-anchor="middle">Feast → Redis, freshness check · 3.7 ms</text></g>
+    <g class="node"><rect x="760" y="170" width="230" height="64" rx="10"/><text x="875" y="198" text-anchor="middle">Exact solver</text><text class="sub" x="875" y="218" text-anchor="middle">ground truth, not shown to LLM · 0.2 ms</text></g>
+    <g class="node key"><rect x="510" y="170" width="220" height="64" rx="10"/><text x="620" y="198" text-anchor="middle">LLM picks a bundle</text><text class="sub" x="620" y="218" text-anchor="middle">vLLM, Qwen2.5-1.5B + LoRA · 757 ms</text></g>
+    <g class="node guard"><rect x="260" y="170" width="220" height="64" rx="10"/><text x="370" y="198" text-anchor="middle">Verifier (+1 retry)</text><text class="sub" x="370" y="218" text-anchor="middle">IDs, stock, total, budget</text></g>
+    <g class="node"><rect x="10" y="170" width="220" height="64" rx="10"/><text x="120" y="198" text-anchor="middle">Answer with evidence</text><text class="sub" x="120" y="218" text-anchor="middle">or refusal / withheld + trace</text></g>
+    <path class="edge" d="M230,52 H256"/><path class="edge" d="M480,52 H506"/><path class="edge" d="M730,52 H756"/>
+    <path class="edge" d="M875,84 V166"/><path class="edge" d="M760,202 H734"/><path class="edge" d="M510,202 H484"/><path class="edge" d="M260,202 H234"/>
+    <path class="edge dash" d="M875,234 V252 H370 V238"/>
+    <text class="sub" x="622" y="274" text-anchor="middle">solver result is used to grade the decision; the LLM never sees it</text>
+  </svg>
+  <div class="grid two" style="margin-top:12px">
+    <div class="card"><h3 style="margin-top:0">Why a verifier, not just a better model</h3>
+      <p class="small" style="margin:0">The fine-tuned model is right about 7 times in 10. Its errors are mostly arithmetic (totals that don't add
+        up, bundles over budget). Instead of trusting it, every answer is checked against live features; failures get one retry with the
+        verifier's errors and are otherwise withheld. Result: <strong>no unverified bundle is ever shown</strong>, and refusals come with reasons.</p></div>
+    <div class="card"><h3 style="margin-top:0">Fails closed</h3>
+      <ul class="tight small"><li>Feature snapshot older than 6 h → “features too old”; no price or stock claims made.</li>
+        <li>Redis unreachable → HTTP 503; prices are never invented.</li>
+        <li>GPU replica killed → Ray Serve restarts it; 0 of 60 requests failed.</li>
+        <li>Every response carries a trace: release, model, feature snapshot, evidence IDs, verifier result, stage timings.</li></ul></div>
+  </div>
+
+  <div class="kicker" style="margin-top:36px">The platform behind it</div>
+  <h2>Data, models, and serving: one connected system</h2>
+  <svg class="diagram" viewBox="0 0 1000 340" role="img" aria-label="Platform: data lane, model lane, serving lane">
+    <text class="lane" x="10" y="16">DATA</text>
+    <g class="node"><rect x="10" y="24" width="175" height="58" rx="10"/><text x="97" y="49" text-anchor="middle">ESCI + synthetic</text><text class="sub" x="97" y="67" text-anchor="middle">482k products · 5M events</text></g>
+    <g class="node key"><rect x="210" y="24" width="175" height="58" rx="10"/><text x="297" y="49" text-anchor="middle">Ray Data</text><text class="sub" x="297" y="67" text-anchor="middle">validate, dedupe, retry</text></g>
+    <g class="node key"><rect x="410" y="24" width="175" height="58" rx="10"/><text x="497" y="49" text-anchor="middle">Iceberg</text><text class="sub" x="497" y="67" text-anchor="middle">tagged snapshots</text></g>
+    <g class="node key"><rect x="610" y="24" width="175" height="58" rx="10"/><text x="697" y="49" text-anchor="middle">Feast</text><text class="sub" x="697" y="67" text-anchor="middle">point-in-time features</text></g>
+    <g class="node key"><rect x="810" y="24" width="180" height="58" rx="10"/><text x="900" y="49" text-anchor="middle">Redis</text><text class="sub" x="900" y="67" text-anchor="middle">online store + watermark</text></g>
+    <text class="lane" x="10" y="128">MODELS</text>
+    <g class="node"><rect x="10" y="136" width="175" height="58" rx="10"/><text x="97" y="161" text-anchor="middle">Encoder training</text><text class="sub" x="97" y="179" text-anchor="middle">contrastive, train split only</text></g>
+    <g class="node"><rect x="210" y="136" width="175" height="58" rx="10"/><text x="297" y="161" text-anchor="middle">PCA-256 + Qdrant</text><text class="sub" x="297" y="179" text-anchor="middle">+ BM25 hybrid</text></g>
+    <g class="node"><rect x="410" y="136" width="175" height="58" rx="10"/><text x="497" y="161" text-anchor="middle">SFT (LoRA)</text><text class="sub" x="497" y="179" text-anchor="middle">solver demonstrations</text></g>
+    <g class="node"><rect x="610" y="136" width="175" height="58" rx="10"/><text x="697" y="161" text-anchor="middle">GRPO / DPO</text><text class="sub" x="697" y="179" text-anchor="middle">branches, not released</text></g>
+    <g class="node guard"><rect x="810" y="136" width="180" height="58" rx="10"/><text x="900" y="161" text-anchor="middle">Release gate</text><text class="sub" x="900" y="179" text-anchor="middle">manifest, rollback</text></g>
+    <text class="lane" x="10" y="240">SERVING</text>
+    <g class="node key"><rect x="210" y="248" width="175" height="58" rx="10"/><text x="297" y="273" text-anchor="middle">Ray Serve</text><text class="sub" x="297" y="291" text-anchor="middle">request pipeline</text></g>
+    <g class="node key"><rect x="410" y="248" width="175" height="58" rx="10"/><text x="497" y="273" text-anchor="middle">vLLM on 1× RTX 3090</text><text class="sub" x="497" y="291" text-anchor="middle">batching, prefix cache</text></g>
+    <g class="node guard"><rect x="610" y="248" width="175" height="58" rx="10"/><text x="697" y="273" text-anchor="middle">Verifier + solver</text><text class="sub" x="697" y="291" text-anchor="middle">every answer checked</text></g>
+    <g class="node"><rect x="810" y="248" width="180" height="58" rx="10"/><text x="900" y="273" text-anchor="middle">Traced answer</text><text class="sub" x="900" y="291" text-anchor="middle">evidence + versions</text></g>
+    <path class="edge" d="M185,53 H206"/><path class="edge" d="M385,53 H406"/><path class="edge" d="M585,53 H606"/><path class="edge" d="M785,53 H806"/>
+    <path class="edge" d="M185,165 H206"/><path class="edge" d="M585,165 H606"/><path class="edge" d="M785,165 H806"/>
+    <path class="edge" d="M385,277 H406"/><path class="edge" d="M585,277 H606"/><path class="edge" d="M785,277 H806"/>
+    <path class="edge dash" d="M297,194 V244"/><path class="edge dash" d="M497,194 V244"/>
+    <path class="edge dash" d="M900,82 V108 H397 V222 H340 V244"/>
+  </svg>
+  <p class="small muted">Leakage rules: ESCI's official test split is never used for training, negative mining, PCA fitting, or any tuning.
+    Bundle-task products are split by hash, so train and test share none. Feature rows only become visible once they were actually available,
+    so late data can't leak into history.</p>
+</div></section>
+
+<section id="results"><div class="wrap">
+  <div class="kicker">Results</div>
+  <h2>What was measured</h2>
+
+  <h3>1 · Search: a fine-tuned hybrid beats the keyword baseline by 17%</h3>
+  <div class="grid two">
+    <figure><img src="figures/retrieval_ndcg.png" alt="Bar chart of full-catalog NDCG@10 for each retrieval system" loading="lazy">
+      <figcaption>Full-catalog NDCG@10 on 8,956 held-out ESCI queries (482k products). Unjudged results count as zero, so these are lower bounds.</figcaption></figure>
+    <figure><img src="figures/compression_frontier.png" alt="Line chart of NDCG@10 versus vector storage for PCA, truncation, and Matryoshka" loading="lazy">
+      <figcaption>Compression: train-fitted PCA keeps 98.1% of quality at 256 dims (−33% storage). Matryoshka training only wins at 64 dims.</figcaption></figure>
+  </div>
+  <ul class="tight small"><li>Contrastive fine-tuning with query-aware negatives: 0.265 → 0.308. A graded E&gt;S&gt;C&gt;I loss <strong>hurt</strong> (0.244), a negative result.</li>
+    <li>Hybrid (BM25 + encoder, weighted fusion chosen on dev): <strong>0.353</strong>. Qdrant HNSW at ef=32: 95% top-10 agreement with exact search, 3.7 ms p95.</li></ul>
+  <p class="small"><a data-repo="experiments/gate_b/SUMMARY.md" href="#">Evidence →</a></p>
+
+  <h3>2 · Feature platform: zero leaks, zero mismatches</h3>
+  <div class="table-wrap"><table><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody>
+    <tr><td>Feast historical values vs an independent point-in-time reference</td><td><strong>5,001 / 5,001</strong> match</td></tr>
+    <tr><td>Naive event-time join (what a careless pipeline would do)</td><td>would leak late data in 53 samples</td></tr>
+    <tr><td>Late-arriving batch rewrites earlier history</td><td>never (2,981 / 2,981 unchanged)</td></tr>
+    <tr><td>Online (Redis) vs offline values</td><td>0 mismatches (2,000 products × 8 features)</td></tr>
+    <tr><td>Replay a batch / kill a Ray worker mid-task</td><td>0 duplicates / retried, output identical to reference</td></tr>
+    <tr><td>Redis down</td><td>fails closed, no values served</td></tr>
+  </tbody></table></div>
+  <p class="small"><a data-repo="experiments/gate_c/drills_v5/notes.md" href="#">Evidence →</a> Four failed runs are kept; two exposed real Feast behavior with expired features.</p>
+
+  <h3>3 · Assistant: fine-tuning did the heavy lifting; RL-style alignment didn't help</h3>
+  <figure><img src="figures/assistant_correctness.png" alt="Grouped bar chart of correct decisions for base, SFT, GRPO, and DPO models" loading="lazy">
+    <figcaption>500 held-out synthetic bundle tasks on products never seen in training. The exact solver is 1.00 by construction.</figcaption></figure>
+  <ul class="tight small"><li>Base Qwen2.5-1.5B: 0% (it wraps JSON in code fences, then refuses almost everything). After LoRA SFT: <strong>69%</strong>, 75% with verify-and-retry.</li>
+    <li>GRPO with a pass/fail verifier reward learned to <strong>game it</strong>: picked valid but worse bundles (optimal 83% → 59%). A graded reward fixed that. Neither moved correctness significantly.</li>
+    <li>DPO on verifier-labeled pairs: no effect at a gentle setting; <strong>−6 points</strong> when trained harder (overfit). Honest negative results.</li></ul>
+  <p class="small"><a data-repo="experiments/gate_e/SUMMARY.md" href="#">Evidence →</a></p>
+
+  <h3>4 · Serving on one RTX 3090</h3>
+  <div class="grid two">
+    <figure><img src="figures/serving_frontier.png" alt="Throughput versus p95 latency for bf16, FP8, and 4-bit weights" loading="lazy">
+      <figcaption>Throughput vs tail latency as concurrency grows (1–64). ~1k-token prompts, 128 output tokens.</figcaption></figure>
+    <div class="card"><ul class="tight small">
+      <li><strong>53×</strong> throughput over sequential Transformers (2,869 vs 54 output tok/s); per-token decode 5.2 vs 17.8 ms.</li>
+      <li>Prefix caching: <strong>3.6×</strong> faster first token on repeated prompts; 1.75× throughput on shared long prefixes.</li>
+      <li>FP8 weights: −42% weight memory, +23–38% decode speed, −1.4 to −1.8 points of correctness. 4-bit: −10 points raw.</li>
+      <li>Batching cuts GPU energy per request <strong>18×</strong> (66.9 → 3.7 mWh); the card runs at its ~350 W cap either way.</li>
+      <li>Ray Serve on top of vLLM: same per-token speed, −11% peak throughput.</li></ul>
+      <p class="small"><a data-repo="experiments/gate_f/SUMMARY.md" href="#">Evidence →</a></p></div>
+  </div>
+
+  <h3>5 · Governance: bad releases blocked, rollbacks exact</h3>
+  <ul class="tight small"><li>Release manifests bind data, feature snapshots, index, model weights, verifier code, and every dependency lock by checksum.</li>
+    <li>3,481 / 3,481 adversarial answers rejected (fabricated IDs, duplicates, false totals, out-of-stock swaps, over-budget, format-only).</li>
+    <li>A 64-dim index release was <strong>rejected</strong> by the gate (−30% quality). After a rollback, saved requests replayed with identical trace digests.</li></ul>
+  <p class="small"><a data-repo="experiments/gate_g/governance_drill/notes.md" href="#">Evidence →</a></p>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <div class="kicker">Honest scope</div>
+  <h2>What didn't work, and what isn't done</h2>
+  <div class="grid two">
+    <div class="card"><h3 style="margin-top:0">Failures kept on the record</h3><ul class="tight small">
+      <li>GPU 0 fell off the PCIe bus twice under dual-GPU load (probably power), so everything ran on one card.</li>
+      <li>Several of my own bugs, each caught, fixed, and kept with notes: timestamp precision, a stalled Ray shuffle, two Feast lookup issues,
+        silent truncation in SFT, GRPO, DPO, and the reward model, a request parser that cut live accuracy from 82% to 63%, and a fusion-parameter bug.</li>
+      <li>A memory-saving claim for Qdrant that didn't hold across builds was withdrawn.</li>
+      <li>Search ranks by titles, so “microphone” once returned a children's karaoke machine; “quiet” is never actually verified.</li>
+      <li>Product categories come from title keywords, so they're crude: a baby movement monitor counts as a “monitor”, and one wireless
+        mouse was filed as a mouse pad. The verifier enforces categories exactly, so bad labels lead to odd but rule-valid bundles.</li></ul></div>
+    <div class="card"><h3 style="margin-top:0">Not done (and why)</h3><div class="table-wrap"><table><tbody>
+      <tr><td>Human-feedback RL</td><td class="status-ready">Ready</td><td>needs owner preference labels</td></tr>
+      <tr><td>Two-GPU tensor parallelism</td><td class="status-no">Blocked</td><td>GPU 0 unsafe; cloud plan written</td></tr>
+      <tr><td>Kubernetes (KubeRay)</td><td class="status-ready">Ready</td><td>manifests + drill; not yet run</td></tr>
+      <tr><td>Cloud experiment</td><td class="status-no">Planned</td><td>no account / budget</td></tr>
+    </tbody></table></div>
+      <p class="small muted" style="margin:10px 0 0">Prices, stock, clicks, and bundle tasks are <strong>synthetic</strong>; no revenue or conversion claims follow.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Under the hood</div>
+  <h2>Stack and reproducibility</h2>
+  <p class="small">Python 3.11 · PyTorch · Sentence Transformers · Qdrant · Ray Data · Apache Iceberg · Feast · Redis · TRL + PEFT (SFT, DPO, GRPO) ·
+    vLLM · Ray Serve · KubeRay manifests. Every experiment directory stores its config, environment lock, manifest (code commit, input checksums,
+    hardware, command), metrics, per-example outputs, and raw logs.</p>
+  <div class="row"><a class="btn" data-repo="docs/REPRODUCE.md" href="#">Reproduce</a><a class="btn" data-repo="docs/LEDGER.md" href="#">Status ledger</a>
+    <a class="btn" data-repo="docs/MODEL_CARD.md" href="#">Model card</a><a class="btn" data-repo="docs/DATA_CARD.md" href="#">Data card</a>
+    <a class="btn" data-repo="experiments/" href="#">All evidence</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Product titles: Amazon ESCI shopping queries dataset (Apache-2.0). Models: Qwen2.5 and all-MiniLM-L6-v2 (Apache-2.0).
+  Operational data is synthetic. Measurements: one RTX 3090 on a shared lab host, October 2026.</div></footer>
+<script>
+(function () {
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("cartograph-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("cartograph-theme", root.dataset.theme); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

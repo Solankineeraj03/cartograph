@@ -1,0 +1,11 @@
+{
+  "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+  "product_vectors": "/home/user/cartograph/data/vectors/b6_raw_cls/products.npy",
+  "query_vectors": "/home/user/cartograph/data/vectors/b6_raw_cls/queries_dev.npy",
+  "split": "dev",
+  "dims": "",
+  "prefix_only": false,
+  "evidence": "/home/user/cartograph/runs/gate_b/eval_b6_raw_cls_dev",
+  "threads": 24,
+  "seed": 13
+}

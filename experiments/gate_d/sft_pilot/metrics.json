@@ -1,0 +1,15 @@
+{
+  "examples": 3000,
+  "token_lengths": {
+    "max": 1334,
+    "mean": 1156.6486666666667,
+    "over_max_length": 0
+  },
+  "train_seconds": 84.84533911698963,
+  "train_loss": 0.32848950400948523,
+  "steps": 20,
+  "peak_allocated_gib": 9.920470714569092,
+  "peak_reserved_gib": 23.03125,
+  "pilot": true,
+  "cpu_smoke_test": false
+}

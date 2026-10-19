@@ -1,0 +1,11 @@
+/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+{
+  "native_384": 0.2650685852778459,
+  "truncate_256": 0.25351410730319723,
+  "pca_256": 0.2517101819687022,
+  "truncate_128": 0.22360090334440294,
+  "pca_128": 0.22392654602114406,
+  "truncate_64": 0.17477703311563397,
+  "pca_64": 0.17209084515199144
+}

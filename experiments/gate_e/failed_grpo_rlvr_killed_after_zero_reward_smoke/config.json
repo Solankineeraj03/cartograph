@@ -1,0 +1,15 @@
+{
+  "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+  "reward": "verifier",
+  "allow_synthetic_rm": false,
+  "out": "/home/user/cartograph/checkpoints/align/grpo_rlvr",
+  "evidence": "/home/user/cartograph/runs/gate_e/grpo_rlvr",
+  "max_tasks": 2000,
+  "group": 4,
+  "accum": 4,
+  "steps": 300,
+  "beta": 0.04,
+  "lr": 1e-05,
+  "seed": 13
+}

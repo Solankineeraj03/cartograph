@@ -1,0 +1,82 @@
+{
+  "experiment": "gate_b_dimensionality",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "slice": "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "product_vectors": "/home/user/cartograph/data/vectors/minilm-frozen/products.npy",
+    "query_vectors": "/home/user/cartograph/data/vectors/minilm-frozen/queries_test.npy",
+    "split": "test",
+    "dims": "256,128,64",
+    "prefix_only": false,
+    "evidence": "/home/user/cartograph/runs/gate_b/dims_frozen_test",
+    "threads": 16,
+    "seed": 13
+  },
+  "command": [
+    "/home/user/cartograph/venvs/retrieval/bin/python",
+    "/home/user/cartograph/repo/cartograph/dims.py",
+    "--slice",
+    "/home/user/cartograph/data/processed/esci_us_small_v1",
+    "--product-vectors",
+    "/home/user/cartograph/data/vectors/minilm-frozen/products.npy",
+    "--query-vectors",
+    "/home/user/cartograph/data/vectors/minilm-frozen/queries_test.npy",
+    "--split",
+    "test",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_b/dims_frozen_test"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-15T02:59:33.205250+00:00",
+  "git": {
+    "commit": "7bb6c9575c611cee2ced402dbf71c5c0e0cfd7fd",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/retrieval/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "Unable to determine the device handle for GPU0: 0000:01:00.0: Unknown Error",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cuda_available": false
+  },
+  "inputs": {
+    "product_vectors": {
+      "path": "/home/user/cartograph/data/vectors/minilm-frozen/products.npy",
+      "sha256": "1c1dae08c01c4c7fdabfced77e65eb53dd20e67278432255e05e63e66c2d789b"
+    },
+    "query_vectors": {
+      "path": "/home/user/cartograph/data/vectors/minilm-frozen/queries_test.npy",
+      "sha256": "5c0416be587541cea670f27ce0606d5afcd48162ef06ffa75c21242f4cd71874"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/retrieval.lock.txt",
+    "sha256": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "present": true
+  },
+  "extra": {
+    "slice_id": "728e301ef1fb"
+  },
+  "duration_seconds": 165.167,
+  "finished_at_utc": "2026-10-15T03:02:19.049000+00:00",
+  "outputs_sha256": {
+    "config.json": "622a9cc10b582673b1fd511a9d6289f702d2aa0d583f44dcc6a918a9e761a39f",
+    "environment-lock.txt": "166aaea1ab4d63818745ef95185450a76b781137004013b518e9c6dcb1235725",
+    "metrics.json": "8e0b2b3e54ba3f8acd4edadd726e4341ce7e6943ab25336793f6b76fcc7fef80",
+    "per_example.jsonl": "95cbefca81190f06259eee117b86f837d83822d0c57b7e00717647c3ff107d27"
+  }
+}

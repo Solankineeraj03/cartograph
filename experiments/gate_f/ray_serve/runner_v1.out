@@ -1,0 +1,14 @@
+525529:C 18 Oct 2026 12:06:09.408 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+done materialize
+{"ok":true,"release":"2406781e60ea"}done serve_start
+done bench_c1
+done bench_c8
+done bench_c32
+done tasks
+200 verified_bundle None
+200 stale_features feature snapshot older than the freshness limit; no availability or price claims made
+failover failed
+done failover
+503 features_unavailable ConnectionError: Error 111 connecting to 127.0.0.1:6390. Connection refused.
+done probes
+ALL_DONE

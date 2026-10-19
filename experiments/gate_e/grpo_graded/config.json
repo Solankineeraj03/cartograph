@@ -1,0 +1,18 @@
+{
+  "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+  "tasks": "/home/user/cartograph/data/tasks_v1/tasks_train.jsonl",
+  "reward": "graded",
+  "allow_synthetic_rm": false,
+  "out": "/home/user/cartograph/checkpoints/align/grpo_graded",
+  "evidence": "/home/user/cartograph/runs/gate_e/grpo_graded",
+  "max_tasks": 2000,
+  "group": 8,
+  "accum": 4,
+  "steps": 200,
+  "beta": 0.04,
+  "lr": 1e-05,
+  "temperature": 1.2,
+  "max_prompt_length": 1280,
+  "max_completion_length": 384,
+  "seed": 13
+}

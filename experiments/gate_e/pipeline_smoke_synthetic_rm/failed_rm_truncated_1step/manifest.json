@@ -1,0 +1,92 @@
+{
+  "experiment": "gate_e_reward_model",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "base": "qwen2.5-0.5b-instruct",
+    "pairs": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+    "test_pairs": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+    "out": "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic",
+    "evidence": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/rm",
+    "epochs": 1.0,
+    "lr": 0.0001,
+    "seed": 13,
+    "label_source": "verifier_v1"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/training/bin/python",
+    "/home/user/cartograph/repo/cartograph/align.py",
+    "rm",
+    "--pairs",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+    "--test-pairs",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+    "--out",
+    "/home/user/cartograph/checkpoints/align/rm_smoke_synthetic",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/rm"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-18T17:40:22.989509+00:00",
+  "git": {
+    "commit": "d47d9b99df6263109e5e3e80a406fc43ad458c41",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/training/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "cuda_visible_devices": "1",
+    "devices": [
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "pairs": {
+      "path": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/train_pairs.jsonl",
+      "sha256": "3f984f1927c549c203050a914bc4092deeb17d0bf27a614281a55d1c2463e546"
+    },
+    "test_pairs": {
+      "path": "/home/user/cartograph/runs/gate_e/pipeline_smoke_synthetic_rm/test_pairs.jsonl",
+      "sha256": "103a59bcfac32dd38aca168724c77f42792231b635f412c58a92ffc175f49c63"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/training.lock.txt",
+    "sha256": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "present": true
+  },
+  "extra": {
+    "metrics": {
+      "label_source": "verifier_v1",
+      "train_pairs": 500,
+      "test_pairs": 107,
+      "pairwise_accuracy": 0.14953271028037382,
+      "agreement_with_longer_answer": 0.6542056074766355,
+      "note": "Synthetic verifier labels: this measures pipeline function, not human preference."
+    }
+  },
+  "duration_seconds": 87.477,
+  "finished_at_utc": "2026-10-18T17:41:51.119144+00:00",
+  "outputs_sha256": {
+    "config.json": "943b16fd64038d57e296c7a522d0aedf020797350098bcb3471a8e8fcc0f354c",
+    "environment-lock.txt": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "metrics.json": "805d2db343503cb405f862f01a37e678ae1a74b2354bdc936002366c7abe26cb",
+    "per_example.jsonl": "1b6303288122e9ac89b892be664a95b30a9a399980aa5bce5a3a70247d4c3bce"
+  }
+}

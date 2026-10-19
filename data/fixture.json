@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "description": "Authored test fixture only. Not ESCI data or a performance benchmark.",
+  "products": [
+    {"product_id": "keyboard-a", "title": "Quiet wireless keyboard", "text": "Compact keyboard with quiet keys and wireless receiver", "category": "keyboard", "price_cents": 4500, "in_stock": true},
+    {"product_id": "keyboard-b", "title": "Wired mechanical keyboard", "text": "Full size wired keyboard with tactile switches", "category": "keyboard", "price_cents": 7000, "in_stock": true},
+    {"product_id": "mouse-a", "title": "Wireless silent mouse", "text": "Quiet wireless mouse with USB receiver", "category": "mouse", "price_cents": 2500, "in_stock": true},
+    {"product_id": "mouse-b", "title": "Wireless gaming mouse", "text": "Light wireless gaming mouse", "category": "mouse", "price_cents": 6500, "in_stock": false},
+    {"product_id": "case-a", "title": "Keyboard travel case", "text": "Protective case for a compact keyboard", "category": "accessory", "price_cents": 1500, "in_stock": true}
+  ],
+  "queries": [
+    {"query_id": "q1", "text": "quiet wireless keyboard", "judgments": {"keyboard-a": "E", "keyboard-b": "S", "mouse-a": "C", "mouse-b": "I", "case-a": "C"}},
+    {"query_id": "q2", "text": "wireless silent mouse", "judgments": {"mouse-a": "E", "mouse-b": "S", "keyboard-a": "C", "keyboard-b": "I", "case-a": "I"}}
+  ],
+  "bundle_task": {"budget_cents": 10000, "required_categories": ["keyboard", "mouse"], "example_output": {"product_ids": ["keyboard-a", "mouse-a"], "total_cents": 7000}},
+  "feature_events": [
+    {"product_id": "keyboard-a", "event_time": "2026-01-01T09:00:00Z", "available_at": "2026-01-01T09:01:00Z", "price_cents": 4500},
+    {"product_id": "keyboard-a", "event_time": "2026-01-01T09:30:00Z", "available_at": "2026-01-01T11:00:00Z", "price_cents": 4000}
+  ]
+}

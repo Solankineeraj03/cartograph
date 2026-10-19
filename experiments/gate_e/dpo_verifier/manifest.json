@@ -1,0 +1,83 @@
+{
+  "experiment": "gate_e_dpo",
+  "status": "measured_local",
+  "seed": 13,
+  "config": {
+    "policy": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "pairs": "/home/user/cartograph/runs/gate_e/pairs_verifier_v1.jsonl",
+    "out": "/home/user/cartograph/checkpoints/align/dpo_verifier",
+    "evidence": "/home/user/cartograph/runs/gate_e/dpo_verifier",
+    "beta": 0.1,
+    "lr": 5e-06,
+    "accum": 16,
+    "epochs": 1.0,
+    "seed": 13,
+    "label_source": "verifier_v1"
+  },
+  "command": [
+    "/home/user/cartograph/venvs/training/bin/python",
+    "/home/user/cartograph/repo/cartograph/align.py",
+    "dpo",
+    "--policy",
+    "/home/user/cartograph/checkpoints/align/sft_merged",
+    "--pairs",
+    "/home/user/cartograph/runs/gate_e/pairs_verifier_v1.jsonl",
+    "--out",
+    "/home/user/cartograph/checkpoints/align/dpo_verifier",
+    "--evidence",
+    "/home/user/cartograph/runs/gate_e/dpo_verifier"
+  ],
+  "cwd": "/home/user/cartograph/repo",
+  "started_at_utc": "2026-10-17T21:58:15.936357+00:00",
+  "git": {
+    "commit": "acac04ccc789d46fefe14f75f874e0ca7b0e703a",
+    "dirty": false,
+    "dirty_files": [],
+    "diff_sha256": null
+  },
+  "environment": {
+    "python": "3.11.13",
+    "executable": "/home/user/cartograph/venvs/training/bin/python",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "pip_freeze": null,
+    "pip_freeze_sha256": null
+  },
+  "hardware": {
+    "hostname": "gpu-host",
+    "cpu_count": 48,
+    "nvidia_smi": [
+      "0, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:01:00.0",
+      "1, NVIDIA GeForce RTX 3090, 24576 MiB, 570.207, 00000000:21:00.0"
+    ],
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "cuda_visible_devices": "1",
+    "devices": [
+      "NVIDIA GeForce RTX 3090"
+    ]
+  },
+  "inputs": {
+    "pairs": {
+      "path": "/home/user/cartograph/runs/gate_e/pairs_verifier_v1.jsonl",
+      "sha256": "f5c9fbe3dffbfb6bfd85b9995cde49065386deda96b8cde51c92ec337f0f72b4"
+    }
+  },
+  "environment_lock": {
+    "path": "envs/training.lock.txt",
+    "sha256": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "present": true
+  },
+  "extra": {
+    "seconds": 319.92797105701175,
+    "pairs": 607,
+    "peak_reserved_gib": 11.322265625
+  },
+  "duration_seconds": 325.124,
+  "finished_at_utc": "2026-10-17T22:03:41.620291+00:00",
+  "outputs_sha256": {
+    "config.json": "c7c00b22c47cebd1f6beacd53b68fdd80cee88ff0e61061b3b47bbbb06e010a8",
+    "environment-lock.txt": "be55236763a06f66287ddc267df1a79848f3d5962860340be902014150d84f4b",
+    "train_log.jsonl": "5aafe4dbdb6ac514692f0c3d8798f293b0e860cb6614f547e58ab77ac63a00b5"
+  }
+}

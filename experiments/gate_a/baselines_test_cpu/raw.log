@@ -1,0 +1,80 @@
+/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+{
+  "full_catalog": {
+    "n_queries": 8956,
+    "bm25": {
+      "mean": 0.3024451063101345,
+      "ci95": [
+        0.29654287345654556,
+        0.30822378556152635
+      ]
+    },
+    "dense": {
+      "mean": 0.26502145802938726,
+      "ci95": [
+        0.25941025496471665,
+        0.2704047753380369
+      ],
+      "delta_vs_bm25": {
+        "mean": -0.03742364828074722,
+        "ci95": [
+          -0.0426361607139772,
+          -0.03249668986474356
+        ]
+      }
+    },
+    "rrf": {
+      "mean": 0.3216102745182762,
+      "ci95": [
+        0.3151877174913798,
+        0.32737078597734487
+      ],
+      "delta_vs_bm25": {
+        "mean": 0.019165168208141674,
+        "ci95": [
+          0.016180340903387488,
+          0.02244095976832624
+        ]
+      }
+    }
+  },
+  "judged_list": {
+    "n_queries": 8956,
+    "bm25": {
+      "mean": 0.6992898934369391,
+      "ci95": [
+        0.6946984031739182,
+        0.7038747165617252
+      ]
+    },
+    "dense": {
+      "mean": 0.712474055649967,
+      "ci95": [
+        0.7081721298388179,
+        0.7168247299296097
+      ],
+      "delta_vs_bm25": {
+        "mean": 0.01318416221302794,
+        "ci95": [
+          0.009719662953069669,
+          0.017197383542319134
+        ]
+      }
+    },
+    "rrf": {
+      "mean": 0.7171054949846385,
+      "ci95": [
+        0.7130876716505948,
+        0.7211909740541304
+      ],
+      "delta_vs_bm25": {
+        "mean": 0.017815601547699317,
+        "ci95": [
+          0.015657542539227236,
+          0.020176210146589775
+        ]
+      }
+    }
+  }
+}

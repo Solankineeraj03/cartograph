@@ -1,0 +1,119 @@
+{
+  "probes": {
+    "n": 3481,
+    "rejected_fraction": 1.0,
+    "by_probe": {
+      "bundle_for_infeasible": {
+        "rejected": 97,
+        "accepted": 0
+      },
+      "format_only": {
+        "rejected": 500,
+        "accepted": 0
+      },
+      "not_json_object": {
+        "rejected": 500,
+        "accepted": 0
+      },
+      "fabricated_id": {
+        "rejected": 403,
+        "accepted": 0
+      },
+      "duplicate": {
+        "rejected": 403,
+        "accepted": 0
+      },
+      "false_total": {
+        "rejected": 403,
+        "accepted": 0
+      },
+      "false_abstention": {
+        "rejected": 403,
+        "accepted": 0
+      },
+      "stale_stock": {
+        "rejected": 403,
+        "accepted": 0
+      },
+      "over_budget": {
+        "rejected": 369,
+        "accepted": 0
+      }
+    }
+  },
+  "release_log": [
+    {
+      "at": "2026-10-18T06:46:29.744945+00:00",
+      "action": "promote",
+      "candidate": "2406781e60ea",
+      "name": "v1-sft-pca256",
+      "previous_active": null,
+      "decision": "accept",
+      "reasons": [
+        "first_release"
+      ]
+    },
+    {
+      "at": "2026-10-18T06:47:16.733943+00:00",
+      "action": "promote",
+      "candidate": "9f88347d33c2",
+      "name": "candidate-trunc64",
+      "previous_active": "2406781e60ea",
+      "decision": "reject",
+      "reasons": [
+        "ndcg@10 relative drop 0.3031 > 0.02"
+      ]
+    },
+    {
+      "at": "2026-10-18T06:47:16.734311+00:00",
+      "action": "promote",
+      "candidate": "31504bd1c8ea",
+      "name": "v2-grpo-pca256",
+      "previous_active": "2406781e60ea",
+      "decision": "accept",
+      "reasons": []
+    },
+    {
+      "at": "2026-10-18T06:47:16.758221+00:00",
+      "action": "rollback",
+      "from": "31504bd1c8ea",
+      "to": "2406781e60ea"
+    }
+  ],
+  "replay": {
+    "useful_bundle": {
+      "original_release": "2406781e60ea",
+      "replay_release": "2406781e60ea",
+      "decision": "bundle",
+      "digest_match": true,
+      "differs_under_v2_release_id": true
+    },
+    "impossible_budget": {
+      "original_release": "2406781e60ea",
+      "replay_release": "2406781e60ea",
+      "decision": "infeasible",
+      "digest_match": true,
+      "differs_under_v2_release_id": true
+    },
+    "invalid_request": {
+      "original_release": "2406781e60ea",
+      "replay_release": "2406781e60ea",
+      "decision": "invalid_request",
+      "digest_match": true,
+      "differs_under_v2_release_id": true
+    },
+    "other_bundle": {
+      "original_release": "2406781e60ea",
+      "replay_release": "2406781e60ea",
+      "decision": "bundle",
+      "digest_match": true,
+      "differs_under_v2_release_id": true
+    }
+  },
+  "active_after_drill": "2406781e60ea",
+  "release_ids": {
+    "v1": "2406781e60ea",
+    "degraded": "9f88347d33c2",
+    "v2": "31504bd1c8ea"
+  }
+}

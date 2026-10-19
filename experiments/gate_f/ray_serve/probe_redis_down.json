@@ -1,0 +1,25 @@
+{
+  "status": 503,
+  "client_ms": 7184.369147988036,
+  "trace": {
+    "request_id": "dead005c-33ae-45a8-ad3d-bc7b08a4c871",
+    "release_id": "2406781e60ea",
+    "model": "/home/user/cartograph/checkpoints/align/sft_merged",
+    "request": "Find a quiet wireless keyboard and mouse bundle under $100.",
+    "now": "2026-10-01T04:00:00+00:00",
+    "timings_ms": {
+      "total": 7167.766501981532
+    },
+    "parsed": {
+      "required_categories": [
+        "keyboard",
+        "mouse"
+      ],
+      "budget_cents": 10000,
+      "adjective": "quiet wireless",
+      "require_in_stock": true
+    },
+    "decision": "features_unavailable",
+    "error": "ConnectionError: Error 111 connecting to 127.0.0.1:6390. Connection refused."
+  }
+}

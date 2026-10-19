@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartograph live demo</title>
+<meta name="description" content="Ask Cartograph for a product bundle: retrieval, live features, an LLM answer, and a verifier, shown step by step.">
+<link rel="stylesheet" href="site/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='%232a78d6'/></svg>">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="dot"></span>Cartograph</a>
+  <nav class="links"><a href="index.html">Project</a><a class="active" href="demo.html">Live demo</a><a href="index.html#results">Results</a></nav>
+  <button class="theme-toggle" id="theme" aria-label="Toggle color theme">◐</button>
+</div></header>
+
+<main class="wrap" style="padding-top:28px;padding-bottom:40px">
+  <div class="kicker">Live demo</div>
+  <h1>Ask for a product bundle</h1>
+  <p class="lede">Cartograph retrieves candidates, reads point-in-time price and stock from the feature store, asks a fine-tuned
+    Qwen2.5-1.5B for a bundle, and <strong>verifies the answer before showing it</strong>. Each response below shows every step.</p>
+
+  <div class="card" style="margin:18px 0">
+    <div class="row" style="justify-content:space-between">
+      <div class="conn" id="conn"><span class="led"></span><span id="conn-text">Not connected</span></div>
+      <div class="row" style="flex:1;max-width:460px;margin-left:auto">
+        <input type="text" id="backend" value="http://localhost:8012" aria-label="Backend URL" style="flex:1">
+        <button class="btn" id="connect">Connect</button>
+      </div>
+    </div>
+    <details style="margin-top:12px"><summary>How to start the live backend (needs the GPU host)</summary>
+      <p class="small">The model runs on one RTX 3090. Start it from your laptop with an SSH tunnel; the page talks to
+        <code>localhost:8012</code>, which the tunnel forwards to the GPU host. Closing the SSH session (or Ctrl-C) shuts everything down.</p>
+      <pre>ssh -L 8012:127.0.0.1:8012 &lt;gpu-host&gt; 'bash ~/cartograph/repo/scripts/demo_up.sh'</pre>
+      <p class="small muted">Startup takes 1–2 minutes (feature materialization into Redis, then vLLM loading). The script refuses to start if
+        another job is using the GPU. When the backend is off, this page replays real recorded responses instead.</p>
+    </details>
+  </div>
+
+  <div class="demo-grid">
+    <div class="grid" style="gap:14px">
+      <div class="card">
+        <label for="request" class="small muted">Request</label>
+        <textarea id="request">Find a quiet wireless keyboard and mouse bundle under $100. Only include available products and explain the tradeoffs.</textarea>
+        <div class="chips" id="presets" style="margin:10px 0"></div>
+        <label for="clock" class="small muted">Simulated time (operational data is synthetic, 2026-09)</label>
+        <select id="clock" style="margin:4px 0 12px"></select>
+        <button class="btn primary" id="send" disabled style="width:100%;justify-content:center">Ask Cartograph</button>
+        <p class="small muted" style="margin:8px 0 0">Supported product types: keyboard, mouse, keyboard mouse combo, mouse pad, headphones,
+          microphone, webcam, monitor, laptop stand, USB hub, speaker, charger. Include a budget like “under $100”.</p>
+      </div>
+      <div class="card" id="offline-note">
+        <strong>Recorded real responses</strong>
+        <p class="small muted" id="recorded-meta" style="margin:4px 0 10px">Loading…</p>
+        <div class="chips" id="recorded-list"></div>
+        <p class="small muted" style="margin:10px 0 0">Captured from the live backend with the same code. Includes failures:
+          a false refusal, a withheld answer, stale features, and a feature-store outage.</p>
+      </div>
+    </div>
+    <div class="grid" id="result" style="gap:14px" aria-live="polite">
+      <div class="card muted">Choose a recorded example, or connect to the live backend and ask.</div>
+    </div>
+  </div>
+
+  <p class="small muted" style="margin-top:24px">Product titles come from the Amazon ESCI dataset (Apache-2.0). Prices, stock, and dates are
+    <strong>synthetic</strong> and refer to no real offer. <a href="index.html">How it works →</a></p>
+</main>
+<script>
+(function () {
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("cartograph-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("cartograph-theme", root.dataset.theme); } catch (e) {}
+  });
+})();
+</script>
+<script src="site/demo.js"></script>
+</body>
+</html>

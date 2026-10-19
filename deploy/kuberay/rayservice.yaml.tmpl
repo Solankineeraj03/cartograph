@@ -1,0 +1,50 @@
+# RayService for the CPU request path. __RELEASE__ and __IMAGE__ are filled in by scripts/kuberay_kind.sh.
+apiVersion: ray.io/v1
+kind: RayService
+metadata:
+  name: cartograph
+spec:
+  serveConfigV2: |
+    applications:
+      - name: cartograph
+        import_path: cartograph.serve_cpu:app
+        route_prefix: /
+        runtime_env:
+          env_vars:
+            CARTOGRAPH_RELEASE: "__RELEASE__"
+            CARTOGRAPH_BUNDLE: /app/demo_bundle
+  rayClusterConfig:
+    rayVersion: "2.49.2"
+    headGroupSpec:
+      rayStartParams:
+        num-cpus: "0"
+      template:
+        spec:
+          containers:
+            - name: ray-head
+              image: __IMAGE__
+              imagePullPolicy: IfNotPresent
+              resources:
+                requests: {cpu: "250m", memory: 700Mi}
+                limits: {cpu: "1", memory: 900Mi}
+              ports:
+                - {containerPort: 6379, name: gcs}
+                - {containerPort: 8265, name: dashboard}
+                - {containerPort: 10001, name: client}
+                - {containerPort: 8000, name: serve}
+    workerGroupSpecs:
+      - groupName: cpu
+        replicas: 1
+        minReplicas: 1
+        maxReplicas: 1
+        rayStartParams:
+          num-cpus: "1"
+        template:
+          spec:
+            containers:
+              - name: ray-worker
+                image: __IMAGE__
+                imagePullPolicy: IfNotPresent
+                resources:
+                  requests: {cpu: "250m", memory: 700Mi}
+                  limits: {cpu: "1", memory: 900Mi}

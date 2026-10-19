@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/cartograph/repo/cartograph/eval_retrieval.py", line 266, in <module>
+    main()
+  File "/home/user/cartograph/repo/cartograph/eval_retrieval.py", line 166, in main
+    product_vectors = encoder.encode(products.text.tolist())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/repo/cartograph/eval_retrieval.py", line 104, in encode
+    return self.model.encode(texts, batch_size=batch_size or self.batch_size, convert_to_numpy=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/cartograph/venvs/retrieval/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 652, in encode
+    embeddings = embeddings.cpu()
+                 ^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: unspecified launch failure
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

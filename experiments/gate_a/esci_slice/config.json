@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "locale": "us",
+    "small_version": 1,
+    "dev_fraction": 0.1,
+    "dev_salt": "cartograph-dev-v1",
+    "group_key": "nfkc casefold, non-alphanumerics to space, tokens sorted and deduplicated",
+    "product_text": "title + ' Brand: ' + brand + ' Color: ' + color + ' ' + bullet points; missing fields omitted; truncated to max_text_chars",
+    "max_text_chars": 2000
+  },
+  "esci_commit": "7916cdf6ab75a462e77f20ab40428a10923998d5"
+}

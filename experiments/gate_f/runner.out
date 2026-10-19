@@ -1,0 +1,36 @@
+{"tasks": "/home/user/cartograph/data/tasks_v1/tasks_test.jsonl", "tokenizer": "/home/user/cartograph/checkpoints/align/sft_merged", "n": 500, "prompt_tokens": {"min": 895, "median": 1045, "max": 1200}, "sha256": "2527c27556011e9df0ad1a4eaf820124db08669f9c837d4d902f970e3cbaaf5a"}
+done hf_reference
+done bf16/warmup
+done bf16/c1
+done bf16/c2
+done bf16/c4
+done bf16/c8
+done bf16/c16
+done bf16/c32
+done bf16/c64
+done bf16/rate2
+done bf16/rate4
+done bf16/rate8
+done bf16/rate16
+done bf16/rate32
+done bf16_maxseqs4/warmup
+done bf16_maxseqs4/c32
+done bf16_maxseqs16/warmup
+done bf16_maxseqs16/c32
+done prefix_on/first_pass
+done prefix_on/second_pass
+done prefix_on/shared_prefix_c8
+done prefix_off/first_pass
+done prefix_off/second_pass
+done prefix_off/shared_prefix_c8
+done quant_fp8/warmup
+done quant_fp8/c1
+done quant_fp8/c8
+done quant_fp8/c32
+done quant_bitsandbytes/warmup
+done quant_bitsandbytes/c1
+done quant_bitsandbytes/c8
+done quant_bitsandbytes/c32
+done quality_fp8
+done quality_bitsandbytes
+ALL_DONE
